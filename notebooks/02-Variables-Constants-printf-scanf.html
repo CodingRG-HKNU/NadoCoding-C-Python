@@ -13084,7 +13084,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#51221;&#49688;&#54805;-&#48320;&#49688;">&#51221;&#49688;&#54805; &#48320;&#49688;<a class="anchor-link" href="#&#51221;&#49688;&#54805;-&#48320;&#49688;">&#182;</a></h2>
+<h2 id="(C-&#50616;&#50612;)-&#51221;&#49688;&#54805;-&#48320;&#49688;">(C &#50616;&#50612;) &#51221;&#49688;&#54805; &#48320;&#49688;<a class="anchor-link" href="#(C-&#50616;&#50612;)-&#51221;&#49688;&#54805;-&#48320;&#49688;">&#182;</a></h2>
 </div>
 </div>
 </div>
@@ -13107,7 +13107,8 @@ div#notebook {
 <span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="p">{</span>
     <span class="kt">int</span> <span class="n">age</span> <span class="o">=</span> <span class="mi">12</span><span class="p">;</span>        <span class="c1">//자료형 명시</span>
     <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">age</span><span class="p">);</span>
-    <span class="c1">// 변수는 수정 가능</span>
+
+    <span class="c1">// 변수에 할당된 값 수정 가능</span>
     <span class="c1">// 이미 선언된 변수는 자료형 명시하지 않음</span>
     <span class="n">age</span> <span class="o">=</span> <span class="mi">13</span><span class="p">;</span>            
     <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">age</span><span class="p">);</span>
@@ -13123,7 +13124,72 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#51452;&#49437;">&#51452;&#49437;<a class="anchor-link" href="#&#51452;&#49437;">&#182;</a></h2>
+<hr>
+<h3 id="Python-&#44396;&#54788;">Python &#44396;&#54788;<a class="anchor-link" href="#Python-&#44396;&#54788;">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="&#51452;&#51032;&#49324;&#54637;">&#51452;&#51032;&#49324;&#54637;<a class="anchor-link" href="#&#51452;&#51032;&#49324;&#54637;">&#182;</a></h4><ul>
+<li>Python의 <code>print</code>  함수는 줄바꿈을 자동으로 해줌. 
+  따라서 굳이 줄바꿈 기호 <code>/n</code> 을 사용할 필요 없음.</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">age</span> <span class="o">=</span> <span class="mi">12</span>                    <span class="c1"># 변수의 자료형을 명시하지 않음</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%d</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">age</span><span class="p">)</span>     <span class="c1"># %d는 정수형 값을 받는 포맷 코드</span>
+
+<span class="c1"># 변수에 할당된 값 수정 가능</span>
+<span class="c1"># 심지어 자료형이 달려져도 됨</span>
+<span class="n">age</span> <span class="o">=</span> <span class="s1">&#39;twelve&#39;</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">age</span><span class="p">)</span>     <span class="c1"># 하지만 문자열을 받는 %s 포맷 코드를 사용해도 됨.</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>12
+twelve
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<hr>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="(C-&#50616;&#50612;)-&#51452;&#49437;">(C &#50616;&#50612;) &#51452;&#49437;<a class="anchor-link" href="#(C-&#50616;&#50612;)-&#51452;&#49437;">&#182;</a></h2>
 </div>
 </div>
 </div>
@@ -13156,7 +13222,7 @@ div#notebook {
 
     <span class="c1">// 한 줄 주석</span>
     <span class="n">printf</span><span class="p">(</span><span class="s">&quot;1</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
-    <span class="c1">// printf(&quot;2\n&quot;);   // 2는 범위에서 벗어남</span>
+    <span class="c1">// printf(&quot;2\n&quot;);   // 2는 주석처리됨</span>
     <span class="n">printf</span><span class="p">(</span><span class="s">&quot;3</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
 
     <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
@@ -13170,7 +13236,71 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#49892;&#49688;&#54805;-&#48320;&#49688;">&#49892;&#49688;&#54805; &#48320;&#49688;<a class="anchor-link" href="#&#49892;&#49688;&#54805;-&#48320;&#49688;">&#182;</a></h2>
+<hr>
+<h3 id="Python-&#44396;&#54788;">Python &#44396;&#54788;<a class="anchor-link" href="#Python-&#44396;&#54788;">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 정수형 변수 예제</span>
+
+<span class="c1"># 여러 줄 주석은 세 개의 큰 따옴표(&quot;&quot;&quot;)를 이용하여 감싸야 함</span>
+
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">age = 12                    # 변수의 자료형을 명시하지 않음</span>
+<span class="sd">print(&quot;%d&quot; % age)     # %d는 정수형 값을 받는 포맷 코드</span>
+
+<span class="sd"># 변수에 할당된 값 수정 가능</span>
+<span class="sd">age = 13</span>
+<span class="sd">print(&quot;%s&quot; % age)     # 하지만 문자열을 받는 %s 포맷 코드를 사용해도 됨.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="c1"># 한 줄 주석</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;1&quot;</span><span class="p">)</span>
+<span class="c1"># print(&quot;2&quot;)   // 2는 주석처리됨.</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;3&quot;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>1
+3
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<hr>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="(C-&#50616;&#50612;)-&#49892;&#49688;&#54805;-&#48320;&#49688;">(C &#50616;&#50612;) &#49892;&#49688;&#54805; &#48320;&#49688;<a class="anchor-link" href="#(C-&#50616;&#50612;)-&#49892;&#49688;&#54805;-&#48320;&#49688;">&#182;</a></h2>
 </div>
 </div>
 </div>
@@ -13210,7 +13340,76 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#49345;&#49688;">&#49345;&#49688;<a class="anchor-link" href="#&#49345;&#49688;">&#182;</a></h2>
+<hr>
+<h3 id="Python-&#44396;&#54788;">Python &#44396;&#54788;<a class="anchor-link" href="#Python-&#44396;&#54788;">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 실수형 변수 예제</span>
+
+<span class="n">f</span> <span class="o">=</span> <span class="mf">46.5</span>                        <span class="c1"># 자료형과 f 기호를 명시할 필요 없음</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%f</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">f</span><span class="p">)</span> 
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%.2f</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">f</span><span class="p">)</span>         <span class="c1"># 소수점 자릿수 지정</span>
+
+<span class="n">d</span> <span class="o">=</span> <span class="mf">4.428</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%.3lf</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">d</span><span class="p">)</span>       <span class="c1"># float 와 double 구분 없음</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%lf</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">d</span><span class="p">)</span> 
+
+<span class="c1"># 문자열의 자릿수를 지정하고자 할 때  점 앞에 정수 지정</span>
+<span class="c1"># 예를 들어 10자리수로 표현하고자 할 때 </span>
+<span class="c1"># 주의: 자릿수는 소수점과 소수점 이하 숫자도 포함</span>
+<span class="n">pi</span> <span class="o">=</span> <span class="mf">3.14</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%10.3f</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">pi</span><span class="p">)</span>
+
+<span class="c1"># 빈자리를 0으로 채울 수 있음</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%010.3f</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">pi</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>46.500000
+46.50
+4.428
+4.428000
+     3.140
+000003.140
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<hr>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="(C-&#50616;&#50612;)-&#49345;&#49688;">(C &#50616;&#50612;) &#49345;&#49688;<a class="anchor-link" href="#(C-&#50616;&#50612;)-&#49345;&#49688;">&#182;</a></h2>
 </div>
 </div>
 </div>
@@ -13249,7 +13448,22 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="printf">printf<a class="anchor-link" href="#printf">&#182;</a></h2>
+<hr>
+<h3 id="Python-&#44396;&#54788;">Python &#44396;&#54788;<a class="anchor-link" href="#Python-&#44396;&#54788;">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="*-Python&#51008;-&#49345;&#49688;-&#51648;&#50896;-&#50630;&#51020;.">* Python&#51008; &#49345;&#49688; &#51648;&#50896; &#50630;&#51020;.<a class="anchor-link" href="#*-Python&#51008;-&#49345;&#49688;-&#51648;&#50896;-&#50630;&#51020;.">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="(C-&#50616;&#50612;)-&#52636;&#47141;&#54616;&#44592;:-printf">(C &#50616;&#50612;) &#52636;&#47141;&#54616;&#44592;: printf<a class="anchor-link" href="#(C-&#50616;&#50612;)-&#52636;&#47141;&#54616;&#44592;:-printf">&#182;</a></h2>
 </div>
 </div>
 </div>
@@ -13290,7 +13504,65 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="scanf">scanf<a class="anchor-link" href="#scanf">&#182;</a></h2>
+<hr>
+<h3 id="Python-&#44396;&#54788;">Python &#44396;&#54788;<a class="anchor-link" href="#Python-&#44396;&#54788;">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 연산</span>
+
+<span class="n">add</span> <span class="o">=</span> <span class="mi">3</span> <span class="o">+</span> <span class="mi">7</span>                                  <span class="c1"># 10 (계산된 후에 저장됨)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;3 + 7 = </span><span class="si">%d</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">add</span><span class="p">)</span>
+
+<span class="c1"># 문자열의 여러 곳에 값을 지정하기 위해 포맷 기호 여러 개 사용 가능</span>
+
+<span class="c1"># %d의 반복 횟수만큼 정수를 지정해야 함.</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%d</span><span class="s2"> + </span><span class="si">%d</span><span class="s2"> = </span><span class="si">%d</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="mi">30</span><span class="p">,</span> <span class="mi">79</span><span class="p">,</span> <span class="mi">30</span> <span class="o">+</span> <span class="mi">79</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%d</span><span class="s2"> * </span><span class="si">%d</span><span class="s2"> = </span><span class="si">%d</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="mi">30</span><span class="p">,</span> <span class="mi">79</span><span class="p">,</span> <span class="mi">30</span> <span class="o">*</span> <span class="mi">79</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>3 + 7 = 10
+30 + 79 = 109
+30 * 79 = 2370
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<hr>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="(C-&#50616;&#50612;)-&#44050;-&#51077;&#47141;&#48155;&#44592;:-scanf">(C &#50616;&#50612;) &#44050; &#51077;&#47141;&#48155;&#44592;: scanf<a class="anchor-link" href="#(C-&#50616;&#50612;)-&#44050;-&#51077;&#47141;&#48155;&#44592;:-scanf">&#182;</a></h2>
 </div>
 </div>
 </div>
@@ -13307,7 +13579,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="&#51452;&#51032;&#49324;&#54637;">&#51452;&#51032;&#49324;&#54637;<a class="anchor-link" href="#&#51452;&#51032;&#49324;&#54637;">&#182;</a></h4><ul>
+<h4 id="&#51452;&#51032;&#49324;&#54637;:-scanf_s">&#51452;&#51032;&#49324;&#54637;: scanf_s<a class="anchor-link" href="#&#51452;&#51032;&#49324;&#54637;:-scanf_s">&#182;</a></h4><ul>
 <li>동영상에서 사용되는 <code>scanf_s</code>는 Visual Studio이 사용하는 컴파일에서만 사용될 수 있음.</li>
 <li>다양한 종류의 컴파일러 사용되고 있음.</li>
 <li>대부분의 온라인 서버는 gcc 컴파일러 사용하며 <code>scanf_s</code>를 지원하지 않음.</li>
@@ -13321,7 +13593,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="&#44050;-&#51077;&#47141;&#48155;&#44592;">&#44050; &#51077;&#47141;&#48155;&#44592;<a class="anchor-link" href="#&#44050;-&#51077;&#47141;&#48155;&#44592;">&#182;</a></h3><ul>
+<h4 id="&#51452;&#51032;&#49324;&#54637;:-&#50544;&#54140;&#49356;&#46300;(&amp;)-&#49324;&#50857;-&#50668;&#48512;">&#51452;&#51032;&#49324;&#54637;: &#50544;&#54140;&#49356;&#46300;(&amp;) &#49324;&#50857; &#50668;&#48512;<a class="anchor-link" href="#&#51452;&#51032;&#49324;&#54637;:-&#50544;&#54140;&#49356;&#46300;(&amp;)-&#49324;&#50857;-&#50668;&#48512;">&#182;</a></h4><ul>
 <li>정수, 실수, 문자 등을 입력받는 변수에 <code>&amp;</code>(앰퍼샌드) 기호를 붙혀서 사용함에 주의</li>
 <li>문자열을 입력받는 변수에는 <code>&amp;</code> 기호 사용하지 않음.</li>
 </ul>
@@ -13332,7 +13604,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="&#44050;-&#54616;&#45208;-&#51077;&#47141;&#48155;&#44592;">&#44050; &#54616;&#45208; &#51077;&#47141;&#48155;&#44592;<a class="anchor-link" href="#&#44050;-&#54616;&#45208;-&#51077;&#47141;&#48155;&#44592;">&#182;</a></h4>
+<h3 id="(C-&#50616;&#50612;)-&#44050;-&#54616;&#45208;-&#51077;&#47141;&#48155;&#44592;">(C &#50616;&#50612;) &#44050; &#54616;&#45208; &#51077;&#47141;&#48155;&#44592;<a class="anchor-link" href="#(C-&#50616;&#50612;)-&#44050;-&#54616;&#45208;-&#51077;&#47141;&#48155;&#44592;">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -13361,7 +13633,132 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="&#44050;-&#50668;&#47084;-&#44050;-&#51077;&#47141;&#48155;&#44592;">&#44050; &#50668;&#47084; &#44050; &#51077;&#47141;&#48155;&#44592;<a class="anchor-link" href="#&#44050;-&#50668;&#47084;-&#44050;-&#51077;&#47141;&#48155;&#44592;">&#182;</a></h4><ul>
+<hr>
+<h3 id="Python-&#44396;&#54788;">Python &#44396;&#54788;<a class="anchor-link" href="#Python-&#44396;&#54788;">&#182;</a></h3><ul>
+<li><code>input</code> 함수가 키보드 입력을 받아서 되돌려 줌.</li>
+<li><code>input</code> 함수의 인자로 문자열을 지정하여 어떤 값을 입력해야 하는지 정보 제공할 수 있음.</li>
+<li>따라서 <code>print</code> 함수를 미리 사용할 필요 없음.</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 키보드 입력받기 함수: input</span>
+<span class="c1"># 따라서 동일한 이름의 변수를 사용하지 말아야 함.</span>
+
+<span class="c1"># 입력 받은 값을 저장할 변수를 미리 선언할 필요 없음</span>
+<span class="n">input_value</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;값을 입력하세요: &quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;입력값: </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">input_value</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>값을 입력하세요: twelve
+입력값: twelve
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="&#51452;&#51032;&#49324;&#54637;">&#51452;&#51032;&#49324;&#54637;<a class="anchor-link" href="#&#51452;&#51032;&#49324;&#54637;">&#182;</a></h4><ul>
+<li><code>input</code> 함수가 되돌려주는 값(리턴값)은 항상 문자열 자료형임.</li>
+<li><p>따라서 아래와 같이 <code>%d</code>를 사용하면 오류 발생</p>
+</li>
+<li><p>숫자 12를 입력하더라도 문자열 <code>"12"</code>로 인식됨. 
+  반면에 <code>%d</code> 정수를 기대함. 따라서 오류 발생.</p>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">input_value</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;값을 입력하세요: &quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;입력값: </span><span class="si">%d</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">input_value</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>값을 입력하세요: 12
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">TypeError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-6-3044794b98ce&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-intense-fg ansi-bold">      1</span> input_value <span class="ansi-blue-fg">=</span> input<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#34;값을 입력하세요: &#34;</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">      2</span> 
+<span class="ansi-green-fg">----&gt; 3</span><span class="ansi-red-fg"> </span>print<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#34;입력값: %d&#34;</span> <span class="ansi-blue-fg">%</span> input_value<span class="ansi-blue-fg">)</span>
+
+<span class="ansi-red-fg">TypeError</span>: %d format: a number is required, not str</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<hr>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="(C-&#50616;&#50612;)-&#50668;&#47084;-&#44050;-&#51077;&#47141;&#48155;&#44592;">(C &#50616;&#50612;) &#50668;&#47084; &#44050; &#51077;&#47141;&#48155;&#44592;<a class="anchor-link" href="#(C-&#50616;&#50612;)-&#50668;&#47084;-&#44050;-&#51077;&#47141;&#48155;&#44592;">&#182;</a></h3><ul>
 <li>여러 개의 값을 입력할 때 스페이스(space)를 분리 기준으로 사용</li>
 </ul>
 
@@ -13394,7 +13791,134 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="&#47928;&#51088;&#50752;-&#47928;&#51088;&#50676;-&#51077;&#47141;&#48155;&#44592;">&#47928;&#51088;&#50752; &#47928;&#51088;&#50676; &#51077;&#47141;&#48155;&#44592;<a class="anchor-link" href="#&#47928;&#51088;&#50752;-&#47928;&#51088;&#50676;-&#51077;&#47141;&#48155;&#44592;">&#182;</a></h4><ul>
+<hr>
+<h3 id="Python-&#44396;&#54788;">Python &#44396;&#54788;<a class="anchor-link" href="#Python-&#44396;&#54788;">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>Python은 여러 개의 값을 입력 받더라도 하나의 문자열로 처리함.</li>
+<li>따라서 스페이스로 구분된 여러 개의 문자열을 스페이스를 기준으로 쪼개서 여러 개의 변수에 할당해야 함.</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 여러 개의 값을 입력받기</span>
+
+<span class="n">three_ints</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;3개의 정수를 입력하세요: &quot;</span><span class="p">)</span>
+
+<span class="n">one</span><span class="p">,</span> <span class="n">two</span><span class="p">,</span> <span class="n">three</span> <span class="o">=</span> <span class="n">three_ints</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;첫번째 값: </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">one</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;두번째 값: </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">two</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;세번째 값: </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">three</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>3개의 정수를 입력하세요: 3 12 789
+첫번째 값: 3
+두번째 값: 12
+세번째 값: 789
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="&#51452;&#51032;&#49324;&#54637;">&#51452;&#51032;&#49324;&#54637;<a class="anchor-link" href="#&#51452;&#51032;&#49324;&#54637;">&#182;</a></h4><ul>
+<li>입력된 값은 모두 문자열로 처리한다. 따라서 <code>%s</code> 대신에  <code>%d</code>를 사용하면 오류 발생.</li>
+<li>하지만 입력된 문자열이 모두 숫자로만 구성되었다면<br>
+  <code>int</code> 함수를 이용하여 정수형으로 형변환을 한 후에 <code>%d</code>사용 가능</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 여러 개의 값을 입력받기</span>
+
+<span class="n">three_ints</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;3개의 정수를 입력하세요: &quot;</span><span class="p">)</span>
+
+<span class="n">one</span><span class="p">,</span> <span class="n">two</span><span class="p">,</span> <span class="n">three</span> <span class="o">=</span> <span class="n">three_ints</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;첫번째 값: </span><span class="si">%d</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="nb">int</span><span class="p">(</span><span class="n">one</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;두번째 값: </span><span class="si">%d</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="nb">int</span><span class="p">(</span><span class="n">two</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;세번째 값: </span><span class="si">%d</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="nb">int</span><span class="p">(</span><span class="n">three</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>3개의 정수를 입력하세요: 3 12 789
+첫번째 값: 3
+두번째 값: 12
+세번째 값: 789
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="&#51452;&#51032;&#49324;&#54637;">&#51452;&#51032;&#49324;&#54637;<a class="anchor-link" href="#&#51452;&#51032;&#49324;&#54637;">&#182;</a></h4><ul>
+<li><code>int</code> 함수를 <code>three_ints</code> 에 적용하면 오류 발생할 수 있음. </li>
+<li>이유는 <code>3 5 7</code>처럼 스페이스로 구분하면 해당 문자열은 더 이상 정수형 자료형이 아니기 때문임.</li>
+</ul>
+<hr>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="(C-&#50616;&#50612;)-&#47928;&#51088;&#50752;-&#47928;&#51088;&#50676;-&#51077;&#47141;&#48155;&#44592;">(C &#50616;&#50612;) &#47928;&#51088;&#50752; &#47928;&#51088;&#50676; &#51077;&#47141;&#48155;&#44592;<a class="anchor-link" href="#(C-&#50616;&#50612;)-&#47928;&#51088;&#50752;-&#47928;&#51088;&#50676;-&#51077;&#47141;&#48155;&#44592;">&#182;</a></h2><ul>
 <li>문자열은 여러 개의 문자를 의미함</li>
 <li><p><code>char</code>: 문자 자료형</p>
 <ul>
@@ -13416,7 +13940,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h5 id="&#47928;&#51088;-&#51077;&#47141;&#48155;&#44592;">&#47928;&#51088; &#51077;&#47141;&#48155;&#44592;<a class="anchor-link" href="#&#47928;&#51088;-&#51077;&#47141;&#48155;&#44592;">&#182;</a></h5>
+<h3 id="&#47928;&#51088;-&#51077;&#47141;&#48155;&#44592;">&#47928;&#51088; &#51077;&#47141;&#48155;&#44592;<a class="anchor-link" href="#&#47928;&#51088;-&#51077;&#47141;&#48155;&#44592;">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -13446,7 +13970,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h5 id="&#47928;&#51088;&#50676;-&#51077;&#47141;&#48155;&#44592;">&#47928;&#51088;&#50676; &#51077;&#47141;&#48155;&#44592;<a class="anchor-link" href="#&#47928;&#51088;&#50676;-&#51077;&#47141;&#48155;&#44592;">&#182;</a></h5>
+<h3 id="&#47928;&#51088;&#50676;-&#51077;&#47141;&#48155;&#44592;">&#47928;&#51088;&#50676; &#51077;&#47141;&#48155;&#44592;<a class="anchor-link" href="#&#47928;&#51088;&#50676;-&#51077;&#47141;&#48155;&#44592;">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -13478,7 +14002,75 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#54532;&#47196;&#51229;&#53944;">&#54532;&#47196;&#51229;&#53944;<a class="anchor-link" href="#&#54532;&#47196;&#51229;&#53944;">&#182;</a></h2>
+<hr>
+<h3 id="Python-&#44396;&#54788;">Python &#44396;&#54788;<a class="anchor-link" href="#Python-&#44396;&#54788;">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>Python은 문자열 자료형만 사용.</li>
+<li>문자는 길이가 1인 문자열에 해당함.</li>
+<li>문자열 입력은 <code>input</code> 함수가 담당.</li>
+<li><code>input</code> 함수는 키보드를 사용하여 Enter 키가 눌리기 전까지 입력된 모든 문자를
+  하나의 문자열로 되돌려줌.</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">string</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;문자열을 입력하세요: &quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;입력된 문자열: </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">string</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>문자열을 입력하세요: Learning C with Python!
+입력된 문자열: Learning C with Python!
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="&#51452;&#51032;&#49324;&#54637;">&#51452;&#51032;&#49324;&#54637;<a class="anchor-link" href="#&#51452;&#51032;&#49324;&#54637;">&#182;</a></h4><ul>
+<li><code>str</code> 은 Python에서 문자열 자료형을 가리키는 지정자임. 따라서 변수 이름으로 사용하면 안됨.</li>
+<li>여기서는 대신에 <code>string</code>을 변수 이름으로 사용함.</li>
+<li>Python에서는 문자열의 길이를 미리 지정해서 제한하지 않음.</li>
+</ul>
+<hr>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="(C-&#50616;&#50612;)-&#54532;&#47196;&#51229;&#53944;">(C &#50616;&#50612;) &#54532;&#47196;&#51229;&#53944;<a class="anchor-link" href="#(C-&#50616;&#50612;)-&#54532;&#47196;&#51229;&#53944;">&#182;</a></h2>
 </div>
 </div>
 </div>
@@ -13538,6 +14130,73 @@ div#notebook {
 
 </div>
 </div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<hr>
+<h3 id="Python-&#44396;&#54788;">Python &#44396;&#54788;<a class="anchor-link" href="#Python-&#44396;&#54788;">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 경찰관이 범죄자의 정보를 입수 (조서 작성)</span>
+<span class="c1"># 이름? 나이? 몸무게? 키? 범죄명?</span>
+
+<span class="n">name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;이름이 뭐에요? &quot;</span><span class="p">)</span>
+<span class="n">age</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;몇 살이에요? &quot;</span><span class="p">)</span>
+<span class="n">weight</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;몸무게는 몇 kg이에요? &quot;</span><span class="p">)</span>
+<span class="n">height</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;키는 몇 cm이에요? &quot;</span><span class="p">)</span>
+<span class="n">what</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;무슨 범죄를 저질렀어요? &quot;</span><span class="p">)</span>
+
+<span class="c1"># 조서 내용 출력</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">--- 범죄자 정보 ---</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot; 이름     : </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">name</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot; 나이     : </span><span class="si">%d</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="nb">int</span><span class="p">(</span><span class="n">age</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot; 몸무게  : </span><span class="si">%.2f</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="nb">int</span><span class="p">(</span><span class="n">weight</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot; 키         : </span><span class="si">%.2lf</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="nb">int</span><span class="p">(</span><span class="n">height</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot; 범죄      : </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">what</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>이름이 뭐에요? 장발장
+몇 살이에요? 34
+몸무게는 몇 kg이에요? 56
+키는 몇 cm이에요? 178
+무슨 범죄를 저질렀어요? 빵훔치기
+
+--- 범죄자 정보 ---
+
+ 이름     : 장발장
+ 나이     : 34
+ 몸무게  : 56.00
+ 키         : 178.00
+ 범죄      : 빵훔치기
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
     </div>
   </div>
