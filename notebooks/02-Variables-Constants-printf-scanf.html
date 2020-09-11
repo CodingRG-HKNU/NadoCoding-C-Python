@@ -13143,13 +13143,13 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">age</span> <span class="o">=</span> <span class="mi">12</span>                    <span class="c1"># 변수의 자료형을 명시하지 않음</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%d</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">age</span><span class="p">)</span>     <span class="c1"># %d는 정수형 값을 받는 포맷 코드</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">age</span> <span class="o">=</span> <span class="mi">12</span>                <span class="c1"># 변수의 자료형을 명시하지 않음</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%d</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">age</span><span class="p">)</span>       <span class="c1"># %d는 정수형 값을 받는 포맷 코드</span>
 
 <span class="c1"># 변수에 할당된 값 수정 가능</span>
 <span class="c1"># 심지어 자료형이 달려져도 됨</span>
 <span class="n">age</span> <span class="o">=</span> <span class="s1">&#39;twelve&#39;</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">age</span><span class="p">)</span>     <span class="c1"># 하지만 문자열을 받는 %s 포맷 코드를 사용해도 됨.</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">age</span><span class="p">)</span>       <span class="c1"># 하지만 문자열을 받는 %s 포맷 코드를 사용해도 됨.</span>
 </pre></div>
 
     </div>
@@ -13247,12 +13247,12 @@ twelve
 <span class="c1"># 여러 줄 주석은 세 개의 큰 따옴표(&quot;&quot;&quot;)를 이용하여 감싸야 함</span>
 
 <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">age = 12                    # 변수의 자료형을 명시하지 않음</span>
-<span class="sd">print(&quot;%d&quot; % age)     # %d는 정수형 값을 받는 포맷 코드</span>
+<span class="sd">age = 12                # 변수의 자료형을 명시하지 않음</span>
+<span class="sd">print(&quot;%d&quot; % age)       # %d는 정수형 값을 받는 포맷 코드</span>
 
 <span class="sd"># 변수에 할당된 값 수정 가능</span>
 <span class="sd">age = 13</span>
-<span class="sd">print(&quot;%s&quot; % age)     # 하지만 문자열을 받는 %s 포맷 코드를 사용해도 됨.</span>
+<span class="sd">print(&quot;%s&quot; % age)       # 하지만 문자열을 받는 %s 포맷 코드를 사용해도 됨.</span>
 <span class="sd">&quot;&quot;&quot;</span>
 
 <span class="c1"># 한 줄 주석</span>
@@ -13346,12 +13346,12 @@ twelve
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 실수형 변수 예제</span>
 
-<span class="n">f</span> <span class="o">=</span> <span class="mf">46.5</span>                        <span class="c1"># 자료형과 f 기호를 명시할 필요 없음</span>
+<span class="n">f</span> <span class="o">=</span> <span class="mf">46.5</span>                    <span class="c1"># 자료형과 f 기호를 명시할 필요 없음</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%f</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">f</span><span class="p">)</span> 
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%.2f</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">f</span><span class="p">)</span>         <span class="c1"># 소수점 자릿수 지정</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%.2f</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">f</span><span class="p">)</span>           <span class="c1"># 소수점 자릿수 지정</span>
 
 <span class="n">d</span> <span class="o">=</span> <span class="mf">4.428</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%.3lf</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">d</span><span class="p">)</span>       <span class="c1"># float 와 double 구분 없음</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%.3lf</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">d</span><span class="p">)</span>          <span class="c1"># float 와 double 구분 없음</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%lf</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">d</span><span class="p">)</span> 
 
 <span class="c1"># 문자열의 자릿수를 지정하고자 할 때  점 앞에 정수 지정</span>
@@ -13474,7 +13474,7 @@ twelve
 <span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="p">{</span>
     <span class="c1">// 연산</span>
 
-    <span class="kt">int</span> <span class="n">add</span> <span class="o">=</span> <span class="mi">3</span> <span class="o">+</span> <span class="mi">7</span><span class="p">;</span>  <span class="c1">// 10 (계산된 후에 저장됨)</span>
+    <span class="kt">int</span> <span class="n">add</span> <span class="o">=</span> <span class="mi">3</span> <span class="o">+</span> <span class="mi">7</span><span class="p">;</span>               <span class="c1">// 10 (계산된 후에 저장됨)</span>
     <span class="n">printf</span><span class="p">(</span><span class="s">&quot;3 + 7 = %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">add</span><span class="p">);</span>
 
     <span class="c1">// %d의 반복 횟수만큼 정수를 지정해야 함.</span>
@@ -13503,7 +13503,7 @@ twelve
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 연산</span>
 
-<span class="n">add</span> <span class="o">=</span> <span class="mi">3</span> <span class="o">+</span> <span class="mi">7</span>                                  <span class="c1"># 10 (계산된 후에 저장됨)</span>
+<span class="n">add</span> <span class="o">=</span> <span class="mi">3</span> <span class="o">+</span> <span class="mi">7</span>                             <span class="c1"># 10 (계산된 후에 저장됨)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;3 + 7 = </span><span class="si">%d</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">add</span><span class="p">)</span>
 
 <span class="c1"># 문자열의 여러 곳에 값을 지정하기 위해 포맷 기호 여러 개 사용 가능</span>
@@ -13674,7 +13674,7 @@ twelve
 <li><p>따라서 아래와 같이 <code>%d</code>를 사용하면 오류 발생</p>
 </li>
 <li><p>숫자 12를 입력하더라도 문자열 <code>"12"</code>로 인식됨. 
-  반면에 <code>%d</code> 정수를 기대함. 따라서 오류 발생.</p>
+  반면에 <code>%d</code>는 정수를 기대함. 따라서 오류 발생.</p>
 </li>
 </ul>
 
