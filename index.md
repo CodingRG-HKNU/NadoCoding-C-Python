@@ -5,11 +5,14 @@ C 언어 기초 프로그래밍 동영상에서 설명하는 C 코드를 파이�
 ## 목차
 
 * 1장 Hello World &nbsp; 
-	[[ipynb]](./notebooks/01-HelloWorld.ipynb)
-	[[html]](./notebooks/01-HelloWorld.html)
+    [[ipynb]](./notebooks/01-HelloWorld.ipynb)
+    [[html]](./notebooks/01-HelloWorld.html)
 * 2장 변수, 상수, printf, scanf &nbsp;
-	[[ipynb]](./notebooks/02-Variables-Constants-printf-scanf.ipynb)
-	[[html]](./notebooks/02-Variables-Constants-printf-scanf.html)
+    [[ipynb]](./notebooks/02-Variables-Constants-printf-scanf.ipynb)
+    [[html]](./notebooks/02-Variables-Constants-printf-scanf.html)
 * 3장 반복문 &nbsp;
-	[[ipynb]](./notebooks/03-Iterations.ipynb)
-	[[html]](./notebooks/03-Iterations.html)
+    [[ipynb]](./notebooks/03-Iterations.ipynb)
+    [[html]](./notebooks/03-Iterations.html)
+* 4장 조건문 &nbsp;
+    [[ipynb]](./notebooks/04-Conditionals.ipynb)
+    [[html]](./notebooks/04-Conditionals.html)

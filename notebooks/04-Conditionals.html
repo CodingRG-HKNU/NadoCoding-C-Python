@@ -2,7 +2,7 @@
 <html>
 <head><meta charset="utf-8" />
 
-<title>03-Iterations</title>
+<title>04-Conditionals</title>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -13077,14 +13077,27 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="3&#51109;-&#48152;&#48373;&#47928;">3&#51109; &#48152;&#48373;&#47928;<a class="anchor-link" href="#3&#51109;-&#48152;&#48373;&#47928;">&#182;</a></h1>
+<h1 id="4&#51109;-&#51312;&#44148;&#47928;">4&#51109; &#51312;&#44148;&#47928;<a class="anchor-link" href="#4&#51109;-&#51312;&#44148;&#47928;">&#182;</a></h1>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="(C-&#50616;&#50612;)-&#54588;&#46972;&#48120;&#46300;&#47484;-&#49939;&#50500;&#46972;">(C &#50616;&#50612;) &#54588;&#46972;&#48120;&#46300;&#47484; &#49939;&#50500;&#46972;<a class="anchor-link" href="#(C-&#50616;&#50612;)-&#54588;&#46972;&#48120;&#46300;&#47484;-&#49939;&#50500;&#46972;">&#182;</a></h2>
+<h2 id="&#54645;&#49900;:-&#51312;&#44148;&#44284;-&#48516;&#44592;">&#54645;&#49900;: &#51312;&#44148;&#44284; &#48516;&#44592;<a class="anchor-link" href="#&#54645;&#49900;:-&#51312;&#44148;&#44284;-&#48516;&#44592;">&#182;</a></h2><ul>
+<li><code>if ... else</code></li>
+<li><code>break</code></li>
+<li><code>continue</code></li>
+<li><code>switch</code></li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="(C-&#50616;&#50612;)-&#49707;&#51088;-&#47582;&#55176;&#44592;-Up&amp;Down">(C &#50616;&#50612;) &#49707;&#51088; &#47582;&#55176;&#44592; Up&amp;Down<a class="anchor-link" href="#(C-&#50616;&#50612;)-&#49707;&#51088;-&#47582;&#55176;&#44592;-Up&amp;Down">&#182;</a></h2>
 </div>
 </div>
 </div>
@@ -13092,7 +13105,7 @@ div#notebook {
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
-<li>동영상: <a href="https://www.youtube.com/watch?v=5Xx6tK6HWGs&amp;list=PLMsa_0kAjjrdiwQykI8eb3H4IRxLTqCnP&amp;index=12">(나도코딩 C) 3-1 피라미드를 쌓아라</a></li>
+<li>동영상: <a href="https://www.youtube.com/watch?v=62pWle2i3ek&amp;list=PLMsa_0kAjjrdiwQykI8eb3H4IRxLTqCnP&amp;index=21">(나도코딩 C) 4-1 숫자 맞히기 Up&amp;Down</a></li>
 </ul>
 
 </div>
@@ -13101,19 +13114,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="&#48152;&#48373;&#47928;-&#51333;&#47448;">&#48152;&#48373;&#47928; &#51333;&#47448;<a class="anchor-link" href="#&#48152;&#48373;&#47928;-&#51333;&#47448;">&#182;</a></h3><ul>
-<li><code>for</code></li>
-<li><code>while</code></li>
-<li><code>do while</code></li>
-</ul>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="(C-&#50616;&#50612;)-&#49108;&#49108;&#51613;&#44048;&#50672;&#49328;">(C &#50616;&#50612;) &#49108;&#49108;&#51613;&#44048;&#50672;&#49328;<a class="anchor-link" href="#(C-&#50616;&#50612;)-&#49108;&#49108;&#51613;&#44048;&#50672;&#49328;">&#182;</a></h2>
+<h3 id="&#44172;&#51076;-&#49444;&#47749;">&#44172;&#51076; &#49444;&#47749;<a class="anchor-link" href="#&#44172;&#51076;-&#49444;&#47749;">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -13121,7 +13122,10 @@ div#notebook {
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
-<li>동영상: <a href="https://www.youtube.com/watch?v=9n0nv27dxcs&amp;list=PLMsa_0kAjjrdiwQykI8eb3H4IRxLTqCnP&amp;index=13">(나도코딩 C) 3-2 불뿔증감연산</a></li>
+<li>상대방이 생각한 1부터 100사이의 수를 맞히는 게임</li>
+<li>언급한 숫자가 맞혀야 하는 숫자보다 크면 Down으로 반응</li>
+<li>언급한 숫자가 맞혀야 하는 숫자보다 크면 Up으로 반응</li>
+<li>지정된 횟수 안에 지정된 숫자를 맞혀야 함</li>
 </ul>
 
 </div>
@@ -13130,116 +13134,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
-
-<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="p">{</span>
-    <span class="c1">// printf(&quot;Hello World\n&quot;);</span>
-
-    <span class="c1">// ++ 뿔뿔</span>
-    <span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
-    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;a는 %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">a</span><span class="p">);</span>
-
-    <span class="n">a</span><span class="o">++</span><span class="p">;</span>
-    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;a는 %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">a</span><span class="p">);</span>
-
-    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;===</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
-
-    <span class="kt">int</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">20</span><span class="p">;</span>
-
-    <span class="c1">// 먼저 더하기 1을 한 다음에 명령문 실행</span>
-    <span class="c1">// b = b + 1</span>
-    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;b는 %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="o">++</span><span class="n">b</span><span class="p">);</span>
-
-    <span class="c1">//  먼저 명령문을 수행한 다음에 명령문 실행</span>
-    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;b는 %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">b</span><span class="o">++</span><span class="p">);</span>
-    <span class="c1">// b = b + 1</span>
-
-    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;===</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
-
-    <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
-    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Hello World %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">i</span><span class="o">++</span><span class="p">);</span>  <span class="c1">// i = 1</span>
-    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Hello World %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">i</span><span class="o">++</span><span class="p">);</span>  <span class="c1">// i = 2</span>
-    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Hello World %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">i</span><span class="o">++</span><span class="p">);</span>  <span class="c1">// i = 3</span>
-    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Hello World %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">i</span><span class="o">++</span><span class="p">);</span>  <span class="c1">// i = 4</span>
-    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Hello World %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">i</span><span class="o">++</span><span class="p">);</span>  <span class="c1">// i = 5</span>
-    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Hello World %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">i</span><span class="o">++</span><span class="p">);</span>  <span class="c1">// i = 6</span>
-    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Hello World %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">i</span><span class="o">++</span><span class="p">);</span>  <span class="c1">// i = 7</span>
-    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Hello World %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">i</span><span class="o">++</span><span class="p">);</span>  <span class="c1">// i = 8</span>
-    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Hello World %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">i</span><span class="o">++</span><span class="p">);</span>  <span class="c1">// i = 9</span>
-    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Hello World %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">i</span><span class="o">++</span><span class="p">);</span>  <span class="c1">// i = 10</span>
-
-    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;i는 %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">);</span>            <span class="c1">// i = 11</span>
-
-    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;</span><span class="se">\n</span><span class="s">===</span><span class="se">\n\n</span><span class="s">&quot;</span><span class="p">);</span>
-
-    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Hello World %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">i</span><span class="o">--</span><span class="p">);</span>  <span class="c1">// i = 11</span>
-    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Hello World %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">i</span><span class="o">--</span><span class="p">);</span>  <span class="c1">// i = 10</span>
-    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Hello World %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">i</span><span class="o">--</span><span class="p">);</span>  <span class="c1">// i = 9</span>
-    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Hello World %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">i</span><span class="o">--</span><span class="p">);</span>  <span class="c1">// i = 8</span>
-    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Hello World %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">i</span><span class="o">--</span><span class="p">);</span>  <span class="c1">// i = 7</span>
-    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Hello World %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">i</span><span class="o">--</span><span class="p">);</span>  <span class="c1">// i = 6</span>
-    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Hello World %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">i</span><span class="o">--</span><span class="p">);</span>  <span class="c1">// i = 5</span>
-    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Hello World %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">i</span><span class="o">--</span><span class="p">);</span>  <span class="c1">// i = 4</span>
-    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Hello World %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">i</span><span class="o">--</span><span class="p">);</span>  <span class="c1">// i = 3</span>
-    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Hello World %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">i</span><span class="o">--</span><span class="p">);</span>  <span class="c1">// i = 2</span>
-    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Hello World %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">i</span><span class="o">--</span><span class="p">);</span>  <span class="c1">// i = 1</span>
-
-    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;i는 %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">);</span>            <span class="c1">// i = 0</span>
-
-    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
-<span class="p">}</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="&#51452;&#51032;&#49324;&#54637;">&#51452;&#51032;&#49324;&#54637;<a class="anchor-link" href="#&#51452;&#51032;&#49324;&#54637;">&#182;</a></h4><ul>
-<li>++ 연산 사용은 추천하지 않음.<ul>
-<li>사유: 복잡한 코드에서 사용하는 경우 계산 순서에 대한 이해를 어렵게 만들 수 있음.</li>
-</ul>
-</li>
-<li>또한 파이썬에서는 아예 지원되지 않음.</li>
-</ul>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<hr>
-<h3 id="Python-&#44396;&#54788;">Python &#44396;&#54788;<a class="anchor-link" href="#Python-&#44396;&#54788;">&#182;</a></h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[1]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;hello world&quot;</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<hr>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="(C-&#50616;&#50612;)-for">(C &#50616;&#50612;) <code>for</code><a class="anchor-link" href="#(C-&#50616;&#50612;)-for">&#182;</a></h2>
+<h2 id="(C-&#50616;&#50612;)-if-...-else">(C &#50616;&#50612;) <code>if ... else</code><a class="anchor-link" href="#(C-&#50616;&#50612;)-if-...-else">&#182;</a></h2>
 </div>
 </div>
 </div>
@@ -13247,7 +13142,7 @@ div#notebook {
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
-<li>동영상: <a href="https://www.youtube.com/watch?v=XhoKhevLtmk&amp;list=PLMsa_0kAjjrdiwQykI8eb3H4IRxLTqCnP&amp;index=14">(나도코딩 C) 3-3 for</a></li>
+<li>동영상: <a href="https://www.youtube.com/watch?v=9dxy-eG8gvI&amp;list=PLMsa_0kAjjrdiwQykI8eb3H4IRxLTqCnP&amp;index=22">(나도코딩 C) 4-2 If Else</a></li>
 </ul>
 
 </div>
@@ -13256,43 +13151,14 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li><p><code>for</code> 반복문 형식</p>
-<div class="highlight"><pre><span></span><span class="k">for</span> <span class="p">(</span><span class="err">선언</span><span class="p">;</span>  <span class="err">조건</span><span class="p">;</span>  <span class="err">증감</span><span class="p">)</span>
-  <span class="p">{</span>
-  <span class="err">명령문</span>
-  <span class="p">}</span>
-</pre></div>
-</li>
-</ul>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
-
-<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="p">{</span>
-    <span class="c1">// for 반복문</span>
-
-    <span class="c1">// 예제: 증가</span>
-    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="mi">10</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+<h3 id="&#54805;&#49885;">&#54805;&#49885;<a class="anchor-link" href="#&#54805;&#49885;">&#182;</a></h3><div class="highlight"><pre><span></span><span class="k">if</span> <span class="p">(</span><span class="err">조건</span><span class="p">)</span>
     <span class="p">{</span>
-        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Hello World %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">);</span>
+        <span class="err">명령문</span>
     <span class="p">}</span>
-
-    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;</span><span class="se">\n</span><span class="s">===</span><span class="se">\n\n</span><span class="s">&quot;</span><span class="p">);</span>
-
-    <span class="c1">// 예제: 감소</span>
-    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span> <span class="n">i</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">--</span><span class="p">)</span>
+<span class="k">else</span>
     <span class="p">{</span>
-        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Hello World %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">);</span>
+        <span class="err">명령문</span>
     <span class="p">}</span>
-
-    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
-<span class="p">}</span>
 </pre></div>
 
 </div>
@@ -13301,227 +13167,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<hr>
-<h3 id="Python-&#44396;&#54788;">Python &#44396;&#54788;<a class="anchor-link" href="#Python-&#44396;&#54788;">&#182;</a></h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li><p>파이썬의 <code>for</code> 반복문은 형식이 많이 다름:</p>
-<div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">반복변수</span> <span class="ow">in</span> <span class="n">이터레이터</span><span class="p">:</span>
-      <span class="n">명령문</span>
-</pre></div>
-</li>
-<li><p>이터레이터: 반복변수의 값이 지정된 크기만큼씩 변할 수있도록 도와주는 기능을 가진 자료형</p>
-<ul>
-<li>리스트, <code>range</code>, 튜플, 사전 자료형 등등</li>
-</ul>
-</li>
-<li><p>반복변수는 미리 선언할 필요 없음.</p>
-</li>
-<li><p><code>for</code> 반복문과 <code>range</code> 함수의 조합이 매우 유용함</p>
-</li>
-</ul>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="&#51613;&#44032;-&#50696;&#51228;">&#51613;&#44032; &#50696;&#51228;<a class="anchor-link" href="#&#51613;&#44032;-&#50696;&#51228;">&#182;</a></h4>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">11</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello World </span><span class="si">%d</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">i</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">9</span><span class="p">]:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello World </span><span class="si">%d</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">i</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">2</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello World </span><span class="si">%d</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">i</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Hello World 1
-Hello World 3
-Hello World 5
-Hello World 7
-Hello World 9
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="&#44048;&#49548;-&#50696;&#51228;">&#44048;&#49548; &#50696;&#51228;<a class="anchor-link" href="#&#44048;&#49548;-&#50696;&#51228;">&#182;</a></h4>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello World </span><span class="si">%d</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">i</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Hello World 10
-Hello World 9
-Hello World 8
-Hello World 7
-Hello World 6
-Hello World 5
-Hello World 4
-Hello World 3
-Hello World 2
-Hello World 1
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello World </span><span class="si">%d</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">i</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Hello World 10
-Hello World 8
-Hello World 6
-Hello World 4
-Hello World 2
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<hr>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="(C-&#50616;&#50612;)-while">(C &#50616;&#50612;) <code>while</code><a class="anchor-link" href="#(C-&#50616;&#50612;)-while">&#182;</a></h2>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li>동영상: <a href="https://www.youtube.com/watch?v=Um-61He4Lhw&amp;list=PLMsa_0kAjjrdiwQykI8eb3H4IRxLTqCnP&amp;index=15">(나도코딩 C) 3-4 while</a></li>
-</ul>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li><p><code>while</code> 반복문 형식</p>
-<div class="highlight"><pre><span></span><span class="k">while</span> <span class="p">(</span><span class="err">조건</span><span class="p">)</span>
-  <span class="p">{</span>
-  <span class="err">명령문</span>
-  <span class="p">}</span>
-</pre></div>
-</li>
-</ul>
-
+<h3 id="&#50696;&#51228;:-if-...-else-...">&#50696;&#51228;: <code>if ... else ...</code><a class="anchor-link" href="#&#50696;&#51228;:-if-...-else-...">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -13531,353 +13177,17 @@ Hello World 2
 <div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
 
 <span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="p">{</span>
-    <span class="c1">// while 반복문</span>
+    <span class="cm">/*</span>
+<span class="cm">    버스를 탄다고 가정</span>
+<span class="cm">    학생/일반인으로 구분</span>
+<span class="cm">    일반인: 20세 이상</span>
+<span class="cm">    */</span>
 
-    <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
-    <span class="k">while</span> <span class="p">(</span><span class="n">i</span> <span class="o">&lt;=</span> <span class="mi">10</span><span class="p">)</span>
-    <span class="p">{</span>
-        <span class="c1">// printf(&quot;Hello World %d\n&quot;, i);</span>
-        <span class="c1">// i++;</span>
-        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Hello World %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">i</span><span class="o">++</span><span class="p">);</span>
-    <span class="p">}</span>
-
-    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
-<span class="p">}</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<hr>
-<h3 id="Python-&#44396;&#54788;">Python &#44396;&#54788;<a class="anchor-link" href="#Python-&#44396;&#54788;">&#182;</a></h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li>파이썬의 <code>while</code> 반복문 형식은 C 언어의 경우와 거의 동일함.</li>
-</ul>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">i</span> <span class="o">=</span> <span class="mi">1</span>
-
-<span class="k">while</span> <span class="p">(</span><span class="n">i</span> <span class="o">&lt;=</span> <span class="mi">10</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello World </span><span class="si">%d</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">i</span><span class="p">)</span>
-    <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Hello World 1
-Hello World 2
-Hello World 3
-Hello World 4
-Hello World 5
-Hello World 6
-Hello World 7
-Hello World 8
-Hello World 9
-Hello World 10
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">i</span> <span class="o">=</span> <span class="mi">1</span>
-
-<span class="k">while</span> <span class="p">(</span><span class="n">i</span> <span class="o">&lt;=</span> <span class="mi">10</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello World </span><span class="si">%d</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">i</span><span class="p">)</span>
-    <span class="n">i</span> <span class="o">+=</span> <span class="mi">2</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Hello World 1
-Hello World 3
-Hello World 5
-Hello World 7
-Hello World 9
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li>파이썬의 <code>print()</code> 함수는 다양한 자료형의 인자 여러 개를 받을 수 있음.</li>
-<li>따라서 아래와 같이 포맷팅 문자열을 굳이 사용하지 않아도 됨.</li>
-</ul>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">i</span> <span class="o">=</span> <span class="mi">1</span>
-
-<span class="k">while</span> <span class="p">(</span><span class="n">i</span> <span class="o">&lt;=</span> <span class="mi">10</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello World&quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span>
-    <span class="n">i</span> <span class="o">+=</span> <span class="mi">2</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Hello World 1
-Hello World 3
-Hello World 5
-Hello World 7
-Hello World 9
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<hr>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="(C-&#50616;&#50612;)-do-while">(C &#50616;&#50612;) <code>do while</code><a class="anchor-link" href="#(C-&#50616;&#50612;)-do-while">&#182;</a></h2>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li>동영상: <a href="https://www.youtube.com/watch?v=4eDDQU9Mwic&amp;list=PLMsa_0kAjjrdiwQykI8eb3H4IRxLTqCnP&amp;index=16">(나도코딩 C) 3-5 do while</a></li>
-</ul>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li><p><code>do while</code> 반복문 형식</p>
-<div class="highlight"><pre><span></span><span class="k">do</span> 
-  <span class="p">{</span>
-  <span class="err">명령문</span>
-  <span class="p">}</span> <span class="k">while</span> <span class="p">(</span><span class="err">조건</span><span class="p">);</span>
-</pre></div>
-</li>
-</ul>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
-
-<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="p">{</span>
-    <span class="c1">// do while 반복문</span>
-
-    <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
-    <span class="k">do</span>
-    <span class="p">{</span>
-        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Hello World %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">i</span><span class="o">++</span><span class="p">);</span>
-    <span class="p">}</span> <span class="k">while</span> <span class="p">(</span><span class="n">i</span> <span class="o">&lt;=</span> <span class="mi">10</span><span class="p">);</span>
-
-    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
-<span class="p">}</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="&#51452;&#51032;&#49324;&#54637;">&#51452;&#51032;&#49324;&#54637;<a class="anchor-link" href="#&#51452;&#51032;&#49324;&#54637;">&#182;</a></h4><ul>
-<li><code>do while</code> 반복문의 사용 가능하면 사용하지 말 것.</li>
-<li><code>while</code> 반복문을 이용하여 동일한 기능 구현 가능.</li>
-<li>파이썬 등 일부 언어에서 지원되지 않음.</li>
-</ul>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<hr>
-<h3 id="Python-&#44396;&#54788;">Python &#44396;&#54788;<a class="anchor-link" href="#Python-&#44396;&#54788;">&#182;</a></h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li><code>do while</code> 지원하지 않음.</li>
-</ul>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<hr>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="(C-&#50616;&#50612;)-&#51060;&#51473;-&#48152;&#48373;&#47928;(&#44396;&#44396;&#45800;)">(C &#50616;&#50612;) &#51060;&#51473; &#48152;&#48373;&#47928;(&#44396;&#44396;&#45800;)<a class="anchor-link" href="#(C-&#50616;&#50612;)-&#51060;&#51473;-&#48152;&#48373;&#47928;(&#44396;&#44396;&#45800;)">&#182;</a></h2>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li>동영상: <a href="https://www.youtube.com/watch?v=P448GE1UGbQ&amp;list=PLMsa_0kAjjrdiwQykI8eb3H4IRxLTqCnP&amp;index=17">(나도코딩 C) 3-6 이중 반복문(구구단)</a></li>
-</ul>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li><code>for</code> 반복문 중첩해서 사용하기</li>
-</ul>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
-
-<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="p">{</span>
-    <span class="c1">// 2중 반복문</span>
-
-    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="mi">3</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
-    <span class="p">{</span>
-        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;첫재 반복문: %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">);</span>
-
-            <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;=</span> <span class="mi">5</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">)</span>
-                <span class="p">{</span>
-                    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;    둘째 반복문: %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">j</span><span class="p">);</span>
-                <span class="p">}</span>
-    <span class="p">}</span>
-
-    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
-<span class="p">}</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li>구구단 구현하기</li>
-</ul>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
-
-<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="p">{</span>
-    <span class="c1">// 구구단</span>
-
-    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="mi">9</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
-    <span class="p">{</span>
-        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d단:</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">);</span>
-
-        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;=</span> <span class="mi">9</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">)</span>
-        <span class="p">{</span>
-            <span class="n">printf</span><span class="p">(</span><span class="s">&quot;    %d x %d = %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">i</span><span class="o">*</span><span class="n">j</span><span class="p">);</span>
-        <span class="p">}</span>
-    <span class="p">}</span>
+    <span class="kt">int</span> <span class="n">age</span> <span class="o">=</span> <span class="mi">15</span><span class="p">;</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">age</span> <span class="o">&gt;=</span> <span class="mi">20</span><span class="p">)</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;일반인입니다.&quot;</span><span class="p">);</span>
+    <span class="k">else</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;학생입니다.&quot;</span><span class="p">);</span>
 
     <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 
@@ -13894,416 +13204,6 @@ Hello World 9
 <h3 id="Python-&#44396;&#54788;">Python &#44396;&#54788;<a class="anchor-link" href="#Python-&#44396;&#54788;">&#182;</a></h3>
 </div>
 </div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li>이중 반복문 구조는 사용하는 프로그래밍언와 상관 없이 모두 동일한 형식을 가짐.</li>
-<li>파이썬 <code>for</code> 반복문으로 구구단 구현하기 예제는 다음과 같음.</li>
-<li>아래 코드에서 사용되는 <code>f"..."</code>은 문자열을 지정된 서식에 맞추어 출력되도록 도와주는 기법임<ul>
-<li>문자열 서식지원 기법 중에서 가장 사용하기 편리한 기능임.</li>
-<li>f-문자열 포매팅이라 불림.</li>
-<li>사용법 참조:<a href="https://wikidocs.net/13#f">점프투파이썬: f-문자열 포매팅</a> </li>
-</ul>
-</li>
-</ul>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">10</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{i}</span><span class="s2">단&quot;</span><span class="p">)</span>
-    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">):</span>
-        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;     </span><span class="si">{i}</span><span class="s2">x</span><span class="si">{j}</span><span class="s2">={i*j}&quot;</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>2단
-     2x1=2
-     2x2=4
-     2x3=6
-     2x4=8
-     2x5=10
-     2x6=12
-     2x7=14
-     2x8=16
-     2x9=18
-3단
-     3x1=3
-     3x2=6
-     3x3=9
-     3x4=12
-     3x5=15
-     3x6=18
-     3x7=21
-     3x8=24
-     3x9=27
-4단
-     4x1=4
-     4x2=8
-     4x3=12
-     4x4=16
-     4x5=20
-     4x6=24
-     4x7=28
-     4x8=32
-     4x9=36
-5단
-     5x1=5
-     5x2=10
-     5x3=15
-     5x4=20
-     5x5=25
-     5x6=30
-     5x7=35
-     5x8=40
-     5x9=45
-6단
-     6x1=6
-     6x2=12
-     6x3=18
-     6x4=24
-     6x5=30
-     6x6=36
-     6x7=42
-     6x8=48
-     6x9=54
-7단
-     7x1=7
-     7x2=14
-     7x3=21
-     7x4=28
-     7x5=35
-     7x6=42
-     7x7=49
-     7x8=56
-     7x9=63
-8단
-     8x1=8
-     8x2=16
-     8x3=24
-     8x4=32
-     8x5=40
-     8x6=48
-     8x7=56
-     8x8=64
-     8x9=72
-9단
-     9x1=9
-     9x2=18
-     9x3=27
-     9x4=36
-     9x5=45
-     9x6=54
-     9x7=63
-     9x8=72
-     9x9=81
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<hr>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="(C-&#50616;&#50612;)-&#51060;&#51473;-&#48152;&#48373;&#47928;-&#54028;&#54756;&#52824;&#44592;">(C &#50616;&#50612;) &#51060;&#51473; &#48152;&#48373;&#47928; &#54028;&#54756;&#52824;&#44592;<a class="anchor-link" href="#(C-&#50616;&#50612;)-&#51060;&#51473;-&#48152;&#48373;&#47928;-&#54028;&#54756;&#52824;&#44592;">&#182;</a></h2>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li>동영상: <a href="https://www.youtube.com/watch?v=4gV1MjGIL3E&amp;list=PLMsa_0kAjjrdiwQykI8eb3H4IRxLTqCnP&amp;index=18">(나도코딩 C) 3-7 이중 반복문 파헤치기</a></li>
-</ul>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li>아래 모양의 별 피라미드 출력하기</li>
-</ul>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-
-<pre><code>*
-**
-***
-****
-*****</code></pre>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
-
-<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="p">{</span>
-    <span class="c1">// 별 피라미드 출력하기</span>
-
-    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="mi">5</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
-    <span class="p">{</span>
-        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;=</span> <span class="n">i</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">)</span>
-        <span class="p">{</span>
-            <span class="n">printf</span><span class="p">(</span><span class="s">&quot;*&quot;</span><span class="p">);</span>
-        <span class="p">}</span>
-        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
-    <span class="p">}</span>
-
-    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
-
-<span class="p">}</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="PythonTutor-&#54876;&#50857;&#54616;&#44592;">PythonTutor &#54876;&#50857;&#54616;&#44592;<a class="anchor-link" href="#PythonTutor-&#54876;&#50857;&#54616;&#44592;">&#182;</a></h4><ul>
-<li><a href="http://www.pythontutor.com/visualize.html#code=%23include%20%3Cstdio.h%3E%0A%0Aint%20main%28void%29%20%7B%0A%20%20%20%20//%20%EB%B3%84%20%ED%94%BC%EB%9D%BC%EB%AF%B8%EB%93%9C%20%EC%B6%9C%EB%A0%A5%ED%95%98%EA%B8%B0%0A%20%20%20%20%0A%20%20%20%20for%20%28int%20i%20%3D%200%3B%20i%3C5%3B%20i%2B%2B%29%0A%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20for%20%28int%20j%20%3D%200%3B%20j%20%3C%3D%20i%3B%20j%2B%2B%29%0A%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20printf%28%22*%22%29%3B%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20printf%28%22%5Cn%22%29%3B%0A%20%20%20%20%7D%0A%7D&amp;cumulative=false&amp;curInstr=0&amp;heapPrimitives=nevernest&amp;mode=display&amp;origin=opt-frontend.js&amp;py=c&amp;rawInputLstJSON=%5B%5D&amp;textReferences=false">(C 언어) 별 피라미드 그리기</a></li>
-</ul>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<hr>
-<h3 id="Python-&#44396;&#54788;">Python &#44396;&#54788;<a class="anchor-link" href="#Python-&#44396;&#54788;">&#182;</a></h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li>별 피라미드 구하기</li>
-<li>C 언어 프로그램과 동일한 구조를 가짐.</li>
-<li>주의사항: 파이썬의 <code>print()</code> 함수는 줄바꿈(<code>\n</code>)을 기본으로 실행함.
-  하지만 <code>end=''</code>와 같이 옵션인자의 속성을 변경하면 줄바꿈을 해제할 수 있음.</li>
-</ul>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">):</span>
-    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;*&quot;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span>     <span class="c1"># 동일한 i 값에 대해서는 줄바꿈 해제</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">)</span>                  <span class="c1"># i 값이 바뀔때는 줄바꿈을 해주어야 함.</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>*
-**
-***
-****
-*****
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<hr>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="(C-&#50616;&#50612;)-&#51060;&#51473;-&#48152;&#48373;&#47928;-&#44144;&#44984;&#47196;-&#48324;">(C &#50616;&#50612;) &#51060;&#51473; &#48152;&#48373;&#47928; &#44144;&#44984;&#47196; &#48324;<a class="anchor-link" href="#(C-&#50616;&#50612;)-&#51060;&#51473;-&#48152;&#48373;&#47928;-&#44144;&#44984;&#47196;-&#48324;">&#182;</a></h2>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li>동영상: <a href="https://www.youtube.com/watch?v=jjIgIPMwgLA&amp;list=PLMsa_0kAjjrdiwQykI8eb3H4IRxLTqCnP&amp;index=19">(나도코딩 C) 3-8 이중 반복문 거꾸로 별</a></li>
-</ul>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li>아래 모양의 별 피라미드 출력하기</li>
-</ul>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-
-<pre><code>    *
-   **
-  ***
- ****
-*****</code></pre>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
-
-<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="mi">5</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
-    <span class="p">{</span>
-        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="n">i</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="o">-</span><span class="mi">1</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">)</span>
-        <span class="p">{</span>
-            <span class="c1">// 스페이스 추가</span>
-            <span class="n">printf</span><span class="p">(</span><span class="s">&quot; &quot;</span><span class="p">);</span>
-        <span class="p">}</span>
-
-        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">k</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">k</span> <span class="o">&lt;=</span> <span class="n">i</span><span class="p">;</span> <span class="n">k</span><span class="o">++</span><span class="p">)</span>
-        <span class="p">{</span>
-            <span class="n">printf</span><span class="p">(</span><span class="s">&quot;*&quot;</span><span class="p">);</span>
-        <span class="p">}</span>
-        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
-    <span class="p">}</span>
-
-    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
-
-<span class="p">}</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="PythonTutor-&#54876;&#50857;&#54616;&#44592;">PythonTutor &#54876;&#50857;&#54616;&#44592;<a class="anchor-link" href="#PythonTutor-&#54876;&#50857;&#54616;&#44592;">&#182;</a></h4><ul>
-<li><a href="http://pythontutor.com/visualize.html#code=%23include%20%3Cstdio.h%3E%0A%0Aint%20main%28void%29%20%7B%0A%20%20%20%20/*%20%EC%95%84%EB%9E%98%20%EB%AA%A8%EC%96%91%EC%9D%98%20%EB%B3%84%20%EA%B7%B8%EB%A6%AC%EA%B8%B0%0A%20%20%20%20%20%20%20%20*%0A%20%20%20%20%20%20%20**%0A%20%20%20%20%20%20***%0A%20%20%20%20%20****%0A%20%20%20%20*****%0A%20%20%20%20*/%0A%20%20%20%20%0A%20%20%20%20for%20%28int%20i%20%3D%200%3B%20i%3C5%3B%20i%2B%2B%29%0A%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20for%20%28int%20j%20%3D%20i%3B%20j%20%3C%205-1%3B%20j%2B%2B%29%0A%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20//%20%EC%8A%A4%ED%8E%98%EC%9D%B4%EC%8A%A4%20%EC%B6%94%EA%B0%80%0A%20%20%20%20%20%20%20%20%20%20%20%20printf%28%22%20%22%29%3B%0A%20%20%20%20%20%20%20%20%7D%0A%0A%20%20%20%20%20%20%20%20for%20%28int%20k%20%3D%200%3B%20k%20%3C%3D%20i%3B%20k%2B%2B%29%0A%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20printf%28%22*%22%29%3B%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20printf%28%22%5Cn%22%29%3B%0A%20%20%20%20%7D%0A%0A%20%20%20%20return%200%3B%0A%0A%7D&amp;cumulative=false&amp;curInstr=0&amp;heapPrimitives=nevernest&amp;mode=display&amp;origin=opt-frontend.js&amp;py=c&amp;rawInputLstJSON=%5B%5D&amp;textReferences=false">(C 언어) 거꾸로 별 그리기</a></li>
-</ul>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<hr>
-<h3 id="Python-&#44396;&#54788;">Python &#44396;&#54788;<a class="anchor-link" href="#Python-&#44396;&#54788;">&#182;</a></h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li>거구로 별 피라미드 구하기</li>
-<li>C 언어 프로그램과 동일한 구조로 구현 가능</li>
-<li>하지만 다음과 같이 문자열과 정수의 곱셈을 활용할 수도 있음.</li>
-</ul>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;*&quot;</span><span class="o">*</span><span class="mi">4</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>****
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
@@ -14329,40 +13229,7 @@ Hello World 9
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="(C-&#50616;&#50612;)-&#54532;&#47196;&#51229;&#53944;:-&#54588;&#46972;&#48120;&#46300;&#47484;-&#49939;&#50500;&#46972;">(C &#50616;&#50612;) &#54532;&#47196;&#51229;&#53944;: &#54588;&#46972;&#48120;&#46300;&#47484; &#49939;&#50500;&#46972;<a class="anchor-link" href="#(C-&#50616;&#50612;)-&#54532;&#47196;&#51229;&#53944;:-&#54588;&#46972;&#48120;&#46300;&#47484;-&#49939;&#50500;&#46972;">&#182;</a></h2>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li>동영상: <a href="https://www.youtube.com/watch?v=H8-sbBu0blU&amp;list=PLMsa_0kAjjrdiwQykI8eb3H4IRxLTqCnP&amp;index=20">(나도코딩 C) 3-9 프로젝트: 피라미드를 쌓아라</a></li>
-</ul>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li>아래 모양의 별 피라미드 출력하기</li>
-</ul>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-
-<pre><code>        *
-       ***
-      *****
-     *******
-    *********</code></pre>
-
+<h3 id="&#50696;&#51228;:-if-...-else-if-...-else">&#50696;&#51228;: <code>if ... else if ... else</code><a class="anchor-link" href="#&#50696;&#51228;:-if-...-else-if-...-else">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -14372,25 +13239,23 @@ Hello World 9
 <div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
 
 <span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="p">{</span>
+    <span class="cm">/*</span>
+<span class="cm">    초등학생(8-13)/중학생(14-16)/고등학생(17-19)/일반인으로 구분하기</span>
 
-    <span class="kt">int</span> <span class="n">floor</span><span class="p">;</span>
-    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;몇 층으로 쌓겠느냐? &quot;</span><span class="p">);</span>
-    <span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%d&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">floor</span><span class="p">);</span>
+<span class="cm">    if ... else if ... else 형식 활용</span>
+<span class="cm">    */</span>
 
-    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">floor</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
-    <span class="p">{</span>
-        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="n">i</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">floor</span><span class="o">-</span><span class="mi">1</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">)</span>
-        <span class="p">{</span>
-            <span class="c1">// 스페이스 추가</span>
-            <span class="n">printf</span><span class="p">(</span><span class="s">&quot; &quot;</span><span class="p">);</span>
-        <span class="p">}</span>
-
-        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">k</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">k</span> <span class="o">&lt;</span> <span class="n">i</span><span class="o">*</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span> <span class="n">k</span><span class="o">++</span><span class="p">)</span>
-        <span class="p">{</span>
-            <span class="n">printf</span><span class="p">(</span><span class="s">&quot;*&quot;</span><span class="p">);</span>
-        <span class="p">}</span>
-        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
-    <span class="p">}</span>
+    <span class="kt">int</span> <span class="n">age</span> <span class="o">=</span> <span class="mi">25</span><span class="p">;</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">age</span> <span class="o">&gt;=</span> <span class="mi">8</span> <span class="o">&amp;&amp;</span> <span class="n">age</span> <span class="o">&lt;=</span> <span class="mi">13</span><span class="p">)</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;초등학생입니다.&quot;</span><span class="p">);</span>
+    <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">age</span> <span class="o">&gt;=</span> <span class="mi">14</span> <span class="o">&amp;&amp;</span> <span class="n">age</span> <span class="o">&lt;=</span> <span class="mi">16</span><span class="p">)</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;중학생입니다.&quot;</span><span class="p">);</span>
+    <span class="c1">// else if 반복 사용 가능</span>
+    <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">age</span> <span class="o">&gt;=</span> <span class="mi">17</span> <span class="o">&amp;</span> <span class="n">age</span> <span class="o">&lt;=</span> <span class="mi">19</span><span class="p">)</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;고등학생입니다.&quot;</span><span class="p">);</span>
+    <span class="c1">// 마지막 남은 경우는 else로 처리</span>
+    <span class="k">else</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;일반인입니다.&quot;</span><span class="p">);</span>
 
     <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 
@@ -14404,7 +13269,7 @@ Hello World 9
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h4 id="PythonTutor-&#54876;&#50857;&#54616;&#44592;">PythonTutor &#54876;&#50857;&#54616;&#44592;<a class="anchor-link" href="#PythonTutor-&#54876;&#50857;&#54616;&#44592;">&#182;</a></h4><ul>
-<li><a href="http://pythontutor.com/visualize.html#code=%23include%20%3Cstdio.h%3E%0A%0Aint%20main%28void%29%20%7B%0A%20%20%20%20/*%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%3A%20%ED%94%BC%EB%9D%BC%EB%AF%B8%EB%93%9C%EB%A5%BC%20%EC%8C%93%EC%95%84%EB%9D%BC%0A%20%20%20%20%20%20%20%20*%0A%20%20%20%20%20%20%20***%0A%20%20%20%20%20%20*****%0A%20%20%20%20%20*******%0A%20%20%20%20*********%0A%20%20%20%20*/%0A%20%20%20%20%0A%20%20%20%20int%20floor%3B%0A%20%20%20%20printf%28%22%EB%AA%87%20%EC%B8%B5%EC%9C%BC%EB%A1%9C%20%EC%8C%93%EA%B2%A0%EB%8A%90%EB%83%90%3F%5Cn%22%29%3B%0A%20%20%20%20//%20PythonTutor%EC%97%90%EC%84%9C%20scanf%20%EC%A7%80%EC%9B%90%ED%95%98%EC%A7%80%20%EC%95%8A%EC%9D%8C%0A%20%20%20%20//%20%EB%94%B0%EB%9D%BC%EC%84%9C%205%EC%B8%B5%EC%9C%BC%EB%A1%9C%20%EC%A7%80%EC%A0%95%0A%20%20%20%20//%20scanf%28%22%25d%22,%20%26floor%29%3B%0A%20%20%20%20floor%20%3D%205%3B%0A%0A%20%20%20%20for%20%28int%20i%3D0%3B%20i%20%3C%20floor%3B%20i%2B%2B%29%0A%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20for%20%28int%20j%20%3D%20i%3B%20j%20%3C%20floor-1%3B%20j%2B%2B%29%0A%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20//%20%EC%8A%A4%ED%8E%98%EC%9D%B4%EC%8A%A4%20%EC%B6%94%EA%B0%80%0A%20%20%20%20%20%20%20%20%20%20%20%20printf%28%22%20%22%29%3B%0A%20%20%20%20%20%20%20%20%7D%0A%0A%20%20%20%20%20%20%20%20for%20%28int%20k%20%3D%200%3B%20k%20%3C%20i*2%20%2B%201%3B%20k%2B%2B%29%0A%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20printf%28%22*%22%29%3B%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20printf%28%22%5Cn%22%29%3B%0A%20%20%20%20%7D%0A%0A%20%20%20%20return%200%3B%0A%0A%7D&amp;cumulative=false&amp;curInstr=0&amp;heapPrimitives=nevernest&amp;mode=display&amp;origin=opt-frontend.js&amp;py=c&amp;rawInputLstJSON=%5B%5D&amp;textReferences=false">(C 언어) 프로젝트: 피라미드를 쌓아라</a></li>
+<li><a href="http://pythontutor.com/visualize.html#code=%23include%20%3Cstdio.h%3E%0A%0Aint%20main%28void%29%20%7B%0A%20%20%20%20/*%0A%20%20%20%20%EC%B4%88%EB%93%B1%ED%95%99%EC%83%9D%288-13%29/%EC%A4%91%ED%95%99%EC%83%9D%2814-16%29/%EA%B3%A0%EB%93%B1%ED%95%99%EC%83%9D%2817-19%29/%EC%9D%BC%EB%B0%98%EC%9D%B8%EC%9C%BC%EB%A1%9C%20%EA%B5%AC%EB%B6%84%ED%95%98%EA%B8%B0%0A%0A%20%20%20%20if%20...%20else%20if%20...%20else%20if%20...%20else%20%ED%98%95%EC%8B%9D%20%ED%99%9C%EC%9A%A9%0A%20%20%20%20*/%0A%20%20%20%20%0A%20%20%20%20int%20age%20%3D%2025%3B%0A%20%20%20%20if%20%28age%20%3E%3D%208%20%26%26%20age%20%3C%3D%2013%29%0A%20%20%20%20%20%20%20%20printf%28%22%EC%B4%88%EB%93%B1%ED%95%99%EC%83%9D%EC%9E%85%EB%8B%88%EB%8B%A4.%22%29%3B%0A%20%20%20%20else%20if%20%28age%20%3E%3D%2014%20%26%26%20age%20%3C%3D%2016%29%0A%20%20%20%20%20%20%20%20printf%28%22%EC%A4%91%ED%95%99%EC%83%9D%EC%9E%85%EB%8B%88%EB%8B%A4.%22%29%3B%0A%20%20%20%20else%20if%20%28age%20%3E%3D%2017%20%26%20age%20%3C%3D%2019%29%0A%20%20%20%20%20%20%20%20printf%28%22%EA%B3%A0%EB%93%B1%ED%95%99%EC%83%9D%EC%9E%85%EB%8B%88%EB%8B%A4.%22%29%3B%0A%20%20%20%20else%0A%20%20%20%20%20%20%20%20printf%28%22%EC%9D%BC%EB%B0%98%EC%9D%B8%EC%9E%85%EB%8B%88%EB%8B%A4.%22%29%3B%0A%0A%20%20%20%20return%200%3B%0A%0A%7D&amp;cumulative=false&amp;curInstr=0&amp;heapPrimitives=nevernest&amp;mode=display&amp;origin=opt-frontend.js&amp;py=c&amp;rawInputLstJSON=%5B%5D&amp;textReferences=false">(C 언어) if ... else if ... else</a></li>
 </ul>
 
 </div>
@@ -14438,6 +13303,270 @@ Hello World 9
 
 </div>
 </div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="(C-&#50616;&#50612;)-break/continue">(C &#50616;&#50612;) <code>break/continue</code><a class="anchor-link" href="#(C-&#50616;&#50612;)-break/continue">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>동영상: <a href="https://www.youtube.com/watch?v=T-IiUqRbeu4&amp;list=PLMsa_0kAjjrdiwQykI8eb3H4IRxLTqCnP&amp;index=23">(나도코딩 C) 4-3 Break Continue</a></li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="break"><code>break</code><a class="anchor-link" href="#break">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li><code>break</code>가 실행되는 순간에 가장 가까운 반복문의 실행 종료</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="&#50696;&#51228;:-break">&#50696;&#51228;: <code>break</code><a class="anchor-link" href="#&#50696;&#51228;:-break">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="p">{</span>
+    <span class="cm">/*</span>
+<span class="cm">    break/continue</span>
+
+<span class="cm">    1번부터 30번까지 있는 반에서 1번에서 5번까지 조별 발표하기</span>
+<span class="cm">    */</span>
+
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span><span class="mi">30</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">i</span> <span class="o">&gt;=</span> <span class="mi">6</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">printf</span><span class="p">(</span><span class="s">&quot;나머지 학생은 집에 가세요</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+            <span class="c1">// 이제 for 반복문을 더이상 실행하지 않도록 하기</span>
+            <span class="k">break</span><span class="p">;</span>        
+        <span class="p">}</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d번 학생은 조별발표 준비 하세요</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span> 
+
+<span class="p">}</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="PythonTutor-&#54876;&#50857;&#54616;&#44592;">PythonTutor &#54876;&#50857;&#54616;&#44592;<a class="anchor-link" href="#PythonTutor-&#54876;&#50857;&#54616;&#44592;">&#182;</a></h4><ul>
+<li><a href="http://pythontutor.com/visualize.html#code=%23include%20%3Cstdio.h%3E%0A%0Aint%20main%28void%29%20%7B%0A%20%20%20%20/*%0A%20%20%20%20break/continue%0A%20%20%20%20%0A%20%20%20%201%EB%B2%88%EB%B6%80%ED%84%B0%2030%EB%B2%88%EA%B9%8C%EC%A7%80%20%EC%9E%88%EB%8A%94%20%EB%B0%98%EC%97%90%EC%84%9C%201%EB%B2%88%EC%97%90%EC%84%9C%205%EB%B2%88%EA%B9%8C%EC%A7%80%20%EC%A1%B0%EB%B3%84%20%EB%B0%9C%ED%91%9C%ED%95%98%EA%B8%B0%0A%20%20%20%20*/%0A%0A%20%20%20%20for%20%28int%20i%20%3D%201%3B%20i%20%3C%3D30%3B%20i%2B%2B%29%0A%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20if%20%28i%20%3E%3D%206%29%0A%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20printf%28%22%EB%82%98%EB%A8%B8%EC%A7%80%20%ED%95%99%EC%83%9D%EC%9D%80%20%EC%A7%91%EC%97%90%20%EA%B0%80%EC%84%B8%EC%9A%94%5Cn%22%29%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20//%20%EC%9D%B4%EC%A0%9C%20for%20%EB%B0%98%EB%B3%B5%EB%AC%B8%EC%9D%84%20%EB%B9%A0%EC%A0%B8%EB%82%98%EC%98%A4%EB%8F%84%EB%A1%9D%20%ED%95%B4%EC%95%BC%20%ED%95%A8.%0A%20%20%20%20%20%20%20%20%20%20%20%20break%3B%20%20%20%20%20%20%20%20%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20printf%28%22%25d%EB%B2%88%20%ED%95%99%EC%83%9D%EC%9D%80%20%EC%A1%B0%EB%B3%84%EB%B0%9C%ED%91%9C%20%EC%A4%80%EB%B9%84%20%ED%95%98%EC%84%B8%EC%9A%94%5Cn%22,%20i%29%3B%0A%20%20%20%20%7D%0A%0A%20%20%20%20return%200%3B%20%0A%0A%7D&amp;cumulative=false&amp;curInstr=0&amp;heapPrimitives=nevernest&amp;mode=display&amp;origin=opt-frontend.js&amp;py=c&amp;rawInputLstJSON=%5B%5D&amp;textReferences=false">(C 언어) break</a></li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<hr>
+<h3 id="Python-&#44396;&#54788;">Python &#44396;&#54788;<a class="anchor-link" href="#Python-&#44396;&#54788;">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<hr>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="continue"><code>continue</code><a class="anchor-link" href="#continue">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li><code>continue</code>가 실행되는 순간에 가장 가까운 반복문의 다음 경우 실행</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="&#50696;&#51228;:-continue">&#50696;&#51228;: <code>continue</code><a class="anchor-link" href="#&#50696;&#51228;:-continue">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="p">{</span>
+    <span class="cm">/*</span>
+<span class="cm">    break/continue</span>
+
+<span class="cm">    1번부터 30번까지 있는 반에서 7번 학생은 결석</span>
+<span class="cm">    따라서 7번을 제외하고 6번부터 10번까지 조별발표 하세요.</span>
+<span class="cm">    */</span>
+
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span><span class="mi">30</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">i</span> <span class="o">&gt;=</span> <span class="mi">6</span> <span class="o">&amp;&amp;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="mi">10</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">i</span> <span class="o">==</span> <span class="mi">7</span><span class="p">)</span>
+            <span class="p">{</span>
+            <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d번 학생은 결석입니다.</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">);</span>
+            <span class="c1">// 이제 7번 학생은 건너뛰고 for 반복문을 8번 학생에 대해 실행하도록 하기</span>
+            <span class="k">continue</span> <span class="p">;</span>
+            <span class="p">}</span>        
+
+            <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d번 학생은 조별발표 준비 하세요</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span> 
+
+<span class="p">}</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="PythonTutor-&#54876;&#50857;&#54616;&#44592;">PythonTutor &#54876;&#50857;&#54616;&#44592;<a class="anchor-link" href="#PythonTutor-&#54876;&#50857;&#54616;&#44592;">&#182;</a></h4><ul>
+<li><a href="http://pythontutor.com/visualize.html#code=%23include%20%3Cstdio.h%3E%0A%0Aint%20main%28void%29%20%7B%0A%20%20%20%20/*%0A%20%20%20%20break/continue%0A%20%20%20%20%0A%20%20%20%201%EB%B2%88%EB%B6%80%ED%84%B0%2030%EB%B2%88%EA%B9%8C%EC%A7%80%20%EC%9E%88%EB%8A%94%20%EB%B0%98%EC%97%90%EC%84%9C%207%EB%B2%88%20%ED%95%99%EC%83%9D%EC%9D%80%20%EA%B2%B0%EC%84%9D%0A%20%20%20%20%EB%94%B0%EB%9D%BC%EC%84%9C%207%EB%B2%88%EC%9D%84%20%EC%A0%9C%EC%99%B8%ED%95%98%EA%B3%A0%206%EB%B2%88%EB%B6%80%ED%84%B0%2010%EB%B2%88%EA%B9%8C%EC%A7%80%20%EC%A1%B0%EB%B3%84%EB%B0%9C%ED%91%9C%20%ED%95%98%EC%84%B8%EC%9A%94.%0A%20%20%20%20*/%0A%0A%20%20%20%20for%20%28int%20i%20%3D%201%3B%20i%20%3C%3D30%3B%20i%2B%2B%29%0A%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20if%20%28i%20%3E%3D%206%20%26%26%20i%20%3C%3D%2010%29%0A%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20if%20%28i%20%3D%3D%207%29%0A%20%20%20%20%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20printf%28%22%25d%EB%B2%88%20%ED%95%99%EC%83%9D%EC%9D%80%20%EA%B2%B0%EC%84%9D%EC%9E%85%EB%8B%88%EB%8B%A4.%5Cn%22,%20i%29%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20//%20%EC%9D%B4%EC%A0%9C%207%EB%B2%88%20%ED%95%99%EC%83%9D%EC%9D%80%20%EA%B1%B4%EB%84%88%EB%9B%B0%EA%B3%A0%20for%20%EB%B0%98%EB%B3%B5%EB%AC%B8%20%EC%9D%B4%EC%96%B4%EB%82%98%EA%B0%80%EB%8F%84%EB%A1%9D%20%ED%95%B4%EC%95%BC%ED%95%A8.%0A%20%20%20%20%20%20%20%20%20%20%20%20continue%20%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%7D%20%20%20%20%20%20%20%20%0A%20%20%20%20%20%20%20%20%0A%20%20%20%20%20%20%20%20%20%20%20%20printf%28%22%25d%EB%B2%88%20%ED%95%99%EC%83%9D%EC%9D%80%20%EC%A1%B0%EB%B3%84%EB%B0%9C%ED%91%9C%20%EC%A4%80%EB%B9%84%20%ED%95%98%EC%84%B8%EC%9A%94%5Cn%22,%20i%29%3B%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%7D%0A%0A%20%20%20%20return%200%3B%20%0A%0A%7D&amp;cumulative=false&amp;curInstr=0&amp;heapPrimitives=nevernest&amp;mode=display&amp;origin=opt-frontend.js&amp;py=c&amp;rawInputLstJSON=%5B%5D&amp;textReferences=false">(C 언어) continue</a></li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<hr>
+<h3 id="Python-&#44396;&#54788;">Python &#44396;&#54788;<a class="anchor-link" href="#Python-&#44396;&#54788;">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<hr>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="(C-&#50616;&#50612;)-And/Or-&#48512;&#50872;-&#50672;&#49328;">(C &#50616;&#50612;) And/Or &#48512;&#50872; &#50672;&#49328;<a class="anchor-link" href="#(C-&#50616;&#50612;)-And/Or-&#48512;&#50872;-&#50672;&#49328;">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>동영상: <a href="https://www.youtube.com/watch?v=LjP9HlJBQ6s&amp;list=PLMsa_0kAjjrdiwQykI8eb3H4IRxLTqCnP&amp;index=24">(나도코딩 C) 4-4 And Or 연산</a></li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="&#50696;&#51228;">&#50696;&#51228;<a class="anchor-link" href="#&#50696;&#51228;">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<div class="highlight"><pre><span></span>
+</pre></div>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<hr>
+<h3 id="Python-&#44396;&#54788;">Python &#44396;&#54788;<a class="anchor-link" href="#Python-&#44396;&#54788;">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
