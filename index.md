@@ -16,3 +16,6 @@ C 언어 기초 프로그래밍 동영상에서 설명하는 C 코드를 파이�
 * 4장 조건문 &nbsp;
     [[ipynb]](./notebooks/04-Conditionals.ipynb)
     [[html]](./notebooks/04-Conditionals.html)
+* 5장 함수 &nbsp;
+    [[ipynb]](./notebooks/05-Functions.ipynb)
+    [[html]](./notebooks/05-Functions.html)
