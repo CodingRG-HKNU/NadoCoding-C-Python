@@ -19,3 +19,6 @@ C 언어 기초 프로그래밍 동영상에서 설명하는 C 코드를 파이�
 * 5장 함수 &nbsp;
     [[ipynb]](./notebooks/05-Functions.ipynb)
     [[html]](./notebooks/05-Functions.html)
+* 6장 배열 &nbsp;
+    [[ipynb]](./notebooks/06-Arrays.ipynb)
+    [[html]](./notebooks/06-Arrays.html)
