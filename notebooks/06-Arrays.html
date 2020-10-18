@@ -14552,7 +14552,7 @@ div#notebook {
 <ul>
 <li>ANSI(미국표준협회)에서 제시한 표준코드 체계</li>
 <li>7 bit 크기로 표현할 수 있는 문자 표준체계</li>
-<li>총 $128 ( = 2^7$)개의 문자 표현 가능</li>
+<li>총 2의 7승 개, 즉 128 개의 문자 표현 가능</li>
 </ul>
 
 </div>
@@ -15473,6 +15473,13 @@ C
 </div>
 </div>
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="&#47924;&#51089;&#50948;&#47196;-&#49373;&#49457;&#54616;&#44592;-&#50948;&#54620;-&#54872;&#44221;&#49444;&#51221;">&#47924;&#51089;&#50948;&#47196; &#49373;&#49457;&#54616;&#44592; &#50948;&#54620; &#54872;&#44221;&#49444;&#51221;<a class="anchor-link" href="#&#47924;&#51089;&#50948;&#47196;-&#49373;&#49457;&#54616;&#44592;-&#50948;&#54620;-&#54872;&#44221;&#49444;&#51221;">&#182;</a></h4>
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[25]:</div>
@@ -15493,6 +15500,23 @@ C
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="&#44172;&#51076;-&#49464;&#54021;-&#54632;&#49688;-&#44396;&#54788;">&#44172;&#51076; &#49464;&#54021; &#54632;&#49688; &#44396;&#54788;<a class="anchor-link" href="#&#44172;&#51076;-&#49464;&#54021;-&#54632;&#49688;-&#44396;&#54788;">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li><code>random.randint(a, b)</code>는 <code>a</code>에서 <code>b</code>까지의 수 중에서 임의로 수를 선택하여 반환함.</li>
+</ul>
+
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
@@ -15624,10 +15648,7 @@ C
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li><code>main()</code> 함수 부분은 쉽게 구현 가능함.</li>
-</ul>
-
+<h4 id="main()-&#54632;&#49688;-&#48512;&#48516;-&#44396;&#54788;"><code>main()</code> &#54632;&#49688; &#48512;&#48516; &#44396;&#54788;<a class="anchor-link" href="#main()-&#54632;&#49688;-&#48512;&#48516;-&#44396;&#54788;">&#182;</a></h4>
 </div>
 </div>
 </div>
@@ -15716,11 +15737,10 @@ C
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ol>
-<li>"아빠는 대머리 게임: 발모제 찾기" 코드에서 사용된 <code>game_setting()</code> 함수의 본체가 매우 길다.
- 하지만 본체의 기능을 세분화할 수 있어 보인다.
- 세분화가능한 부분을 함수로 선언해서 
- <code>game_setting()</code> 함수를, 그리고 결국엔 코드 전체를 보다 기능별로 분화된 보다 체계적인 코드로 
- 구현하라.</li>
+<li>"아빠는 대머리 게임: 발모제 찾기" 코드에서 사용된 <code>game_setting()</code> 함수의 본체가 매우 길지만,
+ 서로 독립적인 기능으로 구분될 수 있어 보인다. 
+ 독립적인 기능을 수행하는 부분을 함수로 선언하여 <code>game_setting()</code> 함수의 본체를,
+ 더 나아가 게임 코드 전체를 기능별로 체계화된 코드로 수정하라.</li>
 </ol>
 
 </div>
