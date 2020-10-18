@@ -1,7 +1,7 @@
-유튜버 [나도코딩](https://www.youtube.com/channel/UC7iAOLiALt2rtMVAWWl4pnw)의
+유튜버 [나도코딩](https://www.youtube.com/channel/UC7iAOLiALt2rtMVAWWl4pnw)의 
 C 프로그래밍 기초 동영상 모음집 
-[(나도코딩 C)](https://www.youtube.com/watch?v=dEykoFZkf5Y&list=PLMsa_0kAjjrdiwQykI8eb3H4IRxLTqCnP&ab_channel=%EB%82%98%EB%8F%84%EC%BD%94%EB%94%A9) 를 이용하여   
-C 언오와 파이썬 언어를 함께 설명함.
+[(나도코딩 C)](https://www.youtube.com/watch?v=dEykoFZkf5Y&list=PLMsa_0kAjjrdiwQykI8eb3H4IRxLTqCnP&ab_channel=%EB%82%98%EB%8F%84%EC%BD%94%EB%94%A9)를 
+이용하여 C 언오와 파이썬 언어를 함께 설명함.
 특성이 많이 다른 두 언어를 함께 살펴보면서 프로그래밍언어의 기초를 전달하고자 함.
 
 ## 목차
