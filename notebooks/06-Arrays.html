@@ -14209,6 +14209,1523 @@ div#notebook {
 </div>
 </div>
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="(C-&#50616;&#50612;)-&#47928;&#51088;&#50676;-&#49900;&#54868;">(C &#50616;&#50612;) &#47928;&#51088;&#50676; &#49900;&#54868;<a class="anchor-link" href="#(C-&#50616;&#50612;)-&#47928;&#51088;&#50676;-&#49900;&#54868;">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>동영상: <a href="https://www.youtube.com/watch?v=MxUudXTn-2E&amp;list=PLMsa_0kAjjrdiwQykI8eb3H4IRxLTqCnP&amp;index=41">(나도코딩 C) 6-5 문자열 심화</a></li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>문자열을 문자로 구성된 배열로 동일하게 구현 가능.</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<hr>
+<div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+
+<span class="c1">// 문자열 심화</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="kt">char</span> <span class="n">arr</span><span class="p">[</span><span class="mi">7</span><span class="p">]</span> <span class="o">=</span> <span class="s">&quot;coding&quot;</span><span class="p">;</span>
+    <span class="c1">// 위 문자열의 원래 정의는 다음과 같음.</span>
+    <span class="c1">// 끝에 문자열의 끝을 알려주는 널 문자를 포함하는 것에 주의할 것.</span>
+    <span class="kt">char</span> <span class="n">c_array</span><span class="p">[</span><span class="mi">7</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="sc">&#39;c&#39;</span><span class="p">,</span> <span class="sc">&#39;o&#39;</span><span class="p">,</span> <span class="sc">&#39;d&#39;</span><span class="p">,</span> <span class="sc">&#39;i&#39;</span><span class="p">,</span> <span class="sc">&#39;n&#39;</span><span class="p">,</span> <span class="sc">&#39;g&#39;</span><span class="p">,</span> <span class="sc">&#39;\0&#39;</span><span class="p">};</span>
+
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%s</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">arr</span><span class="p">);</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%s</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">c_array</span><span class="p">);</span>
+
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="&#45328;&#47928;&#51088;&#50752;-&#48176;&#50676;&#51032;-&#53356;&#44592;">&#45328;&#47928;&#51088;&#50752; &#48176;&#50676;&#51032; &#53356;&#44592;<a class="anchor-link" href="#&#45328;&#47928;&#51088;&#50752;-&#48176;&#50676;&#51032;-&#53356;&#44592;">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>배열의 크기를 충분히 크게 하면 남은 공간은 널문자로 대체됨.</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+
+<span class="c1">// 문자열 심화</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="c1">// 배열의 길이를 사용된 문자열의 크기보다 크게 지정한 경우</span>
+    <span class="kt">char</span> <span class="n">c_array</span><span class="p">[</span><span class="mi">10</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="sc">&#39;c&#39;</span><span class="p">,</span> <span class="sc">&#39;o&#39;</span><span class="p">,</span> <span class="sc">&#39;d&#39;</span><span class="p">,</span> <span class="sc">&#39;i&#39;</span><span class="p">,</span> <span class="sc">&#39;n&#39;</span><span class="p">,</span> <span class="sc">&#39;g&#39;</span><span class="p">};</span>
+
+    <span class="c1">// 마지막에 널 문자를 명시하지 않더라도 문자열 출력에 전혀 문제 없음.</span>
+    <span class="c1">// 널 문자가 자동으로 삽입되며, 남은 공간도 동일하게 취급됨.</span>
+    <span class="c1">// 이 점을 for 반복문으로 직접 확인 가능.</span>
+
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">c_array</span><span class="p">);</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%c</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">c_array</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+    <span class="p">}</span>
+
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<div class="highlight"><pre><span></span><span class="n">c</span>
+<span class="n">o</span>
+<span class="n">d</span>
+<span class="n">i</span>
+<span class="n">n</span>
+<span class="n">g</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="&#47928;&#51088;&#50752;-&#50500;&#49828;&#53412;(ascii)-&#53076;&#46300;">&#47928;&#51088;&#50752; &#50500;&#49828;&#53412;(ascii) &#53076;&#46300;<a class="anchor-link" href="#&#47928;&#51088;&#50752;-&#50500;&#49828;&#53412;(ascii)-&#53076;&#46300;">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>아스키 코드: 사용되는 문자와 숫자 사이의 연관관계</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+
+<span class="c1">// 문자와 아스키 코드</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="c1">// 배열의 길이를 사용된 문자열의 크기보다 크게 지정한 경우</span>
+    <span class="kt">char</span> <span class="n">c_array</span><span class="p">[</span><span class="mi">10</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="sc">&#39;c&#39;</span><span class="p">,</span> <span class="sc">&#39;o&#39;</span><span class="p">,</span> <span class="sc">&#39;d&#39;</span><span class="p">,</span> <span class="sc">&#39;i&#39;</span><span class="p">,</span> <span class="sc">&#39;n&#39;</span><span class="p">,</span> <span class="sc">&#39;g&#39;</span><span class="p">};</span>
+
+    <span class="c1">// 각각의 문자에 아스키(ascii) 코드라는 숫자가 대응됨.</span>
+    <span class="c1">// 이 점을 for 반복문으로 직접 확인 가능.</span>
+
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">c_array</span><span class="p">);</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">c_array</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>    <span class="c1">// %d 사용에 주의</span>
+    <span class="p">}</span>
+
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<div class="highlight"><pre><span></span><span class="mi">99</span>
+<span class="mi">111</span>
+<span class="mi">100</span>
+<span class="mi">105</span>
+<span class="mi">110</span>
+<span class="mi">103</span>
+<span class="mi">0</span>
+<span class="mi">0</span>
+<span class="mi">0</span>
+<span class="mi">0</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="&#45328;-&#47928;&#51088;-&#45796;&#51020;&#50640;-&#50724;&#45716;-&#47928;&#51088;">&#45328; &#47928;&#51088; &#45796;&#51020;&#50640; &#50724;&#45716; &#47928;&#51088;<a class="anchor-link" href="#&#45328;-&#47928;&#51088;-&#45796;&#51020;&#50640;-&#50724;&#45716;-&#47928;&#51088;">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>널 문자 다음에 오는 문자들은 모두 무시됨. 널 문자가 문자열의 끝으로 인식되기 때문.</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+
+<span class="c1">// 문자와 아스키 코드</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="c1">// 배열의 길이를 사용된 문자열의 크기보다 크게 지정한 경우</span>
+    <span class="kt">char</span> <span class="n">c_array</span><span class="p">[</span><span class="mi">10</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="sc">&#39;c&#39;</span><span class="p">,</span> <span class="sc">&#39;o&#39;</span><span class="p">,</span> <span class="sc">&#39;d&#39;</span><span class="p">,</span> <span class="sc">&#39;i&#39;</span><span class="p">,</span> <span class="sc">&#39;n&#39;</span><span class="p">,</span> <span class="sc">&#39;g&#39;</span><span class="p">,</span> <span class="sc">&#39;\0&#39;</span><span class="p">,</span> <span class="sc">&#39;c&#39;</span> <span class="p">};</span>
+
+    <span class="c1">// 문자열 전체를 한꺼번에 출력하면 널문자는 무시됨.</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%s</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">c_array</span><span class="p">);</span>    <span class="c1">// %d 사용에 주의</span>
+
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<div class="highlight"><pre><span></span><span class="n">coding</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<hr>
+<h3 id="Python-&#44396;&#54788;">Python &#44396;&#54788;<a class="anchor-link" href="#Python-&#44396;&#54788;">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>파이썬에서 문자는 길이가 1인 문자열로 처리함. 따라서 <code>char</code>에 해당하는 자료형 없음.</li>
+<li>또한 널문자(<code>\0</code>)와 동일한 기능의 문자도 없음. 물론 널문자를 가리키는 문자열 <code>\0</code>은 사용 가능.</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\0</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre> 
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>빈문자열과 동일함.</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<hr>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="(C-&#50616;&#50612;)-&#50500;&#49828;&#53412;-&#53076;&#46300;">(C &#50616;&#50612;) &#50500;&#49828;&#53412; &#53076;&#46300;<a class="anchor-link" href="#(C-&#50616;&#50612;)-&#50500;&#49828;&#53412;-&#53076;&#46300;">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>동영상: <a href="https://www.youtube.com/watch?v=-brVtblamCY&amp;list=PLMsa_0kAjjrdiwQykI8eb3H4IRxLTqCnP&amp;index=42">(나도코딩 C) 6-6 아스키 코드</a></li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>ANSI(미국표준협회)에서 제시한 표준코드 체계</li>
+<li>7 bit 크기로 표현할 수 있는 문자 표준체계</li>
+<li>총 $128 ( = 2^7$)개의 문자 표현 가능</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<hr>
+<div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+
+<span class="c1">// 아스키 코드</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="c1">// 소문자 a, b, c 는 97, 98, 99 등으로 시작</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%c는 아스키 코드로 %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="sc">&#39;a&#39;</span><span class="p">,</span> <span class="sc">&#39;a&#39;</span><span class="p">);</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%c는 아스키 코드로 %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="sc">&#39;b&#39;</span><span class="p">,</span> <span class="sc">&#39;b&#39;</span><span class="p">);</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%c는 아스키 코드로 %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="sc">&#39;c&#39;</span><span class="p">,</span> <span class="sc">&#39;c&#39;</span><span class="p">);</span>
+
+    <span class="c1">// 대문자 A, B, C 는 65, 66, 67 등으로 시작</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%c는 아스키 코드로 %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="sc">&#39;A&#39;</span><span class="p">,</span> <span class="sc">&#39;A&#39;</span><span class="p">);</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%c는 아스키 코드로 %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="sc">&#39;B&#39;</span><span class="p">,</span> <span class="sc">&#39;B&#39;</span><span class="p">);</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%c는 아스키 코드로 %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="sc">&#39;C&#39;</span><span class="p">,</span> <span class="sc">&#39;C&#39;</span><span class="p">);</span>
+
+    <span class="c1">// 널문자 `\0`은 아스키 코드 0임.</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;널문자 %c는 아스키 코드로 %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="sc">&#39;\0&#39;</span><span class="p">,</span> <span class="sc">&#39;\0&#39;</span><span class="p">);</span>
+
+    <span class="c1">// 숫자 0, 1, 2 는 48, 49, 50 등으로 시작</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%c는 아스키 코드로 %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="sc">&#39;0&#39;</span><span class="p">,</span> <span class="sc">&#39;0&#39;</span><span class="p">);</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%c는 아스키 코드로 %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="sc">&#39;1&#39;</span><span class="p">,</span> <span class="sc">&#39;1&#39;</span><span class="p">);</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%c는 아스키 코드로 %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="sc">&#39;2&#39;</span><span class="p">,</span> <span class="sc">&#39;2&#39;</span><span class="p">);</span>
+
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<div class="highlight"><pre><span></span><span class="n">a는</span> <span class="err">아스키</span> <span class="err">코드로</span> <span class="mi">97</span>
+<span class="n">b는</span> <span class="err">아스키</span> <span class="err">코드로</span> <span class="mi">98</span>
+<span class="n">c는</span> <span class="err">아스키</span> <span class="err">코드로</span> <span class="mi">99</span>
+<span class="n">A는</span> <span class="err">아스키</span> <span class="err">코드로</span> <span class="mi">65</span>
+<span class="n">B는</span> <span class="err">아스키</span> <span class="err">코드로</span> <span class="mi">66</span>
+<span class="n">C는</span> <span class="err">아스키</span> <span class="err">코드로</span> <span class="mi">67</span>
+<span class="err">널문자</span> <span class="err">는</span> <span class="err">아스키</span> <span class="err">코드로</span> <span class="mi">0</span>
+<span class="mi">0</span><span class="err">는</span> <span class="err">아스키</span> <span class="err">코드로</span> <span class="mi">48</span>
+<span class="mi">1</span><span class="err">는</span> <span class="err">아스키</span> <span class="err">코드로</span> <span class="mi">49</span>
+<span class="mi">2</span><span class="err">는</span> <span class="err">아스키</span> <span class="err">코드로</span> <span class="mi">50</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="&#50500;&#49828;&#53412;-&#53076;&#46300;-&#51204;&#52404;">&#50500;&#49828;&#53412; &#53076;&#46300; &#51204;&#52404;<a class="anchor-link" href="#&#50500;&#49828;&#53412;-&#53076;&#46300;-&#51204;&#52404;">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>전체 아스키 코드와 간단한 역사는
+  <a href="https://ko.wikipedia.org/wiki/ASCII">위키피디아: 아스키 코드</a>
+  에서 확인 가능.</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<hr>
+<h3 id="Python-&#44396;&#54788;">Python &#44396;&#54788;<a class="anchor-link" href="#Python-&#44396;&#54788;">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="&#54028;&#51060;&#50028;&#44284;-&#50500;&#49828;&#53412;-&#53076;&#46300;">&#54028;&#51060;&#50028;&#44284; &#50500;&#49828;&#53412; &#53076;&#46300;<a class="anchor-link" href="#&#54028;&#51060;&#50028;&#44284;-&#50500;&#49828;&#53412;-&#53076;&#46300;">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>아스키 코드 문자 사이의 대응관계는 C 언어의 경우와 동일함. </li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>하지만 관계를 확인하려면 <code>ord()</code> 함수와 <code>chr()</code> 함수를 활용해야 함.</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li><code>ord()</code> 함수: 문자를 아스키 코드 숫자로 변환</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">]:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="nb">ord</span><span class="p">(</span><span class="n">item</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>97
+98
+99
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">]:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="nb">ord</span><span class="p">(</span><span class="n">item</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>65
+66
+67
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;0&#39;</span><span class="p">,</span> <span class="s1">&#39;1&#39;</span><span class="p">,</span> <span class="s1">&#39;2&#39;</span><span class="p">]:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="nb">ord</span><span class="p">(</span><span class="n">item</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>48
+49
+50
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>널문자의 아스키 코드 번호는 0.</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="nb">ord</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\0</span><span class="s1">&#39;</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>0
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li><code>chr()</code> 함수는 아스키 코드를 해당 문자로 변환함.</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">num</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">97</span><span class="p">,</span> <span class="mi">100</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="nb">chr</span><span class="p">(</span><span class="n">num</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>a
+b
+c
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">num</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">65</span><span class="p">,</span> <span class="mi">68</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="nb">chr</span><span class="p">(</span><span class="n">num</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>A
+B
+C
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">num</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">48</span><span class="p">,</span><span class="mi">51</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="nb">chr</span><span class="p">(</span><span class="n">num</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>0
+1
+2
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>널문자 표기</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">chr</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[20]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;\x00&#39;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="&#50976;&#45768;&#53076;&#46300;">&#50976;&#45768;&#53076;&#46300;<a class="anchor-link" href="#&#50976;&#45768;&#53076;&#46300;">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li><code>chr()</code>과 <code>ord()</code> 함수는 실제로는 아스키 코드를 확장한 유니코드도 지원함.</li>
+<li>따라서 한글도 지원함.</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">ord</span><span class="p">(</span><span class="s1">&#39;ㄱ&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[21]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>12593</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[22]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">ord</span><span class="p">(</span><span class="s1">&#39;썬&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[22]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>50028</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[23]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">chr</span><span class="p">(</span><span class="mi">12593</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[23]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;ㄱ&#39;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[24]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">chr</span><span class="p">(</span><span class="mi">50028</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[24]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;썬&#39;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>아스키코드, 유니코드, utf8 등에 대한 간단한 설명은 
+  <a href="https://wayhome25.github.io/cs/2017/04/05/cs-06/">초보몽키: 강의노트 06. ASCII, UNICODE, utf8</a> 참조</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<hr>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="(C-&#50616;&#50612;)-&#54532;&#47196;&#51229;&#53944;">(C &#50616;&#50612;) &#54532;&#47196;&#51229;&#53944;<a class="anchor-link" href="#(C-&#50616;&#50612;)-&#54532;&#47196;&#51229;&#53944;">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>동영상: <a href="https://www.youtube.com/watch?v=W1b7YhFjc70&amp;list=PLMsa_0kAjjrdiwQykI8eb3H4IRxLTqCnP&amp;index=43">(나도코딩 C) 6-7 프로젝트</a></li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>아빠는 대머리 게임: 발모제 찾기 게임</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<hr>
+<div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;stdlib.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;time.h&gt;</span><span class="cp"></span>
+
+<span class="c1">// 아빠는 대머리 게임: 발모제 찾기</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="n">srand</span><span class="p">(</span><span class="n">time</span><span class="p">(</span><span class="nb">NULL</span><span class="p">));</span>
+
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;</span><span class="se">\n\n</span><span class="s"> === 아빠는 대머리 게임 === </span><span class="se">\n\n</span><span class="s">&quot;</span><span class="p">);</span>
+
+    <span class="kt">int</span> <span class="n">answer</span><span class="p">;</span> <span class="c1">// 사용자 입력값</span>
+    <span class="kt">int</span> <span class="n">treatment</span> <span class="o">=</span> <span class="n">rand</span><span class="p">()</span> <span class="o">%</span> <span class="mi">4</span><span class="p">;</span> <span class="c1">// 네 개의 발모제 중 산택 (0 - 3)</span>
+
+    <span class="c1">// 무작위로 보여줄 병 개수 지정. </span>
+    <span class="c1">// 정답률을 향상시키기 위해 병의 수를 2개 또는 3개로 번갈아 가면서 지정</span>
+
+    <span class="kt">int</span> <span class="n">cntShowBottle</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="c1">// 이번 게임에 보여줄 병 개수</span>
+    <span class="kt">int</span> <span class="n">prevCntShowBottle</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="c1">// 앞 게임에 보여준 병 개수</span>
+
+    <span class="c1">// 게임 세팅하기</span>
+
+    <span class="c1">// 발모제에 대한 정보를 3번 전달함.</span>
+
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="mi">3</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="c1">// 보여줄 병의 개수를 2개 또는 3개로 번갈아 임의로 선택</span>
+        <span class="kt">int</span> <span class="n">bottle</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">};</span> <span class="c1">// 병 4개</span>
+        <span class="k">do</span> <span class="p">{</span>
+            <span class="n">cntShowBottle</span> <span class="o">=</span> <span class="n">rand</span><span class="p">()</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">2</span><span class="p">;</span> <span class="c1">// 보여줄 병 개수는 2-3개</span>
+        <span class="p">}</span> <span class="k">while</span> <span class="p">(</span><span class="n">cntShowBottle</span> <span class="o">==</span> <span class="n">prevCntShowBottle</span><span class="p">);</span> 
+
+        <span class="n">prevCntShowBottle</span> <span class="o">=</span> <span class="n">cntShowBottle</span><span class="p">;</span>
+
+        <span class="c1">// 선택된 병의 개수만큼 병 선택</span>
+
+        <span class="c1">// 발모제 포함여부에 따라 약의 효과여부 전달</span>
+        <span class="kt">int</span> <span class="n">isincluded</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+        <span class="c1">// 몇 번째 정보인지 알려줌.</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">&quot; &gt; %d 번째 시도: &quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">);</span>
+
+        <span class="c1">// 보여줄 병 종류 선택</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">cntShowBottle</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="kt">int</span> <span class="n">randBottle</span> <span class="o">=</span> <span class="n">rand</span><span class="p">()</span> <span class="o">%</span> <span class="mi">4</span><span class="p">;</span> <span class="c1">// 0 - 3</span>
+
+            <span class="c1">// 아직 선택되지 않은 병인 경우만 선택</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">bottle</span><span class="p">[</span><span class="n">randBottle</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
+            <span class="p">{</span>
+                <span class="n">bottle</span><span class="p">[</span><span class="n">randBottle</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+
+                <span class="k">if</span> <span class="p">(</span><span class="n">randBottle</span> <span class="o">==</span> <span class="n">treatment</span><span class="p">)</span>
+                <span class="p">{</span>
+                    <span class="n">isincluded</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>  <span class="c1">// 포함된 것 기억</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+            <span class="k">else</span>  <span class="c1">// 이미 선택된 병인 경우 j값을 늘리지 않고 다시 선택하기 위해</span>
+            <span class="p">{</span>
+                <span class="n">j</span><span class="o">--</span><span class="p">;</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+
+        <span class="c1">// 사용자에게 준비된 3개의 물병조합 보여주기</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">k</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">k</span> <span class="o">&lt;</span> <span class="mi">4</span><span class="p">;</span> <span class="n">k</span><span class="o">++</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">bottle</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span>
+            <span class="p">{</span>
+                <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d &quot;</span><span class="p">,</span> <span class="n">k</span><span class="o">+</span><span class="mi">1</span><span class="p">);</span> 
+            <span class="p">}</span>
+        <span class="p">}</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">&quot; 물약을 머리에 바릅니다.</span><span class="se">\n\n</span><span class="s">&quot;</span><span class="p">);</span>
+
+        <span class="k">if</span> <span class="p">(</span><span class="n">isincluded</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">printf</span><span class="p">(</span><span class="s">&quot; &gt;&gt; 성공 ! 머리가 났어요 !!</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+        <span class="p">}</span>
+        <span class="k">else</span>
+        <span class="p">{</span>
+            <span class="n">printf</span><span class="p">(</span><span class="s">&quot; &gt;&gt; 실패 ! 머리가 나지 않었어요.. ㅠㅠ</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+        <span class="p">}</span>
+
+        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;</span><span class="se">\n</span><span class="s"> ... 계속 하려면 아무 키나 누르세요 ...</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+        <span class="n">getchar</span><span class="p">();</span>  <span class="c1">//임의의 값을 입력할 때까지 대기하는 용도로 사용</span>
+    <span class="p">}</span>
+
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;</span><span class="se">\n\n</span><span class="s"> 발모제는 몇 번일까요? &quot;</span><span class="p">);</span>
+    <span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%d&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">answer</span><span class="p">);</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="n">answer</span> <span class="o">==</span> <span class="n">treatment</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;</span><span class="se">\n</span><span class="s"> &gt;&gt; 정답입니다!</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="k">else</span>
+    <span class="p">{</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;</span><span class="se">\n</span><span class="s"> &gt;&gt; 땡! 틀렸어요. 정답은 %d 입니다.</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">treatment</span> <span class="o">+</span> <span class="mi">1</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="&#54632;&#49688;-&#54876;&#50857;&#54616;&#44592;">&#54632;&#49688; &#54876;&#50857;&#54616;&#44592;<a class="anchor-link" href="#&#54632;&#49688;-&#54876;&#50857;&#54616;&#44592;">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>위와 같이 <code>main</code> 함수에 모든 코드를 작성하면 코드의 전체 구조를 살펴보기 매우 어려움.</li>
+<li>함수를 사용하여 코드의 구조를 명확하게 드러나게 할 수 있음.</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="&#50696;&#51228;">&#50696;&#51228;<a class="anchor-link" href="#&#50696;&#51228;">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>아래 코드는 게임세팅을 위한 부분을 <code>game_setting()</code> 함수로 분리하여 활용함.</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;stdlib.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;time.h&gt;</span><span class="cp"></span>
+
+<span class="c1">// 아빠는 대머리 게임: 발모제 찾기</span>
+
+<span class="c1">// 게임세팅을 위한 함수</span>
+<span class="kt">void</span> <span class="nf">game_setting</span><span class="p">(</span><span class="kt">int</span> <span class="n">treatment</span><span class="p">);</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="n">srand</span><span class="p">(</span><span class="n">time</span><span class="p">(</span><span class="nb">NULL</span><span class="p">));</span>
+
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;</span><span class="se">\n\n</span><span class="s"> === 아빠는 대머리 게임 === </span><span class="se">\n\n</span><span class="s">&quot;</span><span class="p">);</span>
+
+    <span class="kt">int</span> <span class="n">answer</span><span class="p">;</span> <span class="c1">// 사용자 입력값</span>
+    <span class="kt">int</span> <span class="n">treatment</span> <span class="o">=</span> <span class="n">rand</span><span class="p">()</span> <span class="o">%</span> <span class="mi">4</span><span class="p">;</span> <span class="c1">// 네 개의 발모제 중 산택 (0 - 3)</span>
+
+    <span class="n">game_setting</span><span class="p">(</span><span class="n">treatment</span><span class="p">);</span>
+
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;</span><span class="se">\n\n</span><span class="s"> 발모제는 몇 번일까요? &quot;</span><span class="p">);</span>
+    <span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%d&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">answer</span><span class="p">);</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="n">answer</span> <span class="o">==</span> <span class="n">treatment</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;</span><span class="se">\n</span><span class="s"> &gt;&gt; 정답입니다!</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="k">else</span>
+    <span class="p">{</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;</span><span class="se">\n</span><span class="s"> &gt;&gt; 땡! 틀렸어요. 정답은 %d 입니다.</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">treatment</span> <span class="o">+</span> <span class="mi">1</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">game_setting</span><span class="p">(</span><span class="kt">int</span> <span class="n">treatment</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="c1">// 무작위로 보여줄 병 개수 지정. </span>
+    <span class="c1">// 정답률을 향상시키기 위해 병의 수를 2개 또는 3개로 번갈아 가면서 지정</span>
+
+    <span class="kt">int</span> <span class="n">cntShowBottle</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="c1">// 이번 게임에 보여줄 병 개수</span>
+    <span class="kt">int</span> <span class="n">prevCntShowBottle</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="c1">// 앞 게임에 보여준 병 개수</span>
+
+    <span class="c1">// 게임 세팅하기</span>
+
+    <span class="c1">// 발모제에 대한 정보를 3번 전달함.</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="mi">3</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="c1">// ***보여줄 병의 개수를 2개 또는 3개로 번갈아 임의로 선택***</span>
+
+        <span class="c1">// 4개의 물병준비</span>
+        <span class="c1">// 인덱스에 해당하는 물병의 사용여부 저장</span>
+        <span class="kt">int</span> <span class="n">bottle</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">};</span> <span class="c1">// 병 4개</span>
+        <span class="k">do</span> <span class="p">{</span>
+            <span class="n">cntShowBottle</span> <span class="o">=</span> <span class="n">rand</span><span class="p">()</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">2</span><span class="p">;</span> <span class="c1">// 보여줄 병 개수는 2-3개</span>
+        <span class="p">}</span> <span class="k">while</span> <span class="p">(</span><span class="n">cntShowBottle</span> <span class="o">==</span> <span class="n">prevCntShowBottle</span><span class="p">);</span> 
+
+        <span class="n">prevCntShowBottle</span> <span class="o">=</span> <span class="n">cntShowBottle</span><span class="p">;</span>
+
+        <span class="c1">// ***선택된 병의 개수만큼 병 선택***</span>
+
+        <span class="c1">// 발모제 포함여부에 따라 약의 효과여부 전달</span>
+        <span class="kt">int</span> <span class="n">isincluded</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="c1">// 보여줄 병들에 발모제 포함 여부</span>
+
+        <span class="c1">// 몇 번째 정보인지 알려줌.</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">&quot; &gt; %d 번째 시도: &quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">);</span>
+
+        <span class="c1">// 보여줄 물병 종류 선택</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">cntShowBottle</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="kt">int</span> <span class="n">randBottle</span> <span class="o">=</span> <span class="n">rand</span><span class="p">()</span> <span class="o">%</span> <span class="mi">4</span><span class="p">;</span> <span class="c1">// 0 - 3</span>
+
+            <span class="c1">// 아직 선택되지 않은 물병만 선택</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">bottle</span><span class="p">[</span><span class="n">randBottle</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
+            <span class="p">{</span>
+                <span class="n">bottle</span><span class="p">[</span><span class="n">randBottle</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+
+                <span class="k">if</span> <span class="p">(</span><span class="n">randBottle</span> <span class="o">==</span> <span class="n">treatment</span><span class="p">)</span>
+                <span class="p">{</span>
+                    <span class="n">isincluded</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>  <span class="c1">// 포함된 것 기억</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+            <span class="k">else</span>  <span class="c1">// 이미 선택된 병인 경우 j값을 늘리지 않고 다시 선택하기 위해</span>
+            <span class="p">{</span>
+                <span class="n">j</span><span class="o">--</span><span class="p">;</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+
+        <span class="c1">// ***사용자에게 준비된 3개의 물병조합 보여주기***</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">k</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">k</span> <span class="o">&lt;</span> <span class="mi">4</span><span class="p">;</span> <span class="n">k</span><span class="o">++</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">bottle</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span>
+            <span class="p">{</span>
+                <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d &quot;</span><span class="p">,</span> <span class="n">k</span><span class="o">+</span><span class="mi">1</span><span class="p">);</span> 
+            <span class="p">}</span>
+        <span class="p">}</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">&quot; 물약을 머리에 바릅니다.</span><span class="se">\n\n</span><span class="s">&quot;</span><span class="p">);</span>
+
+        <span class="k">if</span> <span class="p">(</span><span class="n">isincluded</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">printf</span><span class="p">(</span><span class="s">&quot; &gt;&gt; 성공 ! 머리가 났어요 !!</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+        <span class="p">}</span>
+        <span class="k">else</span>
+        <span class="p">{</span>
+            <span class="n">printf</span><span class="p">(</span><span class="s">&quot; &gt;&gt; 실패 ! 머리가 나지 않었어요.. ㅠㅠ</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+        <span class="p">}</span>
+
+        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;</span><span class="se">\n</span><span class="s"> ... 계속 하려면 아무 키나 누르세요 ...</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+        <span class="n">getchar</span><span class="p">();</span>  <span class="c1">//임의의 값을 입력할 때까지 대기하는 용도로 사용</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<hr>
+<h3 id="Python-&#44396;&#54788;">Python &#44396;&#54788;<a class="anchor-link" href="#Python-&#44396;&#54788;">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li><p>C 언어 코드를 거의 그대로 변환할 수 있음.</p>
+</li>
+<li><p>주의사항 1: 파이썬은 <code>do ... while ...</code> 반복문을 지원하지 않음.</p>
+<ul>
+<li><p>하지만 아래 형식 사용 가능</p>
+<div class="highlight"><pre><span></span><span class="k">while</span> <span class="kc">True</span>
+  <span class="n">명령문</span>
+  <span class="k">if</span> <span class="ow">not</span> <span class="n">조건식</span><span class="p">:</span>
+      <span class="k">break</span>
+</pre></div>
+</li>
+<li><p>위 파이썬 코드는 아래 C 코드와 동일한 기능 수행</p>
+<div class="highlight"><pre><span></span><span class="k">do</span>
+<span class="p">{</span>
+  <span class="err">명령문</span>
+<span class="p">}</span> <span class="k">while</span> <span class="err">조건식</span><span class="p">;</span>
+</pre></div>
+</li>
+</ul>
+</li>
+<li><p>주의사항 2: 파이썬의 <code>for</code> 문은 인덱스를 뒤로 돌릴 수 없음에 주의.</p>
+<ul>
+<li>그런 기능이 필요할 경우 <code>while</code> 반복문 사용할 것.    </li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[25]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">random</span> 
+<span class="kn">import</span> <span class="nn">time</span>
+
+<span class="c1"># 현재 시간에 맞추어 무작위로 정수 생성 가능</span>
+
+<span class="c1"># time 함수: 1970.01.01 이후 흐른 시간(ns 단위)</span>
+<span class="n">current_time</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">())</span>
+<span class="c1"># 현재 시간 기준으로 무작위수 생성 지정</span>
+<span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="n">current_time</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[26]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 게임세팅을 위한 함수</span>
+
+<span class="k">def</span> <span class="nf">game_setting</span><span class="p">(</span><span class="n">treatment</span><span class="p">):</span>
+    <span class="c1"># 무작위로 보여줄 병 개수 지정. </span>
+    <span class="c1"># 정답률을 향상시키기 위해 병의 수를 2개 또는 3개로 번갈아 가면서 지정</span>
+
+    <span class="n">cntShowBottle</span> <span class="o">=</span> <span class="mi">0</span> <span class="c1"># 이번 게임에 보여줄 병 개수</span>
+    <span class="n">prevCntShowBottle</span> <span class="o">=</span> <span class="mi">0</span> <span class="c1"># 앞 게임에 보여준 병 개수</span>
+
+    <span class="c1"># 발모제에 대한 정보를 3번 전달함.</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">):</span>
+        <span class="c1">### 보여줄 병의 개수를 2개 또는 3개로 번갈아 임의로 선택</span>
+        <span class="c1"># 4개의 물병준비</span>
+        <span class="c1"># 인덱스에 해당하는 물병의 사용여부 저장</span>
+        <span class="n">bottle</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
+
+        <span class="c1"># do ... while ... 문을 파이썬으로 구현하기</span>
+        <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+            <span class="n">cntShowBottle</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="mi">2</span> <span class="c1"># 보여줄 병 개수는 2-3개</span>
+            <span class="k">if</span> <span class="n">cntShowBottle</span> <span class="o">!=</span> <span class="n">prevCntShowBottle</span><span class="p">:</span>
+                <span class="k">break</span>
+
+        <span class="n">prevCntShowBottle</span> <span class="o">=</span> <span class="n">cntShowBottle</span>
+
+        <span class="c1">### 선택된 병의 개수만큼 병 선택</span>
+
+        <span class="c1"># 발모제 포함여부에 따라 약의 효과여부 전달</span>
+        <span class="n">isincluded</span> <span class="o">=</span> <span class="mi">0</span> <span class="c1"># 보여줄 병들에 발모제 포함 여부</span>
+
+        <span class="c1"># 몇 번째 정보인지 알려줌.</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot; &gt; </span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2"> 번째 시도: &quot;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+
+        <span class="c1"># 보여줄 병 종류 선택</span>
+        <span class="c1"># 주의: 파이썬의 for 반복문은 사용되는 인덱스를 임의로 조정할 수 없음.</span>
+        <span class="c1"># 따라서 while 반복문으로 대체함.</span>
+        
+        <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">while</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">cntShowBottle</span><span class="p">:</span>
+            <span class="n">randBottle</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
+
+            <span class="c1"># 아직 선택되지 않은 물병만 선택</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">bottle</span><span class="p">[</span><span class="n">randBottle</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span><span class="p">):</span>
+                <span class="n">bottle</span><span class="p">[</span><span class="n">randBottle</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+
+                <span class="k">if</span> <span class="p">(</span><span class="n">randBottle</span> <span class="o">==</span> <span class="n">treatment</span><span class="p">):</span>
+                    <span class="n">isincluded</span> <span class="o">=</span> <span class="mi">1</span>  <span class="c1"># 포함된 것 기억</span>
+
+                <span class="n">j</span> <span class="o">+=</span> <span class="mi">1</span>
+        
+        <span class="c1">### 사용자에게 준비된 3개의 물병조합 보여주기</span>
+        <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">4</span><span class="p">):</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">bottle</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">):</span>
+                <span class="nb">print</span><span class="p">(</span><span class="n">k</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="p">)</span> 
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot; 물약을 머리에 바릅니다.n&quot;</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="p">(</span><span class="n">isincluded</span> <span class="o">==</span> <span class="mi">1</span><span class="p">):</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot; &gt;&gt; 성공 ! 머리가 났어요 !!&quot;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot; &gt;&gt; 실패 ! 머리가 나지 않었어요.. ㅠㅠ&quot;</span><span class="p">)</span>
+
+        <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2"> ... 계속 하려면 아무 키나 누르세요 ...&quot;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>게임준비가 제대로 되는지 확인 가능.</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[27]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">treatment</span> <span class="o">=</span> <span class="mi">2</span>
+
+<span class="n">game_setting</span><span class="p">(</span><span class="n">treatment</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre> &gt; 1 번째 시도:  2 4  물약을 머리에 바릅니다.n
+ &gt;&gt; 실패 ! 머리가 나지 않었어요.. ㅠㅠ
+
+ ... 계속 하려면 아무 키나 누르세요 ...
+ &gt; 2 번째 시도:  1 3 4  물약을 머리에 바릅니다.n
+ &gt;&gt; 성공 ! 머리가 났어요 !!
+
+ ... 계속 하려면 아무 키나 누르세요 ...
+ &gt; 3 번째 시도:  1 3  물약을 머리에 바릅니다.n
+ &gt;&gt; 성공 ! 머리가 났어요 !!
+
+ ... 계속 하려면 아무 키나 누르세요 ...
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li><code>main()</code> 함수 부분은 쉽게 구현 가능함.</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[28]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 아빠는 대머리 게임: 발모제 찾기</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2"> === 아빠는 대머리 게임 === </span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1"># 4개의 물약 중에 효과 있는 발모제 임의 지정</span>
+<span class="n">treatment</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
+
+<span class="c1"># 게임 준비</span>
+<span class="n">game_setting</span><span class="p">(</span><span class="n">treatment</span><span class="p">)</span>
+
+<span class="c1"># 사용자로부터 발모제 선택 입력값 받기</span>
+<span class="n">answer</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n\n</span><span class="s2"> 발모제는 몇 번일까요? &quot;</span><span class="p">))</span>
+
+<span class="k">if</span> <span class="p">(</span><span class="n">answer</span> <span class="o">==</span> <span class="n">treatment</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2"> &gt;&gt; 정답입니다!&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2"> &gt;&gt; 땡! 틀렸어요. 정답은 </span><span class="si">%d</span><span class="s2"> 입니다.&quot;</span><span class="p">,</span> <span class="n">treatment</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>
+ === 아빠는 대머리 게임 === 
+
+ &gt; 1 번째 시도:  1 2 3  물약을 머리에 바릅니다.n
+ &gt;&gt; 성공 ! 머리가 났어요 !!
+
+ ... 계속 하려면 아무 키나 누르세요 ...
+ &gt; 2 번째 시도:  1 4  물약을 머리에 바릅니다.n
+ &gt;&gt; 성공 ! 머리가 났어요 !!
+
+ ... 계속 하려면 아무 키나 누르세요 ...
+ &gt; 3 번째 시도:  1 2 4  물약을 머리에 바릅니다.n
+ &gt;&gt; 성공 ! 머리가 났어요 !!
+
+ ... 계속 하려면 아무 키나 누르세요 ...
+
+
+ 발모제는 몇 번일까요? 2
+
+ &gt;&gt; 땡! 틀렸어요. 정답은 %d 입니다. 1
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<hr>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#50672;&#49845;&#47928;&#51228;">&#50672;&#49845;&#47928;&#51228;<a class="anchor-link" href="#&#50672;&#49845;&#47928;&#51228;">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ol>
+<li>"아빠는 대머리 게임: 발모제 찾기" 코드에서 사용된 <code>game_setting()</code> 함수의 본체가 매우 길다.
+ 하지만 본체의 기능을 세분화할 수 있어 보인다.
+ 세분화가능한 부분을 함수로 선언해서 
+ <code>game_setting()</code> 함수를, 그리고 결국엔 코드 전체를 보다 기능별로 분화된 보다 체계적인 코드로 
+ 구현하라.</li>
+</ol>
+
+</div>
+</div>
+</div>
     </div>
   </div>
 </body>
