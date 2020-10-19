@@ -287,7 +287,23 @@ int main(void) {
 
 ### Python 구현
 
-* `do while` 지원하지 않음.
+* 파이썬은 `do ... while ...` 반복문을 지원하지 않음. 하지만 아래 형식 사용 가능
+    
+    ```python
+    while True
+        명령문
+        if not 조건식:
+            break
+    ```
+    
+* 위 파이썬 코드는 아래 C 코드와 동일한 기능 수행
+    
+    ```c
+    do
+    {
+        명령문
+    } while 조건식;
+    ```
 
 ---
 
