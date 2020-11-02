@@ -25,5 +25,5 @@ C 프로그래밍 기초 동영상 모음집
     [[ipynb]](./notebooks/06-Arrays.ipynb)
     [[html]](./notebooks/06-Arrays.html)
 * 7장 포인터 &nbsp;
-    [[ipynb]](./notebooks/06-Pointers.ipynb)
-    [[html]](./notebooks/06-Pointers.html)
+    [[ipynb]](./notebooks/07-Pointers.ipynb)
+    [[html]](./notebooks/07-Pointers.html)
