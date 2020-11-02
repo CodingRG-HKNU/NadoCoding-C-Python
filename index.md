@@ -24,3 +24,6 @@ C 프로그래밍 기초 동영상 모음집
 * 6장 배열 &nbsp;
     [[ipynb]](./notebooks/06-Arrays.ipynb)
     [[html]](./notebooks/06-Arrays.html)
+* 7장 포인터 &nbsp;
+    [[ipynb]](./notebooks/06-Pointers.ipynb)
+    [[html]](./notebooks/06-Pointers.html)
