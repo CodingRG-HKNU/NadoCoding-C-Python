@@ -716,3 +716,125 @@ int checkFishAlive()
 ```
 
 ---
+
+## (C 언어) 이중 포인터
+
+### 이중 포인터 변수
+
+* 이중 포인터 변수: 포인터 변수의 주소를 가리키는 포인터 변수
+* 포인터 변수에 저장되는 값 또한 하나의 정수값이기에 그 값이 저장되는 메모리의 주소를 저장하는 변수가 이중 포인터 변수임.
+
+<div align="center"><img src="./images/nado07-c-pointer-4.png" width="500"/></div>
+
+<그림 참조: [GeeksforGeeks: Double Pointer in C](https://www.geeksforgeeks.org/double-pointer-pointer-pointer-c/)>
+
+* 이중 포인터 작동은 일반 포인터가 작동과 동일
+
+<div align="center"><img src="./images/nado07-c-pointer-4a.png" width="500"/></div>
+
+<그림 참조: [GeeksforGeeks: Double Pointer in C](https://www.geeksforgeeks.org/double-pointer-pointer-pointer-c/)>
+
+#### 예제: 이중 포인터 변수
+
+---
+
+```c
+#include <stdio.h>
+
+int main(){
+	int var = 10;
+	int *ptr1;
+	int **ptr2;
+	
+	ptr1 = &var;
+	ptr2 = &ptr1;
+	
+	printf("var : %d *ptr1 : %d **ptr1 : %d\n", var, *ptr1, **ptr2);
+	printf("var 주소 : %d *ptr1 값 : %d **ptr1 값 : %d\n", &var, ptr1, *ptr2);
+	printf("ptr1 주소 : %d ptr2 값 : %d", &ptr1, ptr2);
+	
+	return 0;
+}
+```
+
+---
+
+#### PythonTutor 활용하기
+
+* [(C 언어) 이중 포인터 소개](http://pythontutor.com/visualize.html#code=%23include%20%3Cstdio.h%3E%0A%0Aint%20main%28%29%7B%0A%20%20%20%20int%20var%20%3D%2010%3B%0A%20%20%20%20int%20*ptr1%3B%0A%20%20%20%20int%20**ptr2%3B%0A%20%20%20%20%0A%20%20%20%20ptr1%20%3D%20%26var%3B%0A%20%20%20%20ptr2%20%3D%20%26ptr1%3B%0A%20%20%20%20%0A%20%20%20%20printf%28%22var%20%3A%20%25d%20*ptr1%20%3A%20%25d%20**ptr1%20%3A%20%25d%5Cn%22,%20var,%20*ptr1,%20**ptr2%29%3B%0A%20%20%20%20printf%28%22var%20%EC%A3%BC%EC%86%8C%20%3A%20%25d%20*ptr1%20%EA%B0%92%20%3A%20%25d%20**ptr1%20%EA%B0%92%20%3A%20%25d%5Cn%22,%20%26var,%20ptr1,%20*ptr2%29%3B%0A%20%20%20%20printf%28%22ptr1%20%EC%A3%BC%EC%86%8C%20%3A%20%25d%20ptr2%20%EA%B0%92%20%3A%20%25d%22,%20%26ptr1,%20ptr2%29%3B%0A%20%20%20%20%0A%20%20%20%20return%200%3B%0A%7D&cumulative=false&curInstr=0&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=c&rawInputLstJSON=%5B%5D&textReferences=false)
+
+### 포인터 배열
+
+* 포인터 배열: 포인터(메모리 주소)로 구성된 배열
+* 일반 배열과 동일. 다만, 항목에 사용되는 값들이 값들이 저장된 메모리의 주소에 불과함.
+
+#### 예제: 포인터 배열
+
+---
+
+```c
+#include <stdio.h>
+
+int main(){
+	int num1 = 10, num2 = 20, num3 = 30;
+	int *parr[3];
+	
+	parr[0] = &num1;
+	parr[1] = &num2;
+	parr[2] = &num3;
+	
+	for(int i=0; i<3; i++){
+		printf("parr[%d] : %d\n", i, *parr[i]);
+	}
+	
+	return 0;
+}
+```
+
+---
+
+#### PythonTutor 활용하기
+
+* [(C 언어) 포인터 배열 소개](http://pythontutor.com/visualize.html#code=%23include%20%3Cstdio.h%3E%0A%0Aint%20main%28%29%7B%0A%20%20%20%20int%20num1%20%3D%2010,%20num2%20%3D%2020,%20num3%20%3D%2030%3B%0A%20%20%20%20int%20*parr%5B3%5D%3B%0A%20%20%20%20%0A%20%20%20%20parr%5B0%5D%20%3D%20%26num1%3B%0A%20%20%20%20parr%5B1%5D%20%3D%20%26num2%3B%0A%20%20%20%20parr%5B2%5D%20%3D%20%26num3%3B%0A%20%20%20%20%0A%20%20%20%20for%28int%20i%3D0%3B%20i%3C3%3B%20i%2B%2B%29%7B%0A%20%20%20%20%20%20%20%20printf%28%22parr%5B%25d%5D%20%3A%20%25d%5Cn%22,%20i,%20*parr%5Bi%5D%29%3B%0A%20%20%20%20%7D%0A%20%20%20%20%0A%20%20%20%20return%200%3B%0A%7D&cumulative=false&curInstr=0&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=c&rawInputLstJSON=%5B%5D&textReferences=false)
+
+### call-by-value vs. call-by-reference
+
+* 함수에 인자를 전달할 때 값을 전달하는 방식과 포인터를 전달하는 방식에 차이가 있음.
+    * 예제: `swap()`과 `swap_addr()`
+
+#### 예제
+
+---
+
+```c
+#include <stdio.h>
+
+void cbv(int val)
+{
+    val = 30;
+}
+
+void cbr(int *ref)
+{
+    *ref = 30;
+}
+
+int main()
+{
+    int val1 = 10, val2 = 10;
+
+    printf("이전 : val1=%d, val2=%d\n", val1, val2);
+    cbv(val1);
+    cbr(&val2);
+    printf("이후  : val1=%d, val2=%d\n", val1, val2);
+	return 0;
+}
+```
+
+---
+
+#### PythonTutor 활용하기
+
+* [(C 언어) call-by-value vs call-by-reference](http://pythontutor.com/visualize.html#code=%23include%20%3Cstdio.h%3E%0A%0Avoid%20call_by_value%28int%20val%29%0A%7B%0A%20%20%20%20val%20%3D%2020%3B%0A%7D%0A%0Avoid%20call_by_refer%28int%20*ref%29%0A%7B%0A%20%20%20%20*ref%20%3D%2020%3B%0A%7D%0A%0Aint%20main%28%29%0A%7B%0A%20%20%20%20int%20value%20%3D%2010%3B%0A%20%20%20%20int%20refer%20%3D%2010%3B%0A%0A%20%20%20%20printf%28%22before%20%3A%20value%3D%25d,%20refer%3D%25d%5Cn%22,%20value,%20refer%29%3B%0A%20%20%20%20call_by_value%28value%29%3B%0A%20%20%20%20call_by_refer%28%26refer%29%3B%0A%20%20%20%20printf%28%22after%20%20%3A%20value%3D%25d,%20refer%3D%25d%5Cn%22,%20value,%20refer%29%3B%0A%20%20%20%20return%200%3B%0A%7D&cumulative=false&curInstr=0&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=c&rawInputLstJSON=%5B%5D&textReferences=false)
+
+---

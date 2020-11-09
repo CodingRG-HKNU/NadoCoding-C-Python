@@ -14700,47 +14700,7 @@ b: 20
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
-
-<span class="kt">int</span> <span class="n">global_val</span> <span class="o">=</span> <span class="mi">30</span><span class="p">;</span> 
-
-<span class="kt">void</span> <span class="nf">cbv</span><span class="p">(</span><span class="kt">int</span> <span class="o">*</span><span class="n">val</span><span class="p">)</span>
-<span class="p">{</span>
-  <span class="n">val</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">global_val</span><span class="p">;</span> 
-<span class="p">}</span>
-
-<span class="kt">void</span> <span class="nf">cbr</span><span class="p">(</span><span class="kt">int</span> <span class="o">**</span><span class="n">ref</span><span class="p">)</span> 
-<span class="p">{</span>
-  <span class="o">*</span><span class="n">ref</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">global_val</span><span class="p">;</span> 
-<span class="p">}</span>
-
-<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> 
-<span class="p">{</span> 
-  <span class="kt">int</span> <span class="n">local_val</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span> 
-
-  <span class="kt">int</span> <span class="o">*</span><span class="n">value</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">local_val</span><span class="p">;</span> 
-  <span class="kt">int</span> <span class="o">*</span><span class="n">refer</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">local_val</span><span class="p">;</span> 
-
-  <span class="n">printf</span><span class="p">(</span><span class="s">&quot;이전 : *value=%d, *refer=%d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="o">*</span><span class="n">value</span><span class="p">,</span> <span class="o">*</span><span class="n">refer</span><span class="p">);</span> 
-
-  <span class="n">cbv</span><span class="p">(</span><span class="n">value</span><span class="p">);</span> 
-  <span class="n">cbr</span><span class="p">(</span><span class="o">&amp;</span><span class="n">refer</span><span class="p">);</span> 
-
-  <span class="n">printf</span><span class="p">(</span><span class="s">&quot;이후 : *value=%d, *refer=%d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="o">*</span><span class="n">value</span><span class="p">,</span> <span class="o">*</span><span class="n">refer</span><span class="p">);</span>
-
-  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
-<span class="p">}</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="PythonTutor-&#54876;&#50857;&#54616;&#44592;">PythonTutor &#54876;&#50857;&#54616;&#44592;<a class="anchor-link" href="#PythonTutor-&#54876;&#50857;&#54616;&#44592;">&#182;</a></h4><ul>
-<li><a href="http://pythontutor.com/visualize.html#code=%23include%20%3Cstdio.h%3E%0A%0Aint%20global_val%20%3D%2030%3B%20%0A%0Avoid%20cbv%28int%20*val%29%20%0A%7B%0A%20%20val%20%3D%20%26global_val%3B%20%0A%7D%0A%0Avoid%20cbr%28int%20**ref%29%20%0A%7B%0A%20%20*ref%20%3D%20%26global_val%3B%20%0A%7D%0A%0Aint%20main%28%29%20%0A%7B%20%0A%20%20int%20local_val%20%3D%2010%3B%20%0A%0A%20%20int%20*value%20%3D%20%26local_val%3B%20%0A%20%20int%20*refer%20%3D%20%26local_val%3B%20%0A%0A%20%20printf%28%22%EC%9D%B4%EC%A0%84%20%3A%20*value%3D%25d,%20*refer%3D%25d%5Cn%22,%20*value,%20*refer%29%3B%20%0A%0A%20%20cbv%28value%29%3B%20%0A%20%20cbr%28%26refer%29%3B%20%0A%0A%20%20printf%28%22%EC%9D%B4%ED%9B%84%20%3A%20*value%3D%25d,%20*refer%3D%25d%5Cn%22,%20*value,%20*refer%29%3B%0A%0A%20%20return%200%3B%0A%7D&amp;cumulative=false&amp;curInstr=0&amp;heapPrimitives=nevernest&amp;mode=display&amp;origin=opt-frontend.js&amp;py=c&amp;rawInputLstJSON=%5B%5D&amp;textReferences=false">(C 언어) 이중 포인터</a></li>
-</ul>
+<hr>
 
 </div>
 </div>
