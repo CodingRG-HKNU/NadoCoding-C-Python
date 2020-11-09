@@ -2,7 +2,7 @@
 
 ## 핵심
 
-* 포인터 이해* 문자열 활용
+* 포인터 이해
 
 ## (C 언어) 물고기 키우기
 
@@ -57,10 +57,9 @@ int main()
 
 ### Python 구현
 
+* 파이썬에서는 포인터 변수를 굳이 사용할 필요 없음.
 
-```python
-
-```
+* 또한 변수의 주소 등을 확인할 일도 일밙거으로 없음.
 
 ---
 
@@ -116,15 +115,6 @@ int main()
 
 ---
 
-### Python 구현
-
-
-```python
-
-```
-
----
-
 ## (C 언어) 스파이(또다른 포인터)의 등장
 
 * 동영상: [(나도코딩 C) 7-4 스파이(또다른 포인터)의 등장](https://www.youtube.com/watch?v=Ij_XVWDRznI&list=PLMsa_0kAjjrdiwQykI8eb3H4IRxLTqCnP&index=47)
@@ -170,15 +160,6 @@ int main()
 	// 참고: 미션맨/포인터가 사는 곳의 주소 또한 &미션맨/&스파이 등으로 확인
 	printf("미션맨의 주소: %p\n", &미션맨);
 	printf("스파이의 주소: %p\n", &스파이);
-```
-
----
-
-### Python 구현
-
-
-```python
-
 ```
 
 ---
@@ -270,10 +251,55 @@ int main()
 
 ### Python 구현
 
+* 배열에 해당하는 파이썬 자료형은 리스트임.
+* 하지만 또한 일반 변수로 선언해서 사용함.
+* 리스트의 항목은 인덱스 활용하며, 주소값을 사용할 일이 일반적으로 없음.
+
 
 ```python
+arr = [5, 10, 15]
+
+for i in range(3):
+    print("배열 arr[%d]의 값: %d" % (i, arr[i]));
 
 ```
+
+    배열 arr[0]의 값: 5
+    배열 arr[1]의 값: 10
+    배열 arr[2]의 값: 15
+
+
+* 인덱스 대신에 항목을 직접 이용하여 for 반복문 실행 가능
+
+
+```python
+arr = [5, 10, 15]
+
+for item in arr:
+    print(item)
+
+```
+
+    5
+    10
+    15
+
+
+* 항목과 인덱스를 함께 사용하려면 `enumerate()` 함수 활용
+
+
+```python
+arr = [5, 10, 15]
+
+for i, item in enumerate(arr):
+    print(f"배열 arr[{i}]의 값: {item}")
+
+```
+
+    배열 arr[0]의 값: 5
+    배열 arr[1]의 값: 10
+    배열 arr[2]의 값: 15
+
 
 ---
 
@@ -402,10 +428,47 @@ void swap_addr(int * a, int * b)
 
 ### Python 구현
 
+* 파이썬에서 두 변수에 할당된 값의 교환은 매우 간단함.
+
 
 ```python
+a = 10
+b = 20
 
+a, b = b, a
+
+print(f"a: {a}", f"b: {b}", sep='\n')
 ```
+
+    a: 20
+    b: 10
+
+
+* 주의: 아래와 같이 하면 C 언어에서와 동일한 결과를 얻음.
+    * 각각의 변수들이 사는 영역이 다르기 때문임.
+
+
+```python
+a = 10
+b = 20
+
+def swap(a, b):
+    temp = a
+    b = a
+    a = b
+
+swap(a, b)
+
+print(f"a: {a}", f"b: {b}", sep='\n')
+```
+
+    a: 10
+    b: 20
+
+
+#### PythonTutor 활용하기
+
+* [(파이썬) Swap](http://pythontutor.com/visualize.html#code=a%20%3D%2010%0Ab%20%3D%2020%0A%0Adef%20swap%28a,%20b%29%3A%0A%20%20%20%20temp%20%3D%20a%0A%20%20%20%20b%20%3D%20a%0A%20%20%20%20a%20%3D%20b%0A%0Aswap%28a,%20b%29%0A%0Aprint%28f%22a%3A%20%7Ba%7D%22,%20f%22b%3A%20%7Bb%7D%22,%20sep%3D'%5Cn'%29&cumulative=false&curInstr=0&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false)
 
 ---
 
@@ -443,6 +506,205 @@ void changeArray(int * ptr)
 
 * `changeArray(arr2);`를 `changeArray(&arr2[0]);`로 변경 가능
 * 이제 scanf 함수에서 정수를 입력받을 때 `&num` 과 같이 앰퍼샌드 기호(`&`) 사용하는 이유를 이해할 수 있음.
+
+---
+
+### Python 구현
+
+* 리스트의 항목 수정은 인덱스를 활용하면 됨.
+
+
+```python
+arr2 = [10, 20, 30]
+
+def changeArray(list):
+    list[2] = 50
+    
+changeArray(arr2)
+
+print(arr2)
+```
+
+    [10, 20, 50]
+
+
+---
+
+## (C 언어) 프로젝트
+
+* 동영상: [(나도코딩 C) 7-8 프로젝트(전반전)](https://www.youtube.com/watch?v=_NIkHRkRTG4&list=PLMsa_0kAjjrdiwQykI8eb3H4IRxLTqCnP&index=51)
+* 동영상: [(나도코딩 C) 7-9 프로젝트(후반전)](https://www.youtube.com/watch?v=S88l4zJmkNM&list=PLMsa_0kAjjrdiwQykI8eb3H4IRxLTqCnP&index=52)
+* 동영상: [(나도코딩 C) 7-10 프로젝트(연장전)](https://www.youtube.com/watch?v=QePj1QvLhcc&list=PLMsa_0kAjjrdiwQykI8eb3H4IRxLTqCnP&index=53)
+
+* 물고기 키우기 게임
+    * 물고기 6마리가 각각 다른 어항에 살고 있는데 사막이다보니 너무 건조해서 물이 아주 빠르게 증발함.
+    * 물이 다 증발하기 전에 어항에 물을 채워주어야 함.
+    * 시간이 지날 수록 물고기 커지며, 나주에는 .... 냠냠...
+
+---
+```c
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+// 물고기 6마리가 각각 다른 어항에 살고 있는데
+// 사막이다보니 너무 건조해서 물이 아주 빠르게 증발함.
+// 물이 다 증발하기 전에 어항에 물을 채워주어야 함.
+// 시간이 지날 수록 물고기 커지며, 나주에는 .... 냠냠...
+
+int level;
+int arrayFish[6];
+int * cursor;                  // 각 어항을 가리키는 역할
+
+void initData();
+void printFishes();
+void decreaseWater(long elapsedTime);
+int checkFishAlive();
+
+int main(void)
+{
+	long startTime = 0;        // 게임 시작시간
+	long totalElapsedTime = 0; // 총 경과시간
+	long prevElapsedTime = 0;  // 직전 경과시간 (최근에 물을 준 시간 간격)
+
+	int num;                   // 물을 채울 어항 번호 (사용자 입력)
+
+	initData();
+
+	cursor = arrayFish;        // cursor[0], cursor[1], ...
+
+	startTime = clock();       // 현재시각을 millisecond(ms, 1000분의 1초) 단위로 변환
+
+	while (1)                  // 문한반복
+	{
+		printFishes();
+		printf("몇 번 어항에 물을 주시겠어요? ");
+		scanf("%d", &num);
+
+		// 입력값 체크
+		if (num < 1 || num > 6)
+		{
+			printf("\n입력값이 잘못되었어요.\n");
+			continue;
+		}
+
+		// 게임 총 경과시간
+        
+        // repl.it 사이트에서는 시간이 연속적으로 흐르지 않기 때문에 100으로 나누어 주는 것으로 모의실험 가능.
+		totalElapsedTime = (clock() - startTime) / 100;
+		// totalElapsedTime = (clock() - startTime) / CLOCKS_PER_SEC;
+
+        printf("게임 총 경과시간: %ld 초\n", totalElapsedTime);
+
+		// 마지막으로 물을 준 이후로 흐른 시간
+		// 흐른 시간동안 증발된 물의 양을 측정하기 위함.
+		prevElapsedTime = totalElapsedTime - prevElapsedTime;
+		printf("마지막으로 물을 준 이후로 흐른 시간: %ld 초\n", prevElapsedTime);
+
+		// 증발된 만큼 물을 감소시키기
+		decreaseWater(prevElapsedTime);
+
+		// 사용자가 지정한 어항에 물주기
+		// 1. 어항의 물이 0이면? 물고기 이미 사망. 따라서 물 주지 않음.
+		if (cursor[num-1] <= 0)
+		{
+			printf("%d 번 물고기는 이미 사망. 물 주지 않음.\n", num);
+		}
+		// 2. 어항의 물의 양이 0이 아니면 물을 줌. 단, 어항 물의 양이 100 넘지 않게 해야함.
+		else if (cursor[num-1] + 1 <= 100)
+		{
+			// 물 주기
+			printf("%d 번 어항에 물주기\n\n", num);
+			cursor[num-1] += 1;
+		}
+
+		// 레벨업 시행여부 확인 (20초마다 레벨업 수행)
+		if (totalElapsedTime / 20 > level - 1)
+		{
+			level += 1;
+			printf(" *** 축 레벨업! 기존 %d 레벨에서 %d 레벨로 업그레이드 ***\n\n", level-1, level);
+
+			// 최종레벨: 5
+			if (level == 5)
+			{
+				printf("\n\n축하합니다. 최고레벨을 당성하였음! 게임 종료!\n\n");
+				exit(0);
+			}
+		}
+
+		// 물고기가 죽었는지 확인하기
+		if (checkFishAlive() == 0)
+		{
+			// 모든 물고기 모두 사망
+			printf("모든 물고기 사망 ㅠㅠ\n");
+			exit(0);
+		}
+		else
+		{
+			printf("물고기 아직 살아 있음!\n");
+		}
+		
+		// while 문이 반복될 때마다 마지막에 물준 시간 기억하기
+		// prevElapsedTime 이미 그 역할 다했기 때문에 여기서 업데이트 해도 문제 없음.
+		prevElapsedTime = totalElapsedTime;
+	}
+
+	return 0;
+}
+
+void initData()
+{
+	level = 1;                 // 게임 시작 레벨 (1-5)
+	
+	for (int i = 0; i < 6; i++)
+	{
+		arrayFish[i] = 100;     // 최초 어항 물높이 
+	}
+}
+
+void printFishes()
+{
+	printf("\n");
+	printf("%3d번 %3d번 %3d번 %3d번 %3d번 %3d번\n", 1, 2, 3, 4, 5, 6);
+	for (int i = 0; i < 6; i++)
+	{
+		printf(" %4d ", arrayFish[i]);
+	}
+	printf("\n\n");
+}
+
+void decreaseWater(long elapsedTime)
+{
+	for (int i = 0; i < 6; i++)
+	{
+		arrayFish[i] -= (level * 3 * (int)elapsedTime); // 3은 난이도 조절용
+
+		// 물의 최소량은 0임.
+		if (arrayFish[i] < 0)
+		{
+			arrayFish[i] = 0;
+		}
+	}
+}
+
+int checkFishAlive()
+{
+	for (int i = 0; i < 6; i++)
+	{
+		if (arrayFish[i] > 0)
+			return 1; // 참 True
+	}
+
+	return 0;
+}
+
+```
+---
+
+### 특징
+
+* 포인터 변수 `cursor`를 굳이 사용해야 하는 이유가 확실하지 않음.
+* `cursor` 대신에 `arrayFish` 변수를 그대로 사용해도 되기 때문임.
 
 ---
 

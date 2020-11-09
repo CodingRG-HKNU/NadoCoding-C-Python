@@ -2,7 +2,7 @@
 <html>
 <head><meta charset="utf-8" />
 
-<title>07-Pointer</title>
+<title>07-Pointers</title>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -13084,8 +13084,15 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#54645;&#49900;">&#54645;&#49900;<a class="anchor-link" href="#&#54645;&#49900;">&#182;</a></h2><ul>
-<li>포인터 이해* 문자열 활용</li>
+<h2 id="&#54645;&#49900;">&#54645;&#49900;<a class="anchor-link" href="#&#54645;&#49900;">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>포인터 이해</li>
 </ul>
 
 </div>
@@ -13220,18 +13227,18 @@ div#notebook {
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span> 
-</pre></div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li><p>파이썬에서는 포인터 변수를 굳이 사용할 필요 없음.</p>
+</li>
+<li><p>또한 변수의 주소 등을 확인할 일도 일밙거으로 없음.</p>
+</li>
+</ul>
 
-    </div>
 </div>
 </div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -13339,27 +13346,6 @@ div#notebook {
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <hr>
-<h3 id="Python-&#44396;&#54788;">Python &#44396;&#54788;<a class="anchor-link" href="#Python-&#44396;&#54788;">&#182;</a></h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<hr>
 
 </div>
 </div>
@@ -13452,27 +13438,6 @@ div#notebook {
 
 </div>
 </div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<hr>
-<h3 id="Python-&#44396;&#54788;">Python &#44396;&#54788;<a class="anchor-link" href="#Python-&#44396;&#54788;">&#182;</a></h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-
-    </div>
-</div>
-</div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -13616,15 +13581,142 @@ div#notebook {
 </div>
 </div>
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>배열에 해당하는 파이썬 자료형은 리스트임.</li>
+<li>하지만 또한 일반 변수로 선언해서 사용함.</li>
+<li>리스트의 항목은 인덱스 활용하며, 주소값을 사용할 일이 일반적으로 없음.</li>
+</ul>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span> 
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">arr</span> <span class="o">=</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">15</span><span class="p">]</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;배열 arr[</span><span class="si">%d</span><span class="s2">]의 값: </span><span class="si">%d</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">]));</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>배열 arr[0]의 값: 5
+배열 arr[1]의 값: 10
+배열 arr[2]의 값: 15
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>인덱스 대신에 항목을 직접 이용하여 for 반복문 실행 가능</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">arr</span> <span class="o">=</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">15</span><span class="p">]</span>
+
+<span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">arr</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>5
+10
+15
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>항목과 인덱스를 함께 사용하려면 <code>enumerate()</code> 함수 활용</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">arr</span> <span class="o">=</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">15</span><span class="p">]</span>
+
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">item</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">arr</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;배열 arr[</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">]의 값: </span><span class="si">{</span><span class="n">item</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>배열 arr[0]의 값: 5
+배열 arr[1]의 값: 10
+배열 arr[2]의 값: 15
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -13841,18 +13933,117 @@ div#notebook {
 </div>
 </div>
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>파이썬에서 두 변수에 할당된 값의 교환은 매우 간단함.</li>
+</ul>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span> 
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">b</span> <span class="o">=</span> <span class="mi">20</span>
+
+<span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="n">b</span><span class="p">,</span> <span class="n">a</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;a: </span><span class="si">{</span><span class="n">a</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;b: </span><span class="si">{</span><span class="n">b</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
 </pre></div>
 
     </div>
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>a: 20
+b: 10
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>주의: 아래와 같이 하면 C 언어에서와 동일한 결과를 얻음.<ul>
+<li>각각의 변수들이 사는 영역이 다르기 때문임.</li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">b</span> <span class="o">=</span> <span class="mi">20</span>
+
+<span class="k">def</span> <span class="nf">swap</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+    <span class="n">temp</span> <span class="o">=</span> <span class="n">a</span>
+    <span class="n">b</span> <span class="o">=</span> <span class="n">a</span>
+    <span class="n">a</span> <span class="o">=</span> <span class="n">b</span>
+
+<span class="n">swap</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;a: </span><span class="si">{</span><span class="n">a</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;b: </span><span class="si">{</span><span class="n">b</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>a: 10
+b: 20
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="PythonTutor-&#54876;&#50857;&#54616;&#44592;">PythonTutor &#54876;&#50857;&#54616;&#44592;<a class="anchor-link" href="#PythonTutor-&#54876;&#50857;&#54616;&#44592;">&#182;</a></h4><ul>
+<li><a href="http://pythontutor.com/visualize.html#code=a%20%3D%2010%0Ab%20%3D%2020%0A%0Adef%20swap%28a,%20b%29%3A%0A%20%20%20%20temp%20%3D%20a%0A%20%20%20%20b%20%3D%20a%0A%20%20%20%20a%20%3D%20b%0A%0Aswap%28a,%20b%29%0A%0Aprint%28f%22a%3A%20%7Ba%7D%22,%20f%22b%3A%20%7Bb%7D%22,%20sep%3D&#39;%5Cn&#39;%29&amp;cumulative=false&amp;curInstr=0&amp;heapPrimitives=nevernest&amp;mode=display&amp;origin=opt-frontend.js&amp;py=3&amp;rawInputLstJSON=%5B%5D&amp;textReferences=false">(파이썬) Swap</a></li>
+</ul>
+
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -13939,6 +14130,286 @@ div#notebook {
 </div>
 </div>
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>리스트의 항목 수정은 인덱스를 활용하면 됨.</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">arr2</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">]</span>
+
+<span class="k">def</span> <span class="nf">changeArray</span><span class="p">(</span><span class="nb">list</span><span class="p">):</span>
+    <span class="nb">list</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="mi">50</span>
+    
+<span class="n">changeArray</span><span class="p">(</span><span class="n">arr2</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">arr2</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[10, 20, 50]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<hr>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="(C-&#50616;&#50612;)-&#54532;&#47196;&#51229;&#53944;">(C &#50616;&#50612;) &#54532;&#47196;&#51229;&#53944;<a class="anchor-link" href="#(C-&#50616;&#50612;)-&#54532;&#47196;&#51229;&#53944;">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>동영상: <a href="https://www.youtube.com/watch?v=_NIkHRkRTG4&amp;list=PLMsa_0kAjjrdiwQykI8eb3H4IRxLTqCnP&amp;index=51">(나도코딩 C) 7-8 프로젝트(전반전)</a></li>
+<li>동영상: <a href="https://www.youtube.com/watch?v=S88l4zJmkNM&amp;list=PLMsa_0kAjjrdiwQykI8eb3H4IRxLTqCnP&amp;index=52">(나도코딩 C) 7-9 프로젝트(후반전)</a></li>
+<li>동영상: <a href="https://www.youtube.com/watch?v=QePj1QvLhcc&amp;list=PLMsa_0kAjjrdiwQykI8eb3H4IRxLTqCnP&amp;index=53">(나도코딩 C) 7-10 프로젝트(연장전)</a></li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>물고기 키우기 게임<ul>
+<li>물고기 6마리가 각각 다른 어항에 살고 있는데 사막이다보니 너무 건조해서 물이 아주 빠르게 증발함.</li>
+<li>물이 다 증발하기 전에 어항에 물을 채워주어야 함.</li>
+<li>시간이 지날 수록 물고기 커지며, 나주에는 .... 냠냠...</li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<hr>
+<div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;stdlib.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;time.h&gt;</span><span class="cp"></span>
+
+<span class="c1">// 물고기 6마리가 각각 다른 어항에 살고 있는데</span>
+<span class="c1">// 사막이다보니 너무 건조해서 물이 아주 빠르게 증발함.</span>
+<span class="c1">// 물이 다 증발하기 전에 어항에 물을 채워주어야 함.</span>
+<span class="c1">// 시간이 지날 수록 물고기 커지며, 나주에는 .... 냠냠...</span>
+
+<span class="kt">int</span> <span class="n">level</span><span class="p">;</span>
+<span class="kt">int</span> <span class="n">arrayFish</span><span class="p">[</span><span class="mi">6</span><span class="p">];</span>
+<span class="kt">int</span> <span class="o">*</span> <span class="n">cursor</span><span class="p">;</span>                  <span class="c1">// 각 어항을 가리키는 역할</span>
+
+<span class="kt">void</span> <span class="nf">initData</span><span class="p">();</span>
+<span class="kt">void</span> <span class="nf">printFishes</span><span class="p">();</span>
+<span class="kt">void</span> <span class="nf">decreaseWater</span><span class="p">(</span><span class="kt">long</span> <span class="n">elapsedTime</span><span class="p">);</span>
+<span class="kt">int</span> <span class="nf">checkFishAlive</span><span class="p">();</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="kt">long</span> <span class="n">startTime</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>        <span class="c1">// 게임 시작시간</span>
+    <span class="kt">long</span> <span class="n">totalElapsedTime</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="c1">// 총 경과시간</span>
+    <span class="kt">long</span> <span class="n">prevElapsedTime</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>  <span class="c1">// 직전 경과시간 (최근에 물을 준 시간 간격)</span>
+
+    <span class="kt">int</span> <span class="n">num</span><span class="p">;</span>                   <span class="c1">// 물을 채울 어항 번호 (사용자 입력)</span>
+
+    <span class="n">initData</span><span class="p">();</span>
+
+    <span class="n">cursor</span> <span class="o">=</span> <span class="n">arrayFish</span><span class="p">;</span>        <span class="c1">// cursor[0], cursor[1], ...</span>
+
+    <span class="n">startTime</span> <span class="o">=</span> <span class="n">clock</span><span class="p">();</span>       <span class="c1">// 현재시각을 millisecond(ms, 1000분의 1초) 단위로 변환</span>
+
+    <span class="k">while</span> <span class="p">(</span><span class="mi">1</span><span class="p">)</span>                  <span class="c1">// 문한반복</span>
+    <span class="p">{</span>
+        <span class="n">printFishes</span><span class="p">();</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;몇 번 어항에 물을 주시겠어요? &quot;</span><span class="p">);</span>
+        <span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%d&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">num</span><span class="p">);</span>
+
+        <span class="c1">// 입력값 체크</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">num</span> <span class="o">&lt;</span> <span class="mi">1</span> <span class="o">||</span> <span class="n">num</span> <span class="o">&gt;</span> <span class="mi">6</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">printf</span><span class="p">(</span><span class="s">&quot;</span><span class="se">\n</span><span class="s">입력값이 잘못되었어요.</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+            <span class="k">continue</span><span class="p">;</span>
+        <span class="p">}</span>
+
+        <span class="c1">// 게임 총 경과시간</span>
+
+        <span class="c1">// repl.it 사이트에서는 시간이 연속적으로 흐르지 않기 때문에 100으로 나누어 주는 것으로 모의실험 가능.</span>
+        <span class="n">totalElapsedTime</span> <span class="o">=</span> <span class="p">(</span><span class="n">clock</span><span class="p">()</span> <span class="o">-</span> <span class="n">startTime</span><span class="p">)</span> <span class="o">/</span> <span class="mi">100</span><span class="p">;</span>
+        <span class="c1">// totalElapsedTime = (clock() - startTime) / CLOCKS_PER_SEC;</span>
+
+        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;게임 총 경과시간: %ld 초</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">totalElapsedTime</span><span class="p">);</span>
+
+        <span class="c1">// 마지막으로 물을 준 이후로 흐른 시간</span>
+        <span class="c1">// 흐른 시간동안 증발된 물의 양을 측정하기 위함.</span>
+        <span class="n">prevElapsedTime</span> <span class="o">=</span> <span class="n">totalElapsedTime</span> <span class="o">-</span> <span class="n">prevElapsedTime</span><span class="p">;</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;마지막으로 물을 준 이후로 흐른 시간: %ld 초</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">prevElapsedTime</span><span class="p">);</span>
+
+        <span class="c1">// 증발된 만큼 물을 감소시키기</span>
+        <span class="n">decreaseWater</span><span class="p">(</span><span class="n">prevElapsedTime</span><span class="p">);</span>
+
+        <span class="c1">// 사용자가 지정한 어항에 물주기</span>
+        <span class="c1">// 1. 어항의 물이 0이면? 물고기 이미 사망. 따라서 물 주지 않음.</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">cursor</span><span class="p">[</span><span class="n">num</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d 번 물고기는 이미 사망. 물 주지 않음.</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">num</span><span class="p">);</span>
+        <span class="p">}</span>
+        <span class="c1">// 2. 어항의 물의 양이 0이 아니면 물을 줌. 단, 어항 물의 양이 100 넘지 않게 해야함.</span>
+        <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">cursor</span><span class="p">[</span><span class="n">num</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span> <span class="o">&lt;=</span> <span class="mi">100</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="c1">// 물 주기</span>
+            <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d 번 어항에 물주기</span><span class="se">\n\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">num</span><span class="p">);</span>
+            <span class="n">cursor</span><span class="p">[</span><span class="n">num</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">;</span>
+        <span class="p">}</span>
+
+        <span class="c1">// 레벨업 시행여부 확인 (20초마다 레벨업 수행)</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">totalElapsedTime</span> <span class="o">/</span> <span class="mi">20</span> <span class="o">&gt;</span> <span class="n">level</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">level</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">;</span>
+            <span class="n">printf</span><span class="p">(</span><span class="s">&quot; *** 축 레벨업! 기존 %d 레벨에서 %d 레벨로 업그레이드 ***</span><span class="se">\n\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">level</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">level</span><span class="p">);</span>
+
+            <span class="c1">// 최종레벨: 5</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">level</span> <span class="o">==</span> <span class="mi">5</span><span class="p">)</span>
+            <span class="p">{</span>
+                <span class="n">printf</span><span class="p">(</span><span class="s">&quot;</span><span class="se">\n\n</span><span class="s">축하합니다. 최고레벨을 당성하였음! 게임 종료!</span><span class="se">\n\n</span><span class="s">&quot;</span><span class="p">);</span>
+                <span class="n">exit</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+
+        <span class="c1">// 물고기가 죽었는지 확인하기</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">checkFishAlive</span><span class="p">()</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="c1">// 모든 물고기 모두 사망</span>
+            <span class="n">printf</span><span class="p">(</span><span class="s">&quot;모든 물고기 사망 ㅠㅠ</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+            <span class="n">exit</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+        <span class="p">}</span>
+        <span class="k">else</span>
+        <span class="p">{</span>
+            <span class="n">printf</span><span class="p">(</span><span class="s">&quot;물고기 아직 살아 있음!</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+        <span class="p">}</span>
+
+        <span class="c1">// while 문이 반복될 때마다 마지막에 물준 시간 기억하기</span>
+        <span class="c1">// prevElapsedTime 이미 그 역할 다했기 때문에 여기서 업데이트 해도 문제 없음.</span>
+        <span class="n">prevElapsedTime</span> <span class="o">=</span> <span class="n">totalElapsedTime</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">initData</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="n">level</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>                 <span class="c1">// 게임 시작 레벨 (1-5)</span>
+
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">6</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">arrayFish</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="mi">100</span><span class="p">;</span>     <span class="c1">// 최초 어항 물높이 </span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">printFishes</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%3d번 %3d번 %3d번 %3d번 %3d번 %3d번</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">);</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">6</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">&quot; %4d &quot;</span><span class="p">,</span> <span class="n">arrayFish</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+    <span class="p">}</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;</span><span class="se">\n\n</span><span class="s">&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">decreaseWater</span><span class="p">(</span><span class="kt">long</span> <span class="n">elapsedTime</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">6</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">arrayFish</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">-=</span> <span class="p">(</span><span class="n">level</span> <span class="o">*</span> <span class="mi">3</span> <span class="o">*</span> <span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">elapsedTime</span><span class="p">);</span> <span class="c1">// 3은 난이도 조절용</span>
+
+        <span class="c1">// 물의 최소량은 0임.</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">arrayFish</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">arrayFish</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">checkFishAlive</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">6</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">arrayFish</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span>
+            <span class="k">return</span> <span class="mi">1</span><span class="p">;</span> <span class="c1">// 참 True</span>
+    <span class="p">}</span>
+
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+<hr>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="&#53945;&#51669;">&#53945;&#51669;<a class="anchor-link" href="#&#53945;&#51669;">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>포인터 변수 <code>cursor</code>를 굳이 사용해야 하는 이유가 확실하지 않음.</li>
+<li><code>cursor</code> 대신에 <code>arrayFish</code> 변수를 그대로 사용해도 되기 때문임.</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<hr>
+<h3 id="Python-&#44396;&#54788;">Python &#44396;&#54788;<a class="anchor-link" href="#Python-&#44396;&#54788;">&#182;</a></h3>
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
@@ -13956,6 +14427,320 @@ div#notebook {
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <hr>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="(C-&#50616;&#50612;)-&#51060;&#51473;-&#54252;&#51064;&#53552;">(C &#50616;&#50612;) &#51060;&#51473; &#54252;&#51064;&#53552;<a class="anchor-link" href="#(C-&#50616;&#50612;)-&#51060;&#51473;-&#54252;&#51064;&#53552;">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="&#51060;&#51473;-&#54252;&#51064;&#53552;-&#48320;&#49688;">&#51060;&#51473; &#54252;&#51064;&#53552; &#48320;&#49688;<a class="anchor-link" href="#&#51060;&#51473;-&#54252;&#51064;&#53552;-&#48320;&#49688;">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>이중 포인터 변수: 포인터 변수의 주소를 가리키는 포인터 변수</li>
+<li>포인터 변수에 저장되는 값 또한 하나의 정수값이기에 그 값이 저장되는 메모리의 주소를 저장하는 변수가 이중 포인터 변수임.</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<div align="center"><img src="./images/nado07-c-pointer-4.png" width="500"/></div><p>&lt;그림 참조: <a href="https://www.geeksforgeeks.org/double-pointer-pointer-pointer-c/">GeeksforGeeks: Double Pointer in C</a>&gt;</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>이중 포인터 작동은 일반 포인터가 작동과 동일</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<div align="center"><img src="./images/nado07-c-pointer-4a.png" width="500"/></div><p>&lt;그림 참조: <a href="https://www.geeksforgeeks.org/double-pointer-pointer-pointer-c/">GeeksforGeeks: Double Pointer in C</a>&gt;</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="&#50696;&#51228;:-&#51060;&#51473;-&#54252;&#51064;&#53552;-&#48320;&#49688;">&#50696;&#51228;: &#51060;&#51473; &#54252;&#51064;&#53552; &#48320;&#49688;<a class="anchor-link" href="#&#50696;&#51228;:-&#51060;&#51473;-&#54252;&#51064;&#53552;-&#48320;&#49688;">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<hr>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(){</span>
+    <span class="kt">int</span> <span class="n">var</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="o">*</span><span class="n">ptr1</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="o">**</span><span class="n">ptr2</span><span class="p">;</span>
+
+    <span class="n">ptr1</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">var</span><span class="p">;</span>
+    <span class="n">ptr2</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">ptr1</span><span class="p">;</span>
+
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;var : %d *ptr1 : %d **ptr1 : %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">var</span><span class="p">,</span> <span class="o">*</span><span class="n">ptr1</span><span class="p">,</span> <span class="o">**</span><span class="n">ptr2</span><span class="p">);</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;var 주소 : %d *ptr1 값 : %d **ptr1 값 : %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">var</span><span class="p">,</span> <span class="n">ptr1</span><span class="p">,</span> <span class="o">*</span><span class="n">ptr2</span><span class="p">);</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;ptr1 주소 : %d ptr2 값 : %d&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">ptr1</span><span class="p">,</span> <span class="n">ptr2</span><span class="p">);</span>
+
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<hr>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="PythonTutor-&#54876;&#50857;&#54616;&#44592;">PythonTutor &#54876;&#50857;&#54616;&#44592;<a class="anchor-link" href="#PythonTutor-&#54876;&#50857;&#54616;&#44592;">&#182;</a></h4><ul>
+<li><a href="http://pythontutor.com/visualize.html#code=%23include%20%3Cstdio.h%3E%0A%0Aint%20main%28%29%7B%0A%20%20%20%20int%20var%20%3D%2010%3B%0A%20%20%20%20int%20*ptr1%3B%0A%20%20%20%20int%20**ptr2%3B%0A%20%20%20%20%0A%20%20%20%20ptr1%20%3D%20%26var%3B%0A%20%20%20%20ptr2%20%3D%20%26ptr1%3B%0A%20%20%20%20%0A%20%20%20%20printf%28%22var%20%3A%20%25d%20*ptr1%20%3A%20%25d%20**ptr1%20%3A%20%25d%5Cn%22,%20var,%20*ptr1,%20**ptr2%29%3B%0A%20%20%20%20printf%28%22var%20%EC%A3%BC%EC%86%8C%20%3A%20%25d%20*ptr1%20%EA%B0%92%20%3A%20%25d%20**ptr1%20%EA%B0%92%20%3A%20%25d%5Cn%22,%20%26var,%20ptr1,%20*ptr2%29%3B%0A%20%20%20%20printf%28%22ptr1%20%EC%A3%BC%EC%86%8C%20%3A%20%25d%20ptr2%20%EA%B0%92%20%3A%20%25d%22,%20%26ptr1,%20ptr2%29%3B%0A%20%20%20%20%0A%20%20%20%20return%200%3B%0A%7D&amp;cumulative=false&amp;curInstr=0&amp;heapPrimitives=nevernest&amp;mode=display&amp;origin=opt-frontend.js&amp;py=c&amp;rawInputLstJSON=%5B%5D&amp;textReferences=false">(C 언어) 이중 포인터 소개</a></li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="&#54252;&#51064;&#53552;-&#48176;&#50676;">&#54252;&#51064;&#53552; &#48176;&#50676;<a class="anchor-link" href="#&#54252;&#51064;&#53552;-&#48176;&#50676;">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>포인터 배열: 포인터(메모리 주소)로 구성된 배열</li>
+<li>일반 배열과 동일. 다만, 항목에 사용되는 값들이 값들이 저장된 메모리의 주소에 불과함.</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="&#50696;&#51228;:-&#54252;&#51064;&#53552;-&#48176;&#50676;">&#50696;&#51228;: &#54252;&#51064;&#53552; &#48176;&#50676;<a class="anchor-link" href="#&#50696;&#51228;:-&#54252;&#51064;&#53552;-&#48176;&#50676;">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<hr>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(){</span>
+    <span class="kt">int</span> <span class="n">num1</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span> <span class="n">num2</span> <span class="o">=</span> <span class="mi">20</span><span class="p">,</span> <span class="n">num3</span> <span class="o">=</span> <span class="mi">30</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="o">*</span><span class="n">parr</span><span class="p">[</span><span class="mi">3</span><span class="p">];</span>
+
+    <span class="n">parr</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">num1</span><span class="p">;</span>
+    <span class="n">parr</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">num2</span><span class="p">;</span>
+    <span class="n">parr</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">num3</span><span class="p">;</span>
+
+    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="mi">3</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;parr[%d] : %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="o">*</span><span class="n">parr</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+    <span class="p">}</span>
+
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<hr>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="PythonTutor-&#54876;&#50857;&#54616;&#44592;">PythonTutor &#54876;&#50857;&#54616;&#44592;<a class="anchor-link" href="#PythonTutor-&#54876;&#50857;&#54616;&#44592;">&#182;</a></h4><ul>
+<li><a href="http://pythontutor.com/visualize.html#code=%23include%20%3Cstdio.h%3E%0A%0Aint%20main%28%29%7B%0A%20%20%20%20int%20num1%20%3D%2010,%20num2%20%3D%2020,%20num3%20%3D%2030%3B%0A%20%20%20%20int%20*parr%5B3%5D%3B%0A%20%20%20%20%0A%20%20%20%20parr%5B0%5D%20%3D%20%26num1%3B%0A%20%20%20%20parr%5B1%5D%20%3D%20%26num2%3B%0A%20%20%20%20parr%5B2%5D%20%3D%20%26num3%3B%0A%20%20%20%20%0A%20%20%20%20for%28int%20i%3D0%3B%20i%3C3%3B%20i%2B%2B%29%7B%0A%20%20%20%20%20%20%20%20printf%28%22parr%5B%25d%5D%20%3A%20%25d%5Cn%22,%20i,%20*parr%5Bi%5D%29%3B%0A%20%20%20%20%7D%0A%20%20%20%20%0A%20%20%20%20return%200%3B%0A%7D&amp;cumulative=false&amp;curInstr=0&amp;heapPrimitives=nevernest&amp;mode=display&amp;origin=opt-frontend.js&amp;py=c&amp;rawInputLstJSON=%5B%5D&amp;textReferences=false">(C 언어) 포인터 배열 소개</a></li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="call-by-value-vs.-call-by-reference">call-by-value vs. call-by-reference<a class="anchor-link" href="#call-by-value-vs.-call-by-reference">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>함수에 인자를 전달할 때 값을 전달하는 방식과 포인터를 전달하는 방식에 차이가 있음.<ul>
+<li>예제: <code>swap()</code>과 <code>swap_addr()</code></li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="&#50696;&#51228;">&#50696;&#51228;<a class="anchor-link" href="#&#50696;&#51228;">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<hr>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+
+<span class="kt">void</span> <span class="nf">cbv</span><span class="p">(</span><span class="kt">int</span> <span class="n">val</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">val</span> <span class="o">=</span> <span class="mi">30</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">cbr</span><span class="p">(</span><span class="kt">int</span> <span class="o">*</span><span class="n">ref</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="o">*</span><span class="n">ref</span> <span class="o">=</span> <span class="mi">30</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="kt">int</span> <span class="n">val1</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span> <span class="n">val2</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;이전 : val1=%d, val2=%d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">val1</span><span class="p">,</span> <span class="n">val2</span><span class="p">);</span>
+    <span class="n">cbv</span><span class="p">(</span><span class="n">val1</span><span class="p">);</span>
+    <span class="n">cbr</span><span class="p">(</span><span class="o">&amp;</span><span class="n">val2</span><span class="p">);</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;이후  : val1=%d, val2=%d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">val1</span><span class="p">,</span> <span class="n">val2</span><span class="p">);</span>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<hr>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="PythonTutor-&#54876;&#50857;&#54616;&#44592;">PythonTutor &#54876;&#50857;&#54616;&#44592;<a class="anchor-link" href="#PythonTutor-&#54876;&#50857;&#54616;&#44592;">&#182;</a></h4><ul>
+<li><a href="http://pythontutor.com/visualize.html#code=%23include%20%3Cstdio.h%3E%0A%0Avoid%20call_by_value%28int%20val%29%0A%7B%0A%20%20%20%20val%20%3D%2020%3B%0A%7D%0A%0Avoid%20call_by_refer%28int%20*ref%29%0A%7B%0A%20%20%20%20*ref%20%3D%2020%3B%0A%7D%0A%0Aint%20main%28%29%0A%7B%0A%20%20%20%20int%20value%20%3D%2010%3B%0A%20%20%20%20int%20refer%20%3D%2010%3B%0A%0A%20%20%20%20printf%28%22before%20%3A%20value%3D%25d,%20refer%3D%25d%5Cn%22,%20value,%20refer%29%3B%0A%20%20%20%20call_by_value%28value%29%3B%0A%20%20%20%20call_by_refer%28%26refer%29%3B%0A%20%20%20%20printf%28%22after%20%20%3A%20value%3D%25d,%20refer%3D%25d%5Cn%22,%20value,%20refer%29%3B%0A%20%20%20%20return%200%3B%0A%7D&amp;cumulative=false&amp;curInstr=0&amp;heapPrimitives=nevernest&amp;mode=display&amp;origin=opt-frontend.js&amp;py=c&amp;rawInputLstJSON=%5B%5D&amp;textReferences=false">(C 언어) call-by-value vs call-by-reference</a></li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+
+<span class="kt">int</span> <span class="n">global_val</span> <span class="o">=</span> <span class="mi">30</span><span class="p">;</span> 
+
+<span class="kt">void</span> <span class="nf">cbv</span><span class="p">(</span><span class="kt">int</span> <span class="o">*</span><span class="n">val</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="n">val</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">global_val</span><span class="p">;</span> 
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">cbr</span><span class="p">(</span><span class="kt">int</span> <span class="o">**</span><span class="n">ref</span><span class="p">)</span> 
+<span class="p">{</span>
+  <span class="o">*</span><span class="n">ref</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">global_val</span><span class="p">;</span> 
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> 
+<span class="p">{</span> 
+  <span class="kt">int</span> <span class="n">local_val</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span> 
+
+  <span class="kt">int</span> <span class="o">*</span><span class="n">value</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">local_val</span><span class="p">;</span> 
+  <span class="kt">int</span> <span class="o">*</span><span class="n">refer</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">local_val</span><span class="p">;</span> 
+
+  <span class="n">printf</span><span class="p">(</span><span class="s">&quot;이전 : *value=%d, *refer=%d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="o">*</span><span class="n">value</span><span class="p">,</span> <span class="o">*</span><span class="n">refer</span><span class="p">);</span> 
+
+  <span class="n">cbv</span><span class="p">(</span><span class="n">value</span><span class="p">);</span> 
+  <span class="n">cbr</span><span class="p">(</span><span class="o">&amp;</span><span class="n">refer</span><span class="p">);</span> 
+
+  <span class="n">printf</span><span class="p">(</span><span class="s">&quot;이후 : *value=%d, *refer=%d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="o">*</span><span class="n">value</span><span class="p">,</span> <span class="o">*</span><span class="n">refer</span><span class="p">);</span>
+
+  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="PythonTutor-&#54876;&#50857;&#54616;&#44592;">PythonTutor &#54876;&#50857;&#54616;&#44592;<a class="anchor-link" href="#PythonTutor-&#54876;&#50857;&#54616;&#44592;">&#182;</a></h4><ul>
+<li><a href="http://pythontutor.com/visualize.html#code=%23include%20%3Cstdio.h%3E%0A%0Aint%20global_val%20%3D%2030%3B%20%0A%0Avoid%20cbv%28int%20*val%29%20%0A%7B%0A%20%20val%20%3D%20%26global_val%3B%20%0A%7D%0A%0Avoid%20cbr%28int%20**ref%29%20%0A%7B%0A%20%20*ref%20%3D%20%26global_val%3B%20%0A%7D%0A%0Aint%20main%28%29%20%0A%7B%20%0A%20%20int%20local_val%20%3D%2010%3B%20%0A%0A%20%20int%20*value%20%3D%20%26local_val%3B%20%0A%20%20int%20*refer%20%3D%20%26local_val%3B%20%0A%0A%20%20printf%28%22%EC%9D%B4%EC%A0%84%20%3A%20*value%3D%25d,%20*refer%3D%25d%5Cn%22,%20*value,%20*refer%29%3B%20%0A%0A%20%20cbv%28value%29%3B%20%0A%20%20cbr%28%26refer%29%3B%20%0A%0A%20%20printf%28%22%EC%9D%B4%ED%9B%84%20%3A%20*value%3D%25d,%20*refer%3D%25d%5Cn%22,%20*value,%20*refer%29%3B%0A%0A%20%20return%200%3B%0A%7D&amp;cumulative=false&amp;curInstr=0&amp;heapPrimitives=nevernest&amp;mode=display&amp;origin=opt-frontend.js&amp;py=c&amp;rawInputLstJSON=%5B%5D&amp;textReferences=false">(C 언어) 이중 포인터</a></li>
+</ul>
 
 </div>
 </div>
