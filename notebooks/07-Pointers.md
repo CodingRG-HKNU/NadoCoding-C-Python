@@ -590,9 +590,9 @@ int main(void)
 
 		// 게임 총 경과시간
         
-        // repl.it 사이트에서는 시간이 연속적으로 흐르지 않기 때문에 100으로 나누어 주는 것으로 모의실험 가능.
-		totalElapsedTime = (clock() - startTime) / 100;
-		// totalElapsedTime = (clock() - startTime) / CLOCKS_PER_SEC;
+		totalElapsedTime = (clock() - startTime) / CLOCKS_PER_SEC;
+        // repl.it 사이트에서는 시간이 연속적이지 않음. 100으로 나누어 주는 것으로 모의실험 가능.
+		// totalElapsedTime = (clock() - startTime) / 100;
 
         printf("게임 총 경과시간: %ld 초\n", totalElapsedTime);
 
@@ -796,6 +796,84 @@ int main(){
 #### PythonTutor 활용하기
 
 * [(C 언어) 포인터 배열 소개](http://pythontutor.com/visualize.html#code=%23include%20%3Cstdio.h%3E%0A%0Aint%20main%28%29%7B%0A%20%20%20%20int%20num1%20%3D%2010,%20num2%20%3D%2020,%20num3%20%3D%2030%3B%0A%20%20%20%20int%20*parr%5B3%5D%3B%0A%20%20%20%20%0A%20%20%20%20parr%5B0%5D%20%3D%20%26num1%3B%0A%20%20%20%20parr%5B1%5D%20%3D%20%26num2%3B%0A%20%20%20%20parr%5B2%5D%20%3D%20%26num3%3B%0A%20%20%20%20%0A%20%20%20%20for%28int%20i%3D0%3B%20i%3C3%3B%20i%2B%2B%29%7B%0A%20%20%20%20%20%20%20%20printf%28%22parr%5B%25d%5D%20%3A%20%25d%5Cn%22,%20i,%20*parr%5Bi%5D%29%3B%0A%20%20%20%20%7D%0A%20%20%20%20%0A%20%20%20%20return%200%3B%0A%7D&cumulative=false&curInstr=0&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=c&rawInputLstJSON=%5B%5D&textReferences=false)
+
+---
+
+### 이중 배열
+
+* 포인터 배열을 이용하여 서로 다른 길이의 배열을 항목으로 갖는 배열, 즉, 이중 배열을 정의할 수 있음.
+
+---
+
+```c
+#include <stdio.h>
+
+int main(){
+    int arr1[2] = {10, 11};
+    int arr2[3] = {20, 30, 40};
+
+	int * parr[2];
+
+	parr[0] = arr1;
+	parr[1] = arr2;
+
+	for (int i = 0; i < 2; i++)
+	{
+		printf("parr[%d]: %d\n", i, *parr[i]);
+	}
+
+    return 0;
+}
+```
+
+---
+
+#### PythonTutor 활용하기
+
+* [(C 언어) 이중 배열](http://pythontutor.com/visualize.html#code=%23include%20%3Cstdio.h%3E%0A%0Aint%20main%28%29%7B%0A%20%20%20%20int%20arr1%5B2%5D%20%3D%20%7B10,%2011%7D%3B%0A%20%20%20%20int%20arr2%5B3%5D%20%3D%20%7B20,%2030,%2040%7D%3B%0A%0A%20%20%20%20int%20*%20parr%5B2%5D%3B%0A%0A%20%20%20%20parr%5B0%5D%20%3D%20arr1%3B%0A%20%20%20%20parr%5B1%5D%20%3D%20arr2%3B%0A%0A%20%20%20%20for%20%28int%20i%20%3D%200%3B%20i%20%3C%202%3B%20i%2B%2B%29%0A%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20printf%28%22parr%5B%25d%5D%3A%20%25d%5Cn%22,%20i,%20*parr%5Bi%5D%29%3B%0A%20%20%20%20%7D%0A%0A%20%20%20%20return%200%3B%0A%7D&cumulative=false&curInstr=0&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=c&rawInputLstJSON=%5B%5D&textReferences=false)
+
+#### 주의사항
+
+* 서로 다른 자료형의 배열을 항목으로 갖는 포인터 배열은 구조체를 활용해야 함.
+    
+    ```c
+    int arr1[2] = {10, 11};
+    float arr2[3] = {1.0, 1.1, 1.2};
+
+    ```
+
+* 이후 구조체를 학습한 후에 예제 살펴볼 것임.
+
+---
+
+### Python 구현
+
+* 이중배열을 파이썬으로 구현하는 일은 매우 간단.
+* 자료형, 포인터 생각할 필요 없이 이중 배열로 선언하면 됨.
+* 주의: `parr[i]`는 i 번째 리스트의 첫째 항목을 가리킴.
+
+
+```python
+arr1 = [10, 11]
+arr2 = [20, 30, 40]
+
+parr = [arr1, arr2]
+
+for i in range(2):
+    print("parr[%d]: %d" % (i, parr[i][0]))
+```
+
+    parr[0]: 10
+    parr[1]: 20
+
+
+---
+
+## 부록
+
+* 함수에 대한 인자로 일반적인 값을 받는 경우와 포인터 값을 받는 경우로 구분할 수 있음.
+* call-by-value(콜 바이 밸류) 함수: 일반적인 값을 인자로 받는 함수
+* call-by-reference(콜 바이 레퍼런스) 함수: 포인터 값을 인자로 받는 함수
 
 ### call-by-value vs. call-by-reference
 
