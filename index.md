@@ -4,6 +4,12 @@ C 프로그래밍 기초 동영상 모음집
 이용하여 C 언오와 파이썬 언어를 함께 설명함.
 특성이 많이 다른 두 언어를 함께 살펴보면서 프로그래밍언어의 기초를 전달하고자 함.
 
+## 감사의 글
+
+훌륭한 강의동영상을 공개한 
+[나도코딩](https://www.youtube.com/channel/UC7iAOLiALt2rtMVAWWl4pnw)님께 
+감사드립니다.
+
 ## 목차
 
 * 1장 Hello World &nbsp; 

@@ -13084,6 +13084,19 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<p>감사의 글: 유튜브 동영상 모음집 
+<a href="https://www.youtube.com/watch?v=dEykoFZkf5Y&amp;list=PLMsa_0kAjjrdiwQykI8eb3H4IRxLTqCnP">(나도코딩 C)</a>에서 
+설명하는 코드를 활용합니다. 
+강의동영상을 공개한 
+<a href="https://www.youtube.com/channel/UC7iAOLiALt2rtMVAWWl4pnw">나도코딩</a>님께 
+감사드립니다.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="&#54645;&#49900;">&#54645;&#49900;<a class="anchor-link" href="#&#54645;&#49900;">&#182;</a></h2>
 </div>
 </div>
@@ -13101,7 +13114,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="(C-&#50616;&#50612;)-&#46041;&#47932;-&#46244;&#51665;&#44592;">(C &#50616;&#50612;) &#46041;&#47932; &#46244;&#51665;&#44592;<a class="anchor-link" href="#(C-&#50616;&#50612;)-&#46041;&#47932;-&#46244;&#51665;&#44592;">&#182;</a></h2>
+<h2 id="(C-&#50616;&#50612;)-&#46041;&#47932;-&#46244;&#51665;&#44592;(&#47700;&#47784;&#47532;-&#44172;&#51076;)">(C &#50616;&#50612;) &#46041;&#47932; &#46244;&#51665;&#44592;(&#47700;&#47784;&#47532; &#44172;&#51076;)<a class="anchor-link" href="#(C-&#50616;&#50612;)-&#46041;&#47932;-&#46244;&#51665;&#44592;(&#47700;&#47784;&#47532;-&#44172;&#51076;)">&#182;</a></h2>
 </div>
 </div>
 </div>
@@ -13179,25 +13192,26 @@ div#notebook {
     <span class="c1">// 1차원 배열</span>
     <span class="kt">int</span> <span class="n">arr</span><span class="p">[</span><span class="mi">5</span><span class="p">];</span>
 
-    <span class="c1">// ㅁㅁㅁㅁㅁ</span>
+    <span class="c1">// { ㅁㅁㅁㅁㅁ }</span>
 
     <span class="c1">// 2차원 배열</span>
-    <span class="kt">int</span> <span class="n">arr2</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">5</span><span class="p">];</span> <span class="c1">// 길이가 5인 배열이 두 개 있다는 의미로 이해됨.</span>
-
-    <span class="c1">// ㅁㅁㅁㅁㅁ</span>
-    <span class="c1">// ㅁㅁㅁㅁㅁ</span>
+    <span class="kt">int</span> <span class="n">arr2</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">5</span><span class="p">];</span>     <span class="c1">// 길이가 5인 배열이 두 개 있다는 의미로 이해됨.</span>
+                        <span class="c1">// 보다 실용적으로는 2x5 모양의 행렬로 이해할 수 있음.</span>
+    <span class="c1">// { </span>
+    <span class="c1">//   {ㅁㅁㅁㅁㅁ},</span>
+    <span class="c1">//   {ㅁㅁㅁㅁㅁ},</span>
+    <span class="c1">// }</span>
 
     <span class="c1">// 3차원 배열</span>
     <span class="kt">int</span> <span class="n">arr3</span><span class="p">[</span><span class="mi">3</span><span class="p">][</span><span class="mi">2</span><span class="p">][</span><span class="mi">5</span><span class="p">];</span> <span class="c1">// 길이가 5인 배열 두 개를 포함한 배열이 3개 있다는 의미로 이해됨.</span>
+                       <span class="c1">// 보다 실용적으로는 길이가 5인 배열을 항목으로 갖는 3x2 모양의 행렬로 이해 가능</span>
+                       <span class="c1">// 이미지 픽셀을 다룰 때 보통 이렇게 사용됨.</span>
 
-    <span class="c1">// ㅁㅁㅁㅁㅁ</span>
-    <span class="c1">// ㅁㅁㅁㅁㅁ</span>
-
-    <span class="c1">// ㅁㅁㅁㅁㅁ</span>
-    <span class="c1">// ㅁㅁㅁㅁㅁ</span>
-
-    <span class="c1">// ㅁㅁㅁㅁㅁ</span>
-    <span class="c1">// ㅁㅁㅁㅁㅁ</span>
+    <span class="c1">// { </span>
+    <span class="c1">//   { {ㅁㅁㅁㅁㅁ}, {ㅁㅁㅁㅁㅁ} },</span>
+    <span class="c1">//   { {ㅁㅁㅁㅁㅁ}, {ㅁㅁㅁㅁㅁ} },</span>
+    <span class="c1">//   { {ㅁㅁㅁㅁㅁ}, {ㅁㅁㅁㅁㅁ} } </span>
+    <span class="c1">// }</span>
 
     <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
@@ -13205,27 +13219,6 @@ div#notebook {
 
 </div>
 </div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<hr>
-<h3 id="Python-&#44396;&#54788;">Python &#44396;&#54788;<a class="anchor-link" href="#Python-&#44396;&#54788;">&#182;</a></h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-
-    </div>
-</div>
-</div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -13276,27 +13269,6 @@ div#notebook {
 
 </div>
 </div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<hr>
-<h3 id="Python-&#44396;&#54788;">Python &#44396;&#54788;<a class="anchor-link" href="#Python-&#44396;&#54788;">&#182;</a></h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-
-    </div>
-</div>
-</div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -13378,13 +13350,163 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span> 
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 1차원 배열</span>
+<span class="n">arr</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 2차원 배열</span>
+<span class="n">arr2</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span>
+        <span class="p">[</span><span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">]</span>
+       <span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 3차원 배열</span>
+<span class="n">arr3</span><span class="o">=</span> <span class="p">[</span>
+        <span class="p">[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span>
+         <span class="p">[</span><span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">]],</span>
+        <span class="p">[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span>
+         <span class="p">[</span><span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">]],</span>
+        <span class="p">[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span>
+         <span class="p">[</span><span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">]]</span>
+      <span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>넘파이(numpy) 모듈의 어레이(array)를 사용하면 보다 많은 정보를 쉽게 다룰 수 있음.</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="n">arr3_array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">arr3</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li><code>arr3_array</code>는 어레이 자료형임.</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">arr3_array</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[5]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>numpy.ndarray</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li><code>shape</code> 속성에 차원 정보가 들어있음.</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">arr3_array</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[6]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>(3, 2, 5)</pre>
+</div>
+
+</div>
+
 </div>
 </div>
 
@@ -13596,15 +13718,83 @@ div#notebook {
 </div>
 </div>
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>반복문 사용은 기본적으로 동일함.</li>
+</ul>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span> 
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;3차원 배열 항목 확인</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;3차원 배열 (</span><span class="si">%d</span><span class="s2">, </span><span class="si">%d</span><span class="s2">, </span><span class="si">%d</span><span class="s2">)의 값: </span><span class="si">%d</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">k</span><span class="p">,</span> <span class="n">arr3</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">][</span><span class="n">k</span><span class="p">]))</span>
+    <span class="nb">print</span><span class="p">()</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>3차원 배열 항목 확인
+
+3차원 배열 (0, 0, 0)의 값: 1
+3차원 배열 (0, 0, 1)의 값: 2
+3차원 배열 (0, 0, 2)의 값: 3
+3차원 배열 (0, 0, 3)의 값: 4
+3차원 배열 (0, 0, 4)의 값: 5
+3차원 배열 (0, 1, 0)의 값: 6
+3차원 배열 (0, 1, 1)의 값: 7
+3차원 배열 (0, 1, 2)의 값: 8
+3차원 배열 (0, 1, 3)의 값: 9
+3차원 배열 (0, 1, 4)의 값: 10
+
+3차원 배열 (1, 0, 0)의 값: 1
+3차원 배열 (1, 0, 1)의 값: 2
+3차원 배열 (1, 0, 2)의 값: 3
+3차원 배열 (1, 0, 3)의 값: 4
+3차원 배열 (1, 0, 4)의 값: 5
+3차원 배열 (1, 1, 0)의 값: 6
+3차원 배열 (1, 1, 1)의 값: 7
+3차원 배열 (1, 1, 2)의 값: 8
+3차원 배열 (1, 1, 3)의 값: 9
+3차원 배열 (1, 1, 4)의 값: 10
+
+3차원 배열 (2, 0, 0)의 값: 1
+3차원 배열 (2, 0, 1)의 값: 2
+3차원 배열 (2, 0, 2)의 값: 3
+3차원 배열 (2, 0, 3)의 값: 4
+3차원 배열 (2, 0, 4)의 값: 5
+3차원 배열 (2, 1, 0)의 값: 6
+3차원 배열 (2, 1, 1)의 값: 7
+3차원 배열 (2, 1, 2)의 값: 8
+3차원 배열 (2, 1, 3)의 값: 9
+3차원 배열 (2, 1, 4)의 값: 10
+
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -13660,7 +13850,7 @@ div#notebook {
 <span class="cp">#include</span> <span class="cpf">&lt;time.h&gt;</span><span class="cp"></span>
 
 <span class="kt">int</span> <span class="n">arrayAnimal</span><span class="p">[</span><span class="mi">4</span><span class="p">][</span><span class="mi">5</span><span class="p">];</span> <span class="c1">// 카드 20장의 위치 지정</span>
-<span class="kt">int</span> <span class="n">checkAnimal</span><span class="p">[</span><span class="mi">4</span><span class="p">][</span><span class="mi">5</span><span class="p">];</span> <span class="c1">// 뒤집혔는지 여부를 기억하는 배열</span>
+<span class="kt">int</span> <span class="n">checkAnimal</span><span class="p">[</span><span class="mi">4</span><span class="p">][</span><span class="mi">5</span><span class="p">];</span> <span class="c1">// 뒤집혔는지 여부를 기억하는 배열. 항목이 0으로 자동 초기화됨.</span>
 <span class="kt">char</span> <span class="o">*</span> <span class="n">strAnimal</span><span class="p">[</span><span class="mi">10</span><span class="p">];</span>  <span class="c1">// 동물 이름들의 배열</span>
 
 <span class="kt">void</span> <span class="nf">initAnimalArray</span><span class="p">();</span>
@@ -13830,7 +14020,7 @@ div#notebook {
 
 <span class="kt">void</span> <span class="nf">printQuestion</span><span class="p">()</span>
 <span class="p">{</span> 
-    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;</span><span class="se">\n\n</span><span class="s">(문제)</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);;</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;</span><span class="se">\n\n</span><span class="s">(문제)</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
 
     <span class="kt">int</span> <span class="n">seq</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
 
@@ -13885,13 +14075,576 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span> 
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">random</span> 
+<span class="kn">import</span> <span class="nn">time</span>
+<span class="kn">import</span> <span class="nn">sys</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li><code>arrayAnimlal</code> 초기화 방법 1: 중첩 반복문 활용</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">arrayAnimal</span> <span class="o">=</span> <span class="p">[]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">initAnimalArray</span><span class="p">():</span>
+    <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">):</span>
+        <span class="n">new</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
+            <span class="n">new</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+        <span class="n">arrayAnimal</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">new</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">arrayAnimal</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[11]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[]</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li><code>arrayAnimlal</code> 초기화 방법 2: 리스트 조건제시법 활용<ul>
+<li>참조: <a href="https://wikidocs.net/23200">리스트 조건제시법 이해</a></li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">arrayAnimal</span> <span class="o">=</span> <span class="p">[[</span><span class="o">-</span><span class="mi">1</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">)]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">)]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">arrayAnimal</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[13]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[[-1, -1, -1, -1, -1],
+ [-1, -1, -1, -1, -1],
+ [-1, -1, -1, -1, -1],
+ [-1, -1, -1, -1, -1]]</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>동물 리스트 지정</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">strAnimal</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;원숭이&quot;</span><span class="p">,</span> <span class="s2">&quot;하마&quot;</span><span class="p">,</span> <span class="s2">&quot;강아지&quot;</span><span class="p">,</span> <span class="s2">&quot;고양이&quot;</span><span class="p">,</span> <span class="s2">&quot;돼지&quot;</span><span class="p">,</span> <span class="s2">&quot;코끼리&quot;</span><span class="p">,</span> <span class="s2">&quot;기린&quot;</span><span class="p">,</span> <span class="s2">&quot;낙타&quot;</span><span class="p">,</span> <span class="s2">&quot;타조&quot;</span><span class="p">,</span> <span class="s2">&quot;호랑이&quot;</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>동물 리스트 지정(영어): 줄간격 맞추기가 보다 용이함.</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">strAnimal</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;monkey&quot;</span><span class="p">,</span> <span class="s2">&quot;hippo&quot;</span><span class="p">,</span> <span class="s2">&quot;dog&quot;</span><span class="p">,</span> <span class="s2">&quot;cat&quot;</span><span class="p">,</span> <span class="s2">&quot;pig&quot;</span><span class="p">,</span> 
+             <span class="s2">&quot;elephant&quot;</span><span class="p">,</span> <span class="s2">&quot;giraffe&quot;</span><span class="p">,</span> <span class="s2">&quot;camel&quot;</span><span class="p">,</span> <span class="s2">&quot;ostrich&quot;</span><span class="p">,</span> <span class="s2">&quot;tiger&quot;</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li><p>동물사진이 뒤집혀져있는가에 대한 정보를 담는 2차원 배열</p>
+<ul>
+<li>0: 아직 숨겨져 있음(기본값)</li>
+<li>1: 이미 뒤집혀져서 게임에서 제외됨 (빙고일 경우 1로 변경됨)</li>
+</ul>
+</li>
+<li><p>주의사항:</p>
+<ul>
+<li>C 언어 코드에서 <code>checkAnimal</code> 2차원 배열은 선언만 되었고 항목 초기화가 이루지 지지 않았음.</li>
+<li>하지만 C 언어 컴파일 과정에서 자동으로 모든 항목이 0으로 초기화됨. </li>
+<li>참조: <a href="http://pythontutor.com/visualize.html#code=int%20checkAnimal%5B4%5D%5B5%5D%3B%20//%20%EB%92%A4%EC%A7%91%ED%98%94%EB%8A%94%EC%A7%80%20%EC%97%AC%EB%B6%80%EB%A5%BC%20%EA%B8%B0%EC%96%B5%ED%95%98%EB%8A%94%20%EB%B0%B0%EC%97%B4%0A%0Aint%20main%28%29%20%7B%0A%0A%20%20foundAllAnimals%28%29%3B%0A%20%20return%200%3B%0A%7D%0A%0Aint%20foundAllAnimals%28%29%0A%7B%0A%20%20%20%20for%20%28int%20i%3D0%3B%20i%3C4%3B%20i%2B%2B%29%0A%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20for%20%28int%20j%3D0%3B%20j%3C5%3B%20j%2B%2B%29%0A%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20if%20%28checkAnimal%5Bi%5D%5Bj%5D%20%3D%3D%200%29%0A%20%20%20%20%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20return%200%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%7D%0A%0A%20%20%20%20//%20%EB%AA%A8%EB%93%A0%20%EB%8F%99%EB%AC%BC%EC%9D%84%20%EB%8B%A4%20%EC%B0%BE%EC%9D%80%20%EA%B2%BD%EC%9A%B0%0A%20%20%20%20return%201%3B%0A%7D&amp;cumulative=false&amp;curInstr=0&amp;heapPrimitives=nevernest&amp;mode=display&amp;origin=opt-frontend.js&amp;py=c&amp;rawInputLstJSON=%5B%5D&amp;textReferences=false">PythonTutor: 배열 초기화</a></li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>파이썬에서 배열 항목의 초기화는 자동으로 이루어지지 않음. 
+  따라서 아래와 같이 직접 초기화 과정을 거쳐야 함.</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">checkAnimal</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">0</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">)]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">)]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">checkAnimal</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[17]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[[0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0]]</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li><code>getEmptyPosition()</code> 함수 정의<ul>
+<li>C 언어 코드에서와는 달리 좌표 x, y를 직접 튜플로 반환할 수 있음.</li>
+<li>C 언어에서 튜플은 기본 자료형이 아님. 
+  하지만 다음 시간에 배울 구조체를 이용하여 구현할 수는 있음.</li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">getEmptyPosition</span><span class="p">():</span>
+    <span class="n">current_time</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">())</span>
+    <span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="n">current_time</span><span class="p">)</span>
+
+    <span class="c1"># 4x5 크기의 행렬에서 빈 위치의 좌표 찾기</span>
+    <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+        <span class="n">randPos</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">sys</span><span class="o">.</span><span class="n">maxsize</span><span class="p">)</span> <span class="o">%</span> <span class="mi">20</span> <span class="c1"># 0-19 사이의 숫자 반환</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="n">randPos</span> <span class="o">//</span> <span class="mi">5</span>
+        <span class="n">y</span> <span class="o">=</span> <span class="n">randPos</span> <span class="o">%</span> <span class="mi">5</span>
+
+        <span class="k">if</span> <span class="p">(</span><span class="n">arrayAnimal</span><span class="p">[</span><span class="n">x</span><span class="p">][</span><span class="n">y</span><span class="p">]</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+            <span class="k">return</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li><code>conv_pos_x()</code>와 <code>conv_pos_y()</code> 두 함수는 그래도 여전히 유용함.</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">conv_pos_x</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="c1"># 4x5 크기의 2차원 배열에서 행의 값 확인</span>
+    <span class="k">return</span> <span class="n">x</span> <span class="o">//</span> <span class="mi">5</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">conv_pos_y</span><span class="p">(</span><span class="n">y</span><span class="p">):</span>
+    <span class="c1"># 4x5 크기의 2차원 배열에서 행의 값 확인</span>
+    <span class="k">return</span> <span class="n">y</span> <span class="o">%</span> <span class="mi">5</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li><code>shuffleAnimal()</code>, <code>printAnimals()</code>, <code>printQuestion()</code>, <code>foundAllAnimals()</code> 
+  네 함수는 동일하게 구현함.</li>
+<li>파이썬의 <code>print()</code> 는 기본적으로 줄바꿈을 실행한다는 것에만 주의하면 됨.</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">shuffleAnimal</span><span class="p">():</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">):</span>
+            <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">getEmptyPosition</span><span class="p">()</span>
+            <span class="n">arrayAnimal</span><span class="p">[</span><span class="n">x</span><span class="p">][</span><span class="n">y</span><span class="p">]</span> <span class="o">=</span> <span class="n">i</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[22]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">printAnimals</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">=====쉿, 이건 비밀인데 몰래 보여주는 거임.=====</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="c1"># 4x5 크기의 동물로 구성된 행렬 출력</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%10s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">strAnimal</span><span class="p">[</span><span class="n">arrayAnimal</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]],</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">()</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">=======================================</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[23]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">printQuestion</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n\n</span><span class="s2">(문제)&quot;</span><span class="p">)</span>
+
+    <span class="n">seq</span> <span class="o">=</span> <span class="mi">0</span>
+
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
+            <span class="c1"># 카드를 뒤집어서 정답을 맞혔으면 동물이름 보여주기</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">checkAnimal</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">):</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%10s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">strAnimal</span><span class="p">[</span><span class="n">arrayAnimal</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]],</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+            <span class="c1"># 정답을 맞히지 못했으면 위치를 나타내는 숫자 보여주기</span>
+            <span class="k">else</span><span class="p">:</span> 
+                <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%10d</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">seq</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+
+            <span class="n">seq</span> <span class="o">+=</span> <span class="mi">1</span>
+
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[24]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">foundAllAnimals</span><span class="p">():</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">checkAnimal</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span><span class="p">):</span>
+                <span class="k">return</span> <span class="mi">0</span>
+
+    <span class="c1"># 모든 동물을 다 찾은 경우</span>
+    <span class="k">return</span> <span class="mi">1</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li><code>main()</code> 함수 본문 내용도 사실상 동일하게 구현 가능.</li>
+<li><code>if __name__ == "__main__":</code> 로 감싸는 이유<ul>
+<li>다른 코드로 import 될 때 실행되지 않도록 하기 위함임.</li>
+<li>현재 코드를 하나의 파이썬 파일로 작성한 후 직접 실행하면 실행되지만 
+  다른 코드에 임포트되면 실행되지 않음. </li>
+<li><a href="https://wikidocs.net/23200">리스트 조건제시법 이해</a>에서도 C 언어 코드의 <code>main()</code> 함수와
+  파이썬의 <code>if __name__ == "__main__":</code>의 활용예제를 찾아볼 수 있음.</li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">arrayAnimal</span> <span class="o">=</span> <span class="p">[[</span><span class="o">-</span><span class="mi">1</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">)]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">)]</span>
+    
+    <span class="n">strAnimal</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;monkey&quot;</span><span class="p">,</span> <span class="s2">&quot;hippo&quot;</span><span class="p">,</span> <span class="s2">&quot;dog&quot;</span><span class="p">,</span> <span class="s2">&quot;cat&quot;</span><span class="p">,</span> <span class="s2">&quot;pig&quot;</span><span class="p">,</span> 
+                 <span class="s2">&quot;elephant&quot;</span><span class="p">,</span> <span class="s2">&quot;giraffe&quot;</span><span class="p">,</span> <span class="s2">&quot;camel&quot;</span><span class="p">,</span> <span class="s2">&quot;ostrich&quot;</span><span class="p">,</span> <span class="s2">&quot;tiger&quot;</span><span class="p">]</span>
+    
+    <span class="n">checkAnimal</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">0</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">)]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">)]</span>
+    
+    <span class="n">shuffleAnimal</span><span class="p">()</span>
+
+    <span class="n">failCount</span> <span class="o">=</span> <span class="mi">0</span> <span class="c1"># 실패 횟수 저장</span>
+
+    <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+        <span class="n">printAnimals</span><span class="p">()</span> <span class="c1"># 동물 위치 출력</span>
+        <span class="n">printQuestion</span><span class="p">()</span> <span class="c1"># 문제 출력(카드 지도 보여주기)</span>
+        
+        <span class="c1"># 사용자에 의해 선택된 두 개의 수</span>
+        <span class="n">select1</span><span class="p">,</span> <span class="n">select2</span> <span class="o">=</span> <span class="nb">map</span><span class="p">(</span><span class="nb">int</span><span class="p">,</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;뒤집을 카드 2 개를 고르세요: &quot;</span><span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">())</span>
+
+        <span class="k">if</span> <span class="p">(</span><span class="n">select1</span> <span class="o">==</span> <span class="n">select2</span><span class="p">):</span>
+            <span class="k">continue</span>
+
+        <span class="c1"># 좌표를 확인한 다음에 동일한 동물인지 확인하기</span>
+        <span class="n">firstSelect_x</span> <span class="o">=</span> <span class="n">conv_pos_x</span><span class="p">(</span><span class="n">select1</span><span class="p">)</span>
+        <span class="n">firstSelect_y</span> <span class="o">=</span> <span class="n">conv_pos_y</span><span class="p">(</span><span class="n">select1</span><span class="p">)</span>
+
+        <span class="n">secondSelect_x</span> <span class="o">=</span> <span class="n">conv_pos_x</span><span class="p">(</span><span class="n">select2</span><span class="p">)</span>
+        <span class="n">secondSelect_y</span> <span class="o">=</span> <span class="n">conv_pos_y</span><span class="p">(</span><span class="n">select2</span><span class="p">)</span>
+
+        <span class="c1"># 아직 뒤집히지 않은 카드이고 두 동물이 동일한지 여부확인</span>
+        <span class="k">if</span> <span class="p">(</span> <span class="p">(</span><span class="n">checkAnimal</span><span class="p">[</span><span class="n">firstSelect_x</span><span class="p">][</span><span class="n">firstSelect_y</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
+             <span class="ow">and</span> <span class="p">(</span><span class="n">checkAnimal</span><span class="p">[</span><span class="n">secondSelect_x</span><span class="p">][</span><span class="n">secondSelect_y</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
+             <span class="ow">and</span> <span class="p">(</span><span class="n">arrayAnimal</span><span class="p">[</span><span class="n">firstSelect_x</span><span class="p">][</span><span class="n">firstSelect_y</span><span class="p">]</span> 
+                 <span class="o">==</span> <span class="n">arrayAnimal</span><span class="p">[</span><span class="n">secondSelect_x</span><span class="p">][</span><span class="n">secondSelect_y</span><span class="p">])</span> <span class="p">):</span>
+            
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n\n</span><span class="s2">빙고!: </span><span class="si">%10s</span><span class="s2"> 발견</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">%</span>
+                    <span class="n">strAnimal</span><span class="p">[</span><span class="n">arrayAnimal</span><span class="p">[</span><span class="n">firstSelect_x</span><span class="p">][</span><span class="n">firstSelect_y</span><span class="p">]])</span>
+            
+            <span class="n">checkAnimal</span><span class="p">[</span><span class="n">firstSelect_x</span><span class="p">][</span><span class="n">firstSelect_y</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+            <span class="n">checkAnimal</span><span class="p">[</span><span class="n">secondSelect_x</span><span class="p">][</span><span class="n">secondSelect_y</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n\n</span><span class="s2">땡!! (틀렸거나 아미 뒤집힌 카드입니다!</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%d</span><span class="s2"> : </span><span class="si">%s</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">select1</span><span class="p">,</span> <span class="n">strAnimal</span><span class="p">[</span><span class="n">arrayAnimal</span><span class="p">[</span><span class="n">firstSelect_x</span><span class="p">][</span><span class="n">firstSelect_y</span><span class="p">]]))</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%d</span><span class="s2"> : </span><span class="si">%s</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">select2</span><span class="p">,</span> <span class="n">strAnimal</span><span class="p">[</span><span class="n">arrayAnimal</span><span class="p">[</span><span class="n">secondSelect_x</span><span class="p">][</span><span class="n">secondSelect_y</span><span class="p">]]))</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+
+            <span class="n">failCount</span> <span class="o">+=</span> <span class="mi">1</span>
+
+        <span class="c1"># 모든 동물을 다 찾은 경우</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">foundAllAnimals</span><span class="p">()</span> <span class="o">==</span> <span class="mi">1</span><span class="p">):</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n\n</span><span class="s2">축하합니다! 모든 동물을 다 찾았네요!</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;지금까지 총 </span><span class="si">%d</span><span class="s2">번 실수하였습니다.</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">failCount</span><span class="p">)</span>
+            <span class="k">break</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>
+=====쉿, 이건 비밀인데 몰래 보여주는 거임.=====
+
+  elephant        dog        dog    giraffe      camel 
+       cat      camel      tiger    ostrich      tiger 
+     hippo    ostrich     monkey        pig        pig 
+    monkey    giraffe        cat   elephant      hippo 
+
+=======================================
+
+
+
+(문제)
+         0          1          2          3          4 
+
+         5          6          7          8          9 
+
+        10         11         12         13         14 
+
+        15         16         17         18         19 
+
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
