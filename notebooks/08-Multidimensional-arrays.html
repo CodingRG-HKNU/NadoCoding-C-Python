@@ -13259,13 +13259,12 @@ div#notebook {
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
-<li><p>3차원까지는 행렬 개념으로 이해하면 됨.</p>
-<div class="highlight"><pre><span></span><span class="n">x1</span> <span class="o">=</span> <span class="n">arr</span><span class="p">[</span><span class="mi">2</span><span class="p">];</span>        <span class="c1">// 2번 인덱스 값</span>
-  <span class="n">x2</span> <span class="o">=</span> <span class="n">arr2</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">5</span><span class="p">];</span>    <span class="c1">// 0번 행 5번 열 값</span>
-  <span class="n">x3</span> <span class="o">=</span> <span class="n">arr3</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">1</span><span class="p">][</span><span class="mi">3</span><span class="p">];</span> <span class="c1">// 2번 행 1번 열의 3번 인덱스 값</span>
-</pre></div>
-</li>
+<li>3차원까지는 행렬 개념으로 이해하면 됨.</li>
 </ul>
+<div class="highlight"><pre><span></span><span class="n">x1</span> <span class="o">=</span> <span class="n">arr</span><span class="p">[</span><span class="mi">2</span><span class="p">];</span>        <span class="c1">// 2번 인덱스 값</span>
+<span class="n">x2</span> <span class="o">=</span> <span class="n">arr2</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">5</span><span class="p">];</span>    <span class="c1">// 0번 행 5번 열 값</span>
+<span class="n">x3</span> <span class="o">=</span> <span class="n">arr3</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">1</span><span class="p">][</span><span class="mi">3</span><span class="p">];</span> <span class="c1">// 2번 행 1번 열의 3번 인덱스 값</span>
+</pre></div>
 
 </div>
 </div>
@@ -14134,6 +14133,19 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">initAnimalArray</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="inner_cell">
+    <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">arrayAnimal</span>
 </pre></div>
 
@@ -14147,13 +14159,16 @@ div#notebook {
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[11]:</div>
+    <div class="prompt output_prompt">Out[12]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>[]</pre>
+<pre>[[-1, -1, -1, -1, -1],
+ [-1, -1, -1, -1, -1],
+ [-1, -1, -1, -1, -1],
+ [-1, -1, -1, -1, -1]]</pre>
 </div>
 
 </div>
@@ -14177,7 +14192,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">arrayAnimal</span> <span class="o">=</span> <span class="p">[[</span><span class="o">-</span><span class="mi">1</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">)]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">)]</span>
@@ -14190,7 +14205,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">arrayAnimal</span>
@@ -14206,7 +14221,7 @@ div#notebook {
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[13]:</div>
+    <div class="prompt output_prompt">Out[14]:</div>
 
 
 
@@ -14236,7 +14251,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">strAnimal</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;원숭이&quot;</span><span class="p">,</span> <span class="s2">&quot;하마&quot;</span><span class="p">,</span> <span class="s2">&quot;강아지&quot;</span><span class="p">,</span> <span class="s2">&quot;고양이&quot;</span><span class="p">,</span> <span class="s2">&quot;돼지&quot;</span><span class="p">,</span> <span class="s2">&quot;코끼리&quot;</span><span class="p">,</span> <span class="s2">&quot;기린&quot;</span><span class="p">,</span> <span class="s2">&quot;낙타&quot;</span><span class="p">,</span> <span class="s2">&quot;타조&quot;</span><span class="p">,</span> <span class="s2">&quot;호랑이&quot;</span><span class="p">]</span>
@@ -14259,7 +14274,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">strAnimal</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;monkey&quot;</span><span class="p">,</span> <span class="s2">&quot;hippo&quot;</span><span class="p">,</span> <span class="s2">&quot;dog&quot;</span><span class="p">,</span> <span class="s2">&quot;cat&quot;</span><span class="p">,</span> <span class="s2">&quot;pig&quot;</span><span class="p">,</span> 
@@ -14306,7 +14321,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">checkAnimal</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">0</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">)]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">)]</span>
@@ -14319,7 +14334,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">checkAnimal</span>
@@ -14335,7 +14350,7 @@ div#notebook {
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[17]:</div>
+    <div class="prompt output_prompt">Out[18]:</div>
 
 
 
@@ -14367,7 +14382,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">getEmptyPosition</span><span class="p">():</span>
@@ -14401,7 +14416,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">conv_pos_x</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
@@ -14416,7 +14431,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">conv_pos_y</span><span class="p">(</span><span class="n">y</span><span class="p">):</span>
@@ -14443,7 +14458,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[21]:</div>
+<div class="prompt input_prompt">In&nbsp;[22]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">shuffleAnimal</span><span class="p">():</span>
@@ -14460,7 +14475,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[22]:</div>
+<div class="prompt input_prompt">In&nbsp;[23]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">printAnimals</span><span class="p">():</span>
@@ -14481,7 +14496,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[23]:</div>
+<div class="prompt input_prompt">In&nbsp;[24]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">printQuestion</span><span class="p">():</span>
@@ -14510,7 +14525,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[24]:</div>
+<div class="prompt input_prompt">In&nbsp;[25]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">foundAllAnimals</span><span class="p">():</span>
@@ -14623,10 +14638,10 @@ div#notebook {
 <pre>
 =====쉿, 이건 비밀인데 몰래 보여주는 거임.=====
 
-  elephant        dog        dog    giraffe      camel 
-       cat      camel      tiger    ostrich      tiger 
-     hippo    ostrich     monkey        pig        pig 
-    monkey    giraffe        cat   elephant      hippo 
+       cat        dog   elephant      camel     monkey 
+   ostrich    giraffe   elephant      hippo      tiger 
+       pig    ostrich      camel     monkey    giraffe 
+     tiger        pig        dog        cat      hippo 
 
 =======================================
 
