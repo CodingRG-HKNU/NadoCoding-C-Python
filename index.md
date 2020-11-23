@@ -33,3 +33,6 @@ C 프로그래밍 기초 동영상 모음집
 * 7장 포인터 &nbsp;
     [[ipynb]](./notebooks/07-Pointers.ipynb)
     [[html]](./notebooks/07-Pointers.html)
+* 8장 다차원 배열 &nbsp;
+    [[ipynb]](./notebooks/08-Multidimensional-arrays.ipynb)
+    [[html]](./notebooks/08-Multidimensional-arrays.html)
