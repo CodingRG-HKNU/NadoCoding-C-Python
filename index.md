@@ -36,3 +36,7 @@ C 프로그래밍 기초 동영상 모음집
 * 8장 다차원 배열 &nbsp;
     [[ipynb]](./notebooks/08-Multidimensional-arrays.ipynb)
     [[html]](./notebooks/08-Multidimensional-arrays.html)
+* 9장 구조체와 클래스 &nbsp;
+    [[ipynb]](./notebooks/09-Struct-vs-Class.ipynb)
+    [[html]](./notebooks/09-Struct-vs-Class.html)
+* ...
