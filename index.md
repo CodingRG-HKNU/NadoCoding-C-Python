@@ -1,10 +1,13 @@
+## 소개
+
 유튜버 [나도코딩](https://www.youtube.com/channel/UC7iAOLiALt2rtMVAWWl4pnw)의 
 C 프로그래밍 기초 동영상 모음집 
 [(나도코딩 C)](https://www.youtube.com/watch?v=dEykoFZkf5Y&list=PLMsa_0kAjjrdiwQykI8eb3H4IRxLTqCnP&ab_channel=%EB%82%98%EB%8F%84%EC%BD%94%EB%94%A9)를 
-이용하여 C 언어와 파이썬 언어를 함께 설명하며,
-특성이 많이 다른 두 언어를 함께 살펴보면서 프로그래밍언어의 기초를 전달하고자 합니다.
+이용하여 C 프로그래밍의 기초를 학습합니다. 
+보다 효율적인 학습을 위해 파이썬 프로그래밍의 기본요소를 다루는 방법과 비교하면서 C 프로그래밍의 기본요소를 설명합니다.
+컴퓨터 프로그래밍의 기본요소를 특성이 매우 다른 두 언어를 이용하여 프로그래밍의 보다 깊은 특성을 전달하고자 합니다.
 
-## 감사의 글
+### 감사의 글
 
 훌륭한 강의동영상을 공개한 
 [나도코딩](https://www.youtube.com/channel/UC7iAOLiALt2rtMVAWWl4pnw)님께 
@@ -36,7 +39,7 @@ C 프로그래밍 기초 동영상 모음집
 * 8장 다차원 배열 &nbsp;
     [[ipynb]](./notebooks/08-Multidimensional-arrays.ipynb)
     [[html]](./notebooks/08-Multidimensional-arrays.html)
-* 9장 구조체와 클래스 &nbsp;
+* 9장 구조체 vs. 클래스 &nbsp;
     [[ipynb]](./notebooks/09-Struct-vs-Class.ipynb)
     [[html]](./notebooks/09-Struct-vs-Class.html)
 * ...
