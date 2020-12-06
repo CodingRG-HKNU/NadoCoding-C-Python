@@ -42,4 +42,6 @@ C 프로그래밍 기초 동영상 모음집
 * 9장 구조체 vs. 클래스 &nbsp;
     [[ipynb]](./notebooks/09-Struct-vs-Class.ipynb)
     [[html]](./notebooks/09-Struct-vs-Class.html)
-* ...
+* 10장 파일 다루기 &nbsp;
+    [[ipynb]](./notebooks/10-Files.ipynb)
+    [[html]](./notebooks/10-Files.html)
