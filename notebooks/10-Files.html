@@ -13213,7 +13213,7 @@ div#notebook {
     <span class="k">if</span> <span class="p">(</span><span class="n">file</span> <span class="o">==</span> <span class="nb">NULL</span><span class="p">)</span>
     <span class="p">{</span>
         <span class="n">printf</span><span class="p">(</span><span class="s">&quot;파일 열기 실패</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
-        <span class="k">return</span> <span class="mi">1</span>
+        <span class="k">return</span> <span class="mi">1</span><span class="p">;</span>
     <span class="p">}</span>
 
     <span class="n">fputs</span><span class="p">(</span><span class="s">&quot;fputs를 이용해서 글을 적어볼께요.</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">file</span><span class="p">);</span>
@@ -13255,7 +13255,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[26]:</div>
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 파일에 쓰기: write() 메서드</span>
@@ -14164,7 +14164,7 @@ div#notebook {
         <span class="n">c</span> <span class="o">=</span> <span class="n">getch</span><span class="p">();</span>
 
         <span class="c1">// if (c == 13) // 동영상에서처럼 getch()가 지원되는 윈도우에서 실행하는 경우. </span>
-                        <span class="mi">13</span><span class="err">은</span> <span class="sc">&#39;\n&#39;</span><span class="err">의</span> <span class="err">아스키</span> <span class="err">코드</span>
+                        <span class="c1">// 13은 &#39;\n&#39;의 아스키 코드</span>
         <span class="k">if</span> <span class="p">(</span><span class="n">c</span> <span class="o">==</span> <span class="sc">&#39;\n&#39;</span><span class="p">)</span> <span class="c1">// Enter를 가리키는 번호, 즉, 비밀번호 입력 종료 의미</span>
         <span class="p">{</span>
             <span class="n">password</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="sc">&#39;\0&#39;</span><span class="p">;</span> <span class="c1">// 비밀먼호 문자열 끝에 추가되는 널 문자 지정</span>
@@ -14479,7 +14479,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;test3_py.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
@@ -14529,7 +14529,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[24]:</div>
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;test3_py.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
@@ -14585,7 +14585,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[23]:</div>
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;test3_py.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
@@ -14620,7 +14620,7 @@ div#notebook {
 <pre>write() 메서드를 이용해서 글을 적어볼께요. 1
 잘 적히는지 확인해주세요. 2
 다시 처음부터...
-현재 오프셋의 위치: 0
+현재 오프셋 위치: 0
 write() 메서드를 이용해서 글을 적어볼께요. 1
 잘 적히는지 확인해주세요. 2
 </pre>
