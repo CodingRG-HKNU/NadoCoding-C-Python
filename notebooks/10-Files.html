@@ -13172,7 +13172,7 @@ div#notebook {
 <ul>
 <li><p>윈도우에서 파일경로를 지정할 때 아래와 같이 원(won) 기호를 두 번 사용해야 함.</p>
 <p>"C:&#8361;&#8361;test1.txt"
-<br></p>
+<br><br></p>
 </li>
 </ul>
 </li>
@@ -13207,7 +13207,7 @@ div#notebook {
     <span class="c1">// 파일에 쓰기: fputs</span>
     <span class="c1">// 파일에 특정 내용 저장</span>
 
-    <span class="kt">FILE</span> <span class="o">*</span> <span class="n">file</span> <span class="o">=</span> <span class="n">fopen</span><span class="p">(</span><span class="s">&quot;test1.txt&quot;</span><span class="p">,</span> <span class="s">&quot;wb&quot;</span><span class="p">);</span>  <span class="err">#</span> <span class="err">현재</span> <span class="err">디렉토리에</span> <span class="err">파일</span> <span class="err">생성</span> <span class="err">및</span> <span class="err">저장</span>
+    <span class="kt">FILE</span> <span class="o">*</span> <span class="n">file</span> <span class="o">=</span> <span class="n">fopen</span><span class="p">(</span><span class="s">&quot;test1.txt&quot;</span><span class="p">,</span> <span class="s">&quot;wb&quot;</span><span class="p">);</span>  <span class="c1">// 현재 디렉토리에 파일 생성 및 저장</span>
 
     <span class="c1">// 파일 열기 가능여부 확인</span>
     <span class="k">if</span> <span class="p">(</span><span class="n">file</span> <span class="o">==</span> <span class="nb">NULL</span><span class="p">)</span>
@@ -13238,9 +13238,24 @@ div#notebook {
 </div>
 </div>
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>여기서는 <code>open()</code> 함수의 옵션으로 'b'옵션을 굳이 사용하지 않음.<ul>
+<li>'b' 옵션을 사용하여 파일을 저장하려면 저장 내용을 바이너리로 전환시킨 후 저장해야 하기 때문임.</li>
+<li>바이너리 파일은 실행파일(exe), 음악파일(mp3) 등 일반 텍스트 용도가 아닌 경우에 사용함.</li>
+<li>파이썬에서 바이너리 파일을 다루는 일은 좀 더 복잡함. </li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[23]:</div>
+<div class="prompt input_prompt">In&nbsp;[26]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 파일에 쓰기: write() 메서드</span>
@@ -13261,9 +13276,23 @@ div#notebook {
 </div>
 
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>텍스트 파일을 바이너리 파일로 다루는 경우는 아래와 같이 함.<ul>
+<li>내용을 저장할 때 문자열을 <code>encode()</code> 메서드를 활용하여 bytes 자료형으로 변환시켜야 함.</li>
+<li>바이너리 파일로 저장된 파일은 이후 계속 'b' 옵션을 함께 사용해야 함.</li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;test1b_py.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;wb&quot;</span><span class="p">)</span>
@@ -13279,9 +13308,19 @@ div#notebook {
 </div>
 
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>파일 다루기가 끝나면 자동으로 닫아주는 기능을 아래와 같이 활용할 수 있음.</li>
+</ul>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;test1c_py.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
@@ -13297,14 +13336,25 @@ div#notebook {
 </div>
 
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li><p>파일이 존재하지 않거나 파일 열기/닫기에 실패하는 경우에 대비하여 <strong>예외처리</strong> 활용</p>
+</li>
+<li><p>아래 방식은 오류 종류에 맞추어 예외처리하는 기능 설명</p>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 파일이 존재하지 않거나 파일 열기/닫기에 실패하는 경우</span>
-
-<span class="k">try</span><span class="p">:</span> 
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">try</span><span class="p">:</span> 
     <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;test1d_py.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
 
         <span class="n">file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;write() 메서드를 이용해서 글을 적어볼께요.</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
@@ -13338,14 +13388,22 @@ div#notebook {
 </div>
 
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>아래 방식은 임의의 오류를 처리하는 방식 설명</li>
+</ul>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 파일이 존재하지 않거나 파일 열기/닫기에 실패하는 경우</span>
-
-<span class="k">try</span><span class="p">:</span> 
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">try</span><span class="p">:</span> 
     <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;test1d_py.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
 
         <span class="n">file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;write() 메서드를 이용해서 글을 적어볼께요.</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
@@ -13457,14 +13515,39 @@ div#notebook {
 </div>
 </div>
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>저장된 파일 내용 읽어오기</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="readline()-&#54632;&#49688;-&#54876;&#50857;"><code>readline()</code> &#54632;&#49688; &#54876;&#50857;<a class="anchor-link" href="#readline()-&#54632;&#49688;-&#54876;&#50857;">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li><code>readline()</code> 메서드: 한 줄씩 읽기</li>
+</ul>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[34]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 저장된 파일 내용 읽어오기: readline(), readlines() 메서드</span>
-
-<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;test1_py.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;test1_py.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
 
     <span class="k">while</span> <span class="mi">1</span><span class="p">:</span>
         <span class="n">line</span> <span class="o">=</span> <span class="n">file</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span>
@@ -13502,7 +13585,9 @@ div#notebook {
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
-<li><code>strip()</code> 메서드 활용</li>
+<li>주의사항: 파이썬의 <code>print()</code> 함수는 줄바꿈을 자동으로 추가함. </li>
+<li><code>strip()</code> 메서드 활용하면 문자열의 양 끝에 있는 줄바꿈 기호(<code>'\n'</code>), 스페이스(<code>' '</code>, 뛰어쓰기) 등의
+  소위 화이트 스페이스(white space) 등을 제거함.</li>
 </ul>
 
 </div>
@@ -13510,7 +13595,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[36]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;test1_py.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
@@ -13549,8 +13634,15 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="readlines()-&#54632;&#49688;-&#54876;&#50857;"><code>readlines()</code> &#54632;&#49688; &#54876;&#50857;<a class="anchor-link" href="#readlines()-&#54632;&#49688;-&#54876;&#50857;">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <ul>
-<li><code>readlines()</code> 메서드 활용</li>
+<li><code>readlines()</code> 메서드: 모든 줄을 한꺼번에 리스트로 읽어오기. 각각의 줄을 리스트의 항목으로 사용.</li>
 </ul>
 
 </div>
@@ -13558,7 +13650,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[38]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;test1_py.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
@@ -13594,7 +13686,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[40]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">try</span><span class="p">:</span>
@@ -13722,7 +13814,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[43]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;test2_py.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
@@ -13831,7 +13923,7 @@ div#notebook {
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
-<li>비슷한 함수는 없지만 구현은 아래와 같이 가능.</li>
+<li>비슷한 기능의 함수는 없지만 구현은 아래와 같이 가능.</li>
 </ul>
 
 </div>
@@ -13839,7 +13931,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[50]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;test2_py.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
@@ -13901,21 +13993,14 @@ div#notebook {
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
-<li>비밀읽기 작성하기<ul>
+<li><p>비밀읽기 작성하기</p>
+<ul>
 <li>비밀번호 맞는 경우: 비밀일기를 읽어와서 보여주고, 계속 작성하도록 함.</li>
 <li>비밀번호 틀린 경우: 경고 메시지를 표시하고 종료함.</li>
 </ul>
 </li>
-</ul>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
+<li><p><code>fopen()</code> 함수의 <code>a+</code> 옵션</p>
 <ul>
-<li><code>fopen()</code> 함수의 <code>a+</code> 옵션<ul>
 <li>파일이 존재하면 파일 끝에 문장 추가</li>
 <li>파일이 존재하지 않으면 새로 생성 후 문장 추가</li>
 </ul>
@@ -13936,41 +14021,18 @@ div#notebook {
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
-<li><code>getchar()</code>와 <code>getch()</code>의 차이점<ul>
+<li><p><code>getchar()</code>와 <code>getch()</code>의 차이점</p>
+<ul>
 <li><code>getchar()</code> 함수: 엔터가 입력될 때까지 기다린 후 처리</li>
 <li><code>getch()</code> 함수: 키 입력 시 바로바로 처리</li>
 </ul>
 </li>
-</ul>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
+<li><p>하지만 <code>getch()</code> 함수는 윈도우에서만 지원됨.</p>
+</li>
+<li><p>Repl.it 사이트 등 처럼 리눅스/맥 환경에서 사용하는 gcc 컴파일러에서는 지원하지 않음.</p>
+</li>
+<li><p>하지만 아래와 같이 동일한 기능을 하는 함수를 구현할 수 있음.</p>
 <ul>
-<li>하지만 <code>getch()</code> 함수는 윈도우에서만 지원됨.</li>
-</ul>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li>Repl.it 사이트 등 처럼 리눅스/맥 환경에서 사용하는 gcc 컴파일러에서는 지원하지 않음.</li>
-</ul>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li>하지만 아래와 같이 동일한 기능을 하는 함수를 구현할 수 있음.<ul>
 <li>참조: <a href="https://stackoverflow.com/questions/7469139/what-is-the-equivalent-to-getch-getche-in-linux">stackoverflow: What is the equivalent to getch() &amp; getche() in Linux?</a></li>
 </ul>
 </li>
@@ -14046,18 +14108,17 @@ div#notebook {
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
-<li>동영상과 동일하게 코드 구현 가능</li>
-</ul>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
+<li><p>동영상과 동일하게 코드 구현 가능</p>
+</li>
+<li><p>단, 위 코드를 동일 프로젝트 내의 다른 c 파일에 저장했다고 가정함.</p>
 <ul>
-<li>단, 위 코드를 동일 프로젝트 내의 다른 c 파일에 저장했다고 가정함.<ul>
 <li>다른 c 파일에 저장된 함수를 불러오려면 <code>extern</code> 지정자를 이용하여 함수를 선언해야 함.</li>
+</ul>
+</li>
+<li><p><code>#include &lt;string.h&gt;</code>는 <code>strcmp()</code>를 사용하기 위해 필요함.</p>
+</li>
+<li>비밀일기 작성을 'Exit' 뿐만 아니라 'exit'를 입력해도 종료하도록 수정됨.<ul>
+<li>'또는'(or)에 해당하는 논리연산자 <code>||</code> 활용하였음.</li>
 </ul>
 </li>
 </ul>
@@ -14102,6 +14163,8 @@ div#notebook {
     <span class="p">{</span>
         <span class="n">c</span> <span class="o">=</span> <span class="n">getch</span><span class="p">();</span>
 
+        <span class="c1">// if (c == 13) // 동영상에서처럼 getch()가 지원되는 윈도우에서 실행하는 경우. </span>
+                        <span class="mi">13</span><span class="err">은</span> <span class="sc">&#39;\n&#39;</span><span class="err">의</span> <span class="err">아스키</span> <span class="err">코드</span>
         <span class="k">if</span> <span class="p">(</span><span class="n">c</span> <span class="o">==</span> <span class="sc">&#39;\n&#39;</span><span class="p">)</span> <span class="c1">// Enter를 가리키는 번호, 즉, 비밀번호 입력 종료 의미</span>
         <span class="p">{</span>
             <span class="n">password</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="sc">&#39;\0&#39;</span><span class="p">;</span> <span class="c1">// 비밀먼호 문자열 끝에 추가되는 널 문자 지정</span>
@@ -14138,14 +14201,14 @@ div#notebook {
         <span class="p">}</span>
 
         <span class="c1">// 내용 추가하기</span>
-        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;</span><span class="se">\n\n</span><span class="s"> 내용을 계속 작성하세요. 종료하려면 EXIT를 입력하세요</span><span class="se">\n\n</span><span class="s">&quot;</span><span class="p">);</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;</span><span class="se">\n\n</span><span class="s"> 내용을 계속 작성하세요. 종료하려면 EXIT 또는 exit를 입력하세요</span><span class="se">\n\n</span><span class="s">&quot;</span><span class="p">);</span>
 
         <span class="k">while</span> <span class="p">(</span><span class="mi">1</span><span class="p">)</span>
         <span class="p">{</span>
             <span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%[^</span><span class="se">\n</span><span class="s">]&quot;</span><span class="p">,</span> <span class="n">contents</span><span class="p">);</span> <span class="c1">// 줄바꿈이 사용되기 직전까지 저장. 즉, 한 문단씩 저장.</span>
             <span class="n">getchar</span><span class="p">();</span> <span class="c1">// Enter 키 입력을 flush 처리하기</span>
 
-            <span class="k">if</span> <span class="p">(</span><span class="n">strcmp</span><span class="p">(</span><span class="n">contents</span><span class="p">,</span> <span class="s">&quot;EXIT&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">strcmp</span><span class="p">(</span><span class="n">contents</span><span class="p">,</span> <span class="s">&quot;EXIT&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span> <span class="o">||</span> <span class="n">strcmp</span><span class="p">(</span><span class="n">contents</span><span class="p">,</span> <span class="s">&quot;exit&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
             <span class="p">{</span>
                 <span class="n">printf</span><span class="p">(</span><span class="s">&quot;비밀일기 입력을 종료합니다.</span><span class="se">\n\n</span><span class="s">&quot;</span><span class="p">);</span>
                 <span class="k">break</span><span class="p">;</span>
@@ -14200,6 +14263,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<hr>
 <div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
     <span class="c1"># Windows용 코드</span>
     <span class="kn">import</span> <span class="nn">msvcrt</span>
@@ -14237,6 +14301,7 @@ div#notebook {
             <span class="n">termios</span><span class="o">.</span><span class="n">tcsetattr</span><span class="p">(</span><span class="n">fd</span><span class="p">,</span> <span class="n">termios</span><span class="o">.</span><span class="n">TCSADRAIN</span><span class="p">,</span> <span class="n">original_attributes</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">ch</span>
 </pre></div>
+<hr>
 
 </div>
 </div>
@@ -14244,8 +14309,20 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="&#54532;&#47196;&#51229;&#53944;-&#44396;&#54788;">&#54532;&#47196;&#51229;&#53944; &#44396;&#54788;<a class="anchor-link" href="#&#54532;&#47196;&#51229;&#53944;-&#44396;&#54788;">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <ul>
-<li><code>getch()</code> 함수 활용</li>
+<li>주의사항: <ul>
+<li>위 코드가 getch_termios.py 파일에 저장되어 있다고 가정함.</li>
+<li>엔터 키 입력여부 확인은 <code>'\r'</code> 문자열과 비교함. C 언어의 경우와 다름.</li>
+<li>파이썬의 문자열은 불변자료형임. 따라서 키가 입력될 때마다 매번 새로 생성해야 함.</li>
+</ul>
+</li>
 </ul>
 
 </div>
@@ -14254,9 +14331,13 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<div class="highlight"><pre><span></span><span class="n">password</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+<hr>
+<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">getch_termios</span> <span class="kn">import</span> <span class="n">getch</span>
 
-<span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;&#39;비밀일기&#39;에 오신 것을 환영합니다!&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;비밀번호를 입력하세요:&quot;</span><span class="p">)</span>
+
+<span class="n">password</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
 <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
     <span class="n">c</span> <span class="o">=</span> <span class="n">getch</span><span class="p">()</span>
     <span class="k">if</span> <span class="p">(</span><span class="n">c</span> <span class="o">==</span> <span class="s1">&#39;</span><span class="se">\r</span><span class="s1">&#39;</span><span class="p">):</span>
@@ -14265,9 +14346,26 @@ div#notebook {
         <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;*&quot;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">flush</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
         <span class="n">password</span> <span class="o">+=</span> <span class="n">c</span>
 
-<span class="nb">print</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">=== 비밀번호 확인 중 ... ===</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="n">password</span><span class="p">)</span>
+<span class="k">if</span> <span class="p">(</span><span class="n">password</span> <span class="o">==</span> <span class="s2">&quot;skehzheld&quot;</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">=== 비밀번호 확인 완료 ===</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="n">fileName</span> <span class="o">=</span> <span class="s2">&quot;secretdiary.txt&quot;</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">fileName</span><span class="p">,</span> <span class="s2">&quot;a+&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">file</span><span class="o">.</span><span class="n">readlines</span><span class="p">():</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;내용을 계속 작성하세요. 종료하려면 EXIT 또는 exit를 입력하세요</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+
+        <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+            <span class="n">contents</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">contents</span> <span class="o">==</span> <span class="s2">&quot;EXIT&quot;</span> <span class="ow">or</span> <span class="n">contents</span> <span class="o">==</span> <span class="s2">&quot;exit&quot;</span><span class="p">):</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;비밀일기 입력을 종료합니다.</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+                <span class="k">break</span>
+            <span class="n">file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">contents</span><span class="o">+</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;=== 비밀번호가 틀렸어요. ===</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;꺅!! 당신 누가야?!! 감히 내 일기장을 !!!&quot;</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -14277,6 +14375,322 @@ div#notebook {
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <hr>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#48512;&#47197;">&#48512;&#47197;<a class="anchor-link" href="#&#48512;&#47197;">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="&#48520;&#48320;-&#51088;&#47308;&#54805;-vs.-&#44032;&#48320;-&#51088;&#47308;&#54805;">&#48520;&#48320; &#51088;&#47308;&#54805; vs. &#44032;&#48320; &#51088;&#47308;&#54805;<a class="anchor-link" href="#&#48520;&#48320;-&#51088;&#47308;&#54805;-vs.-&#44032;&#48320;-&#51088;&#47308;&#54805;">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>파이썬에서 문자열은 한 번 생성하면 절대로 내용을 수정할 수 없음.</li>
+<li>반면에 C 에서의 문자열은 문자들의 어레이로 정의되었기 때문에 수정이 가능함.</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">try</span><span class="p">:</span> 
+    <span class="n">password</span> <span class="o">=</span> <span class="s2">&quot;skehzheld&quot;</span> <span class="c1"># 나도코딩</span>
+    <span class="n">password</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;S&quot;</span>
+<span class="k">except</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;문자열은 수정불가!&quot;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>문자열은 수정불가!
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="&#50724;&#54532;&#49483;(offset)-&#54876;&#50857;">&#50724;&#54532;&#49483;(offset) &#54876;&#50857;<a class="anchor-link" href="#&#50724;&#54532;&#49483;(offset)-&#54876;&#50857;">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li><code>fgets()</code> 함수 또는 <code>readline()</code> 함수 등으로 파일 내용을 읽으면 어디까지 읽었는지를 기억하는 장치가 있음.<ul>
+<li>읽기 위치를 <strong>오프셋</strong>(offset)이라 부름.</li>
+</ul>
+</li>
+<li>따라서 파일 끝까지 읽으면 더 이상 읽을 내용이 없어서 빈 문자열을 되돌려줌.</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="&#54028;&#51060;&#50028;">&#54028;&#51060;&#50028;<a class="anchor-link" href="#&#54028;&#51060;&#50028;">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>예를 들어, 아래와 같이 두 줄을 포함하고 있는 파일에 <code>readline()</code> 함수를 세 번 적용하면 빈 줄이 반환됨.</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;test3_py.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;write() 메서드를 이용해서 글을 적어볼께요.</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;잘 적히는지 확인해주세요.</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;test3_py.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span><span class="o">.</span><span class="n">strip</span><span class="p">(),</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span><span class="o">.</span><span class="n">strip</span><span class="p">(),</span> <span class="mi">2</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span><span class="o">.</span><span class="n">strip</span><span class="p">(),</span> <span class="mi">3</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>write() 메서드를 이용해서 글을 적어볼께요. 1
+잘 적히는지 확인해주세요. 2
+ 3
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>오프셋의 현재 위치는 <code>tell()</code> 메서드로 확인 가능</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[24]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;test3_py.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;write() 메서드를 이용해서 글을 적어볼께요.</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;잘 적히는지 확인해주세요.</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;test3_py.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span><span class="o">.</span><span class="n">strip</span><span class="p">(),</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span><span class="o">.</span><span class="n">strip</span><span class="p">(),</span> <span class="mi">2</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;현재 오프셋 위치:&quot;</span><span class="p">,</span> <span class="n">f</span><span class="o">.</span><span class="n">tell</span><span class="p">())</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span><span class="o">.</span><span class="n">strip</span><span class="p">(),</span> <span class="mi">3</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>write() 메서드를 이용해서 글을 적어볼께요. 1
+잘 적히는지 확인해주세요. 2
+현재 오프셋 위치: 95
+ 3
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>파일을 다시 처음부터 읽으려면 파일을 새로 열어야 함.</li>
+<li>아니면 <code>seek()</code> 메서드를 통해 오프셋 값을 바이트 단위로 지정할 수 있음.<ul>
+<li>주의사항: 오프셋의 값을 정확하게 지정하기 어려움.</li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[23]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;test3_py.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;write() 메서드를 이용해서 글을 적어볼께요.</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;잘 적히는지 확인해주세요.</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;test3_py.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span><span class="o">.</span><span class="n">strip</span><span class="p">(),</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span><span class="o">.</span><span class="n">strip</span><span class="p">(),</span> <span class="mi">2</span><span class="p">)</span>
+    
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;다시 처음부터...&quot;</span><span class="p">)</span>
+    <span class="n">f</span><span class="o">.</span><span class="n">seek</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;현재 오프셋 위치:&quot;</span><span class="p">,</span> <span class="n">f</span><span class="o">.</span><span class="n">tell</span><span class="p">())</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span><span class="o">.</span><span class="n">strip</span><span class="p">(),</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span><span class="o">.</span><span class="n">strip</span><span class="p">(),</span> <span class="mi">2</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>write() 메서드를 이용해서 글을 적어볼께요. 1
+잘 적히는지 확인해주세요. 2
+다시 처음부터...
+현재 오프셋의 위치: 0
+write() 메서드를 이용해서 글을 적어볼께요. 1
+잘 적히는지 확인해주세요. 2
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="C-&#50616;&#50612;">C &#50616;&#50612;<a class="anchor-link" href="#C-&#50616;&#50612;">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li><code>fseek()</code>, <code>ftell()</code> 함수를 동일한 방식으로 활용하면 됨.</li>
+<li>참조: <a href="https://luckyyowu.tistory.com/21">fseek와 ftell 함수</a></li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+
+<span class="cp">#define MAX 10000</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="kt">char</span> <span class="n">line</span><span class="p">[</span><span class="n">MAX</span><span class="p">];</span>
+
+    <span class="kt">FILE</span> <span class="o">*</span> <span class="n">file</span> <span class="o">=</span> <span class="n">fopen</span><span class="p">(</span><span class="s">&quot;test1.txt&quot;</span><span class="p">,</span> <span class="s">&quot;rb&quot;</span><span class="p">);</span>
+
+    <span class="n">fgets</span><span class="p">(</span><span class="n">line</span><span class="p">,</span> <span class="n">MAX</span><span class="p">,</span> <span class="n">file</span><span class="p">);</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%s&quot;</span><span class="p">,</span> <span class="n">line</span><span class="p">);</span>
+
+    <span class="n">fgets</span><span class="p">(</span><span class="n">line</span><span class="p">,</span> <span class="n">MAX</span><span class="p">,</span> <span class="n">file</span><span class="p">);</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%s&quot;</span><span class="p">,</span> <span class="n">line</span><span class="p">);</span>
+
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%ld</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">ftell</span><span class="p">(</span><span class="n">file</span><span class="p">));</span>
+    <span class="c1">// 파일의 현재위치부터 4바이트 뒤로 이동</span>
+    <span class="n">fseek</span><span class="p">(</span><span class="n">file</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%ld</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">ftell</span><span class="p">(</span><span class="n">file</span><span class="p">));</span>
+    <span class="c1">// 파일의 현재위치부터 4바이트 앞으로 이동</span>
+    <span class="n">fseek</span><span class="p">(</span><span class="n">file</span><span class="p">,</span> <span class="o">-</span><span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%ld</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">ftell</span><span class="p">(</span><span class="n">file</span><span class="p">));</span>
+    <span class="c1">// 파일의 처음위치부터 0바이트 떨어진 곳으로 이동</span>
+    <span class="c1">// 즉, 파일의 처음으로 이동</span>
+    <span class="n">fseek</span><span class="p">(</span><span class="n">file</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%ld</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">ftell</span><span class="p">(</span><span class="n">file</span><span class="p">));</span>
+
+    <span class="n">fgets</span><span class="p">(</span><span class="n">line</span><span class="p">,</span> <span class="n">MAX</span><span class="p">,</span> <span class="n">file</span><span class="p">);</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%s&quot;</span><span class="p">,</span> <span class="n">line</span><span class="p">);</span>
+
+    <span class="n">fgets</span><span class="p">(</span><span class="n">line</span><span class="p">,</span> <span class="n">MAX</span><span class="p">,</span> <span class="n">file</span><span class="p">);</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%s&quot;</span><span class="p">,</span> <span class="n">line</span><span class="p">);</span>
+
+    <span class="n">fclose</span><span class="p">(</span><span class="n">file</span><span class="p">);</span>
+
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
 
 </div>
 </div>
