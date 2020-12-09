@@ -54,9 +54,9 @@ C 언어를 사용할 수도 있지만 좀 어렵습니다.
 반면에 파이썬 언어는 조금만 더 공부하면 어렵지 않게 모든 애플리케이션을 완벽하게 구현할 수 있을 것입니다.
 예를 들어, 아래 사이트에서 제공하는 파이썬 강좌를 끝까지 이수하는 것으로 충분할 것입니다. 
 
-* [파이썬 프로그래밍 기초](https://github.com/liganega/ProgInPython)
+* [파이썬 프로그래밍 기초](https://formal.hknu.ac.kr/ProgInPython/)
 
 그래픽 인터페이스 관련해서 좀 더 공부하려면 아래 책의 7장 이후 내용을 추가로 보면 됩니다. 
 (번역책이 불행히도 절판되었지만 도서관이나 중고서적으로는 구할 수 있음. 영어 원서 또한 인터넷 상에서 구할 수 있음.)
 
-* [Head First Programming](https://www.hanbit.co.kr/store/books/look.php?p_code=B3578815816)
+* [Head First Programming, 폴 베리 지음, 한빛미디어](https://www.hanbit.co.kr/store/books/look.php?p_code=B3578815816)
