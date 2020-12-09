@@ -15,36 +15,16 @@ C 프로그래밍 기초 동영상 모음집
 
 ## 목차
 
-* 1장 Hello World &nbsp; 
-    [[ipynb]](./notebooks/01-HelloWorld.ipynb)
-    [[html]](./notebooks/01-HelloWorld.html)
-* 2장 변수, 상수, printf, scanf &nbsp;
-    [[ipynb]](./notebooks/02-Variables-Constants-printf-scanf.ipynb)
-    [[html]](./notebooks/02-Variables-Constants-printf-scanf.html)
-* 3장 반복문 &nbsp;
-    [[ipynb]](./notebooks/03-Iterations.ipynb)
-    [[html]](./notebooks/03-Iterations.html)
-* 4장 조건문 &nbsp;
-    [[ipynb]](./notebooks/04-Conditionals.ipynb)
-    [[html]](./notebooks/04-Conditionals.html)
-* 5장 함수 &nbsp;
-    [[ipynb]](./notebooks/05-Functions.ipynb)
-    [[html]](./notebooks/05-Functions.html)
-* 6장 배열 &nbsp;
-    [[ipynb]](./notebooks/06-Arrays.ipynb)
-    [[html]](./notebooks/06-Arrays.html)
-* 7장 포인터 &nbsp;
-    [[ipynb]](./notebooks/07-Pointers.ipynb)
-    [[html]](./notebooks/07-Pointers.html)
-* 8장 다차원 배열 &nbsp;
-    [[ipynb]](./notebooks/08-Multidimensional-arrays.ipynb)
-    [[html]](./notebooks/08-Multidimensional-arrays.html)
-* 9장 구조체 vs. 클래스 &nbsp;
-    [[ipynb]](./notebooks/09-Struct-vs-Class.ipynb)
-    [[html]](./notebooks/09-Struct-vs-Class.html)
-* 10장 파일 다루기 &nbsp;
-    [[ipynb]](./notebooks/10-Files.ipynb)
-    [[html]](./notebooks/10-Files.html)
+* 1장 [Hello World](./notebooks/01-HelloWorld.html)
+* 2장 [변수, 상수, printf, scanf](./notebooks/02-Variables-Constants-printf-scanf.html)
+* 3장 [반복문](./notebooks/03-Iterations.html)
+* 4장 [조건문](./notebooks/04-Conditionals.html)
+* 5장 [함수](./notebooks/05-Functions.html)
+* 6장 [배열](./notebooks/06-Arrays.html)
+* 7장 [포인터](./notebooks/07-Pointers.html)
+* 8장 [다차원 배열](./notebooks/08-Multidimensional-arrays.html)
+* 9장 [구조체 vs. 클래스](./notebooks/09-Struct-vs-Class.html)
+* 10장 [파일 다루기](./notebooks/10-Files.html)
 
 ## 공부 더하기(추천)
 
@@ -60,4 +40,4 @@ C 언어를 사용할 수도 있지만 좀 어렵습니다.
 번역책이 불행히도 절판되었지만 도서관에서 대여하거나 또는 중고서적으로 구매할 수 있으며,
 그리고 영어 원서 또한 인터넷 상에서 쉽게 확인할 수 있습니다.
 
-* [Head First Programming, 폴 베리 지음, 한빛미디어](https://www.hanbit.co.kr/store/books/look.php?p_code=B3578815816)
+* [Head First Programming](https://www.hanbit.co.kr/store/books/look.php?p_code=B3578815816), 폴 베리와 데이비드 그리피스 지음
