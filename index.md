@@ -58,39 +58,3 @@ GUI 관련해서 좀 더 공부하려면 아래 책의 7장 이후 내용을 추
 
 * [Head First Programming](https://www.hanbit.co.kr/store/books/look.php?p_code=B3578815816), 
     폴 베리(Paul Barry)와 데이비드 그리피스(David Griffiths) 지음
-    
-### 게임 프로그래밍 관련
-
-객체지향프로그래밍이 가장 많이 활용되는 분야 중 하나가 게임분야입니다. 
-파이썬은 객체지향프로그래밍을 지원하는 언어이며 게임프로그래밍의 필수 요소인 GUI를 
-매우 간단하게 구현하는 기능을 제공합니다. 
-
-파이썬으로 게임프로그래밍의 맛을 보면서 매우 효율적으로 프로그래밍 실력을 향상시킬 수 있습니다.
-하지만 프로그래밍의 기초를 잘 다졌다 하더라도 게임프로그래밍을 하기 위해
-무엇을 어떻게 시작해야 하는가는 따로 배워야 합니다. 
-이를 위해 유튜버 나도코딩의 파이썬 
-[파이썬 초보 강의](https://www.youtube.com/watch?v=kWiCuklohdY&list=PLMsa_0kAjjrd8hYYCwbAuDsXZmHpqHvlV)
-시리즈를 추천합니다.
-
-주의사항: 나도코딩의 동영상이 매우 간단한 내용부터 설명하기는 하지만 앞서 언급한 
-[파이썬 프로그래밍 기초](https://formal.hknu.ac.kr/ProgInPython/)를
-먼저 학습할 것을 권장합니다.
-그러면 나도코딩의 동영상에서 구현되는 많은 코드를 보다 체계적으로 이해할 수 있을 것입니다.
-
-### 게임 프로그래밍 교재 
-
-파이썬 게임프로그래밍을 체계적으로 설명한 책으로
-[Python과 Pygame으로 게임 만들기](http://www.kyobobook.co.kr/product/detailViewKor.laf?ejkGb=KOR&mallGb=KOR&barcode=9788956746159&orderClick=LAG&Kc=)를
-추천합니다. 
-
-번역서를 구입할 수도 있고, 아니면 원서를 [온라인](http://inventwithpython.com/invent4thed/) 
-상에서 무료로 읽을 수도 있습니다. 
-
-### 게임 프로그래밍 전문 유튜버
-
-유튜버 상에서 많은 이들이 게임프로그래밍을 방송합니다. 
-가장 활발하게 활동하는 이들 중에 한 명은 
-[TokyoEdtech](https://www.youtube.com/channel/UC2vm-0XX5RkWCXWwtBZGOXg)인데
-게임프로그래밍의 기초기술부터 고급기술까지 차근차근 설명하면서 방송을 진행합니다.
-[Python과 Pygame으로 게임 만들기](http://www.kyobobook.co.kr/product/detailViewKor.laf?ejkGb=KOR&mallGb=KOR&barcode=9788956746159&orderClick=LAG&Kc=)를 
-먼저 공부한 후에 좀 오래된 동영상부터 보면 어렵지 않게 따라갈 수 있을 것입니다.
