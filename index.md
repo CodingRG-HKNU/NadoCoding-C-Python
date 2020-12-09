@@ -7,6 +7,10 @@ C 프로그래밍 기초 동영상 모음집
 보다 효율적인 학습을 위해 파이썬 프로그래밍의 기본요소를 다루는 방법과 비교하면서 프로그래밍의 기본요소를 설명합니다.
 컴퓨터 프로그래밍의 기본요소를 특성이 매우 다른 두 언어를 이용하여 설명하면서 프로그래밍의 보다 깊은 특성을 전달하고자 합니다.
 
+### 전제조건
+
+파이썬에 대한 왕초보 지식은 갖고 있어야 합니다.
+
 ### 감사의 글
 
 훌륭한 강의동영상을 공개한 
@@ -16,7 +20,7 @@ C 프로그래밍 기초 동영상 모음집
 ## 목차
 
 * 1장 [Hello World](./notebooks/01-HelloWorld.html)
-* 2장 [변수, 상수, printf, scanf](./notebooks/02-Variables-Constants-printf-scanf.html)
+* 2장 [변수, 상수, 입출력](./notebooks/02-Variables-Constants-printf-scanf.html)
 * 3장 [반복문](./notebooks/03-Iterations.html)
 * 4장 [조건문](./notebooks/04-Conditionals.html)
 * 5장 [함수](./notebooks/05-Functions.html)
@@ -25,6 +29,14 @@ C 프로그래밍 기초 동영상 모음집
 * 8장 [다차원 배열](./notebooks/08-Multidimensional-arrays.html)
 * 9장 [구조체 vs. 클래스](./notebooks/09-Struct-vs-Class.html)
 * 10장 [파일 다루기](./notebooks/10-Files.html)
+
+## 개발환경
+
+강의노트에서 제공되는 코드는 모두 [repl.it](https://repl.it/)에서 실행될 수 있습니다.
+[비주얼 스튜디오](https://visualstudio.microsoft.com/ko/downloads/)
+또는 기타 편집기를 이용할 수도 있지만 초보자에게는 아무 것도 설치할 필요가 없이 
+바로 프로그래밍을 시작할 수 있는 repl.it 사이트를 추천합니다. 
+repl.it 사이트의 사용법은 인터넷 검색을 통해 쉽게 배울 수 있습니다. 
 
 ## 공부 더하기(추천)
 
