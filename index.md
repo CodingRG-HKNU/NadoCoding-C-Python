@@ -23,7 +23,7 @@ C 프로그래밍 기초 동영상 모음집
 ## 목차
 
 * 1장 [Hello World](./notebooks/01-HelloWorld.html)
-* 2장 [변수, 상수, 입출력](./notebooks/02-Variables-Constants-printf-scanf.html)
+* 2장 [변수, 상수, 표준입출력](./notebooks/02-Variables-Constants-printf-scanf.html)
 * 3장 [반복문](./notebooks/03-Iterations.html)
 * 4장 [조건문](./notebooks/04-Conditionals.html)
 * 5장 [함수](./notebooks/05-Functions.html)
@@ -36,15 +36,15 @@ C 프로그래밍 기초 동영상 모음집
 ## 개발환경
 
 강의노트에서 제공되는 C 코드와 파이썬 코드 모두 [레플릿(Repl.it)](https://repl.it/)에서 실행될 수 있습니다.
-[비주얼 스튜디오](https://visualstudio.microsoft.com/ko/downloads/)
+(나도코딩 C)에서 사용되는 [비주얼 스튜디오](https://visualstudio.microsoft.com/ko/downloads/)
 또는 기타 편집기를 이용할 수도 있지만 초보자에게는 아무 것도 설치할 필요가 없이 
 바로 프로그래밍을 시작할 수 있는 레플릿 사이트를 추천합니다. 
-레플릿 사용법은 인터넷 검색을 통해 쉽게 배울 수 있으며, 실행 후의 개발환경이 비주얼 스튜디오와 매우 유사합니다. 
+레플릿 사이트 사용법은 인터넷 검색을 통해 쉽게 확인할 수 있으며, 실행 후의 개발환경이 비주얼 스튜디오와 매우 유사합니다. 
 
 ## 공부 더하기(추천)
 
-아홉 개 프로젝트의 알고리즘을 학습하면서 프로그래밍의 기초를 학습하였습니다. 
-프로그래밍의 기초를 좀 더 깊게 다지고 싶다면 각각의 프로젝트에서 소개된 
+2장에서 10장까지 총 아홉 개 프로젝트의 알고리즘을 학습하면서 프로그래밍의 기초를 학습하였습니다. 
+프로그래밍의 기초를 좀 더 깊게 다지고 싶다면 각각의 프로젝트에서 맛보기로 소개된 
 그래픽 유저 인터페이스(GUI, Graphic User Interface)를 직접 구현해보기를 추천합니다. 
 C 언어를 사용할 수도 있지만 좀 어렵습니다.
 반면에 파이썬 언어는 조금만 더 공부하면 어렵지 않게 모든 애플리케이션을 완벽하게 구현할 수 있을 것입니다.
