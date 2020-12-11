@@ -33,7 +33,7 @@ C 프로그래밍 기초 동영상 모음집
 1. [구조체 vs. 클래스](./notebooks/09-Struct-vs-Class.html)
 1. [파일 다루기](./notebooks/10-Files.html)
 
-## 개발환경
+## 프로그래밍 환경
 
 강의노트에서 제공되는 C 코드와 파이썬 코드 모두 [레플릿(Repl.it)](https://repl.it/)에서 실행될 수 있습니다.
 (나도코딩 C)에서 사용되는 [비주얼 스튜디오](https://visualstudio.microsoft.com/ko/downloads/)
