@@ -22,16 +22,16 @@ C 프로그래밍 기초 동영상 모음집
 
 ## 목차
 
-* 1장 [Hello World](./notebooks/01-HelloWorld.html)
-* 2장 [변수, 상수, 표준입출력](./notebooks/02-Variables-Constants-printf-scanf.html)
-* 3장 [반복문](./notebooks/03-Iterations.html)
-* 4장 [조건문](./notebooks/04-Conditionals.html)
-* 5장 [함수](./notebooks/05-Functions.html)
-* 6장 [배열](./notebooks/06-Arrays.html)
-* 7장 [포인터](./notebooks/07-Pointers.html)
-* 8장 [다차원 배열](./notebooks/08-Multidimensional-arrays.html)
-* 9장 [구조체 vs. 클래스](./notebooks/09-Struct-vs-Class.html)
-* 10장 [파일 다루기](./notebooks/10-Files.html)
+1. [C 언어 소스코드 실행하기: Hello World](./notebooks/01-HelloWorld.html)
+1. [변수, 상수, 표준입출력](./notebooks/02-Variables-Constants-printf-scanf.html)
+1. [반복문](./notebooks/03-Iterations.html)
+1. [조건문](./notebooks/04-Conditionals.html)
+1. [함수](./notebooks/05-Functions.html)
+1. [배열](./notebooks/06-Arrays.html)
+1. [포인터](./notebooks/07-Pointers.html)
+1. [다차원 배열](./notebooks/08-Multidimensional-arrays.html)
+1. [구조체 vs. 클래스](./notebooks/09-Struct-vs-Class.html)
+1. [파일 다루기](./notebooks/10-Files.html)
 
 ## 개발환경
 
