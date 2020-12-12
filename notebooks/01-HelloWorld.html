@@ -13077,7 +13077,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="1&#51109;-Hello-World">1&#51109; Hello World<a class="anchor-link" href="#1&#51109;-Hello-World">&#182;</a></h1>
+<h1 id="1&#51109;-C-&#50616;&#50612;-&#49548;&#49828;&#53076;&#46300;-&#49892;&#54665;:-Hello-World">1&#51109; C &#50616;&#50612; &#49548;&#49828;&#53076;&#46300; &#49892;&#54665;: Hello World<a class="anchor-link" href="#1&#51109;-C-&#50616;&#50612;-&#49548;&#49828;&#53076;&#46300;-&#49892;&#54665;:-Hello-World">&#182;</a></h1>
 </div>
 </div>
 </div>
@@ -13114,6 +13114,27 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>C 언어로 작성된 소스코드를 실행하기 위해 갖추어야 하는 가장 기본적인 형식<ul>
+<li><code>include &lt;stdio.h&gt;</code>: 표준입출력을 위해 필요한 표준 라이브러리 불러오기</li>
+<li><code>int main(void)</code>: 소스코드를 실행할 때 사용되는 메인 함수. 프로젝트별로 반드시 하나만 있어야 함.</li>
+</ul>
+</li>
+<li>우선은 아래 코드를 단순히 따라할 것.</li>
+<li><code>printf()</code> 함수: 표준입출력 창(보통 터미널 창)에 지정된 값을 출력하는 함.<ul>
+<li><code>\n</code>은 줄바꿈을 의미하는 문자</li>
+<li>터미널 창에서 줄바꿈 문자가 있는 경우와 없는 경우를 비교해볼 것.</li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<hr>
 <div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
 
 <span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="p">{</span>
@@ -13133,12 +13154,30 @@ div#notebook {
 </div>
 </div>
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>파이썬에서는 메인함수를 선언할 필요 없음.</li>
+<li>표준입출력을 위한 라이브러리도 굳이 불러올 필요 없음.</li>
+<li><code>print()</code> 함수<ul>
+<li>C 언어의 <code>printf()</code> 함수와 유사한 기능 수행.</li>
+<li>하지만 출력 후 줄바꿈을 기본으로 실행. </li>
+<li>따라서 줄바꿈 문자(<code>\n</code>)를 굳이 사용할 필요 없음.</li>
+<li>아래 한 줄짜리 파이썬 코드가 위 C 언어 코드와 동일한 기능 수행함.</li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello World</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello World&quot;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13156,7 +13195,6 @@ div#notebook {
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Hello World
-
 </pre>
 </div>
 </div>
@@ -13168,10 +13206,56 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<hr>
+<h4 id="if-__name__-==-&quot;__main__&quot;-&#54876;&#50857;"><code>if __name__ == "__main__"</code> &#54876;&#50857;<a class="anchor-link" href="#if-__name__-==-&quot;__main__&quot;-&#54876;&#50857;">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>파이썬 소스코드의 맨 하단에 아래와 같이 작성하면 C 언어의 <code>main()</code> 함수와 유사한 기능 수행함.
+  하지만 반드시 필요한 것은 아니며, 역할이 다름.
+  나중에 자세히 설명할 것임.<ul>
+<li>콜론(<code>:</code>)기호와 들여쓰기에 주의할 것.</li>
+</ul>
+</li>
+</ul>
 
 </div>
 </div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello World&quot;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Hello World
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
     </div>
   </div>

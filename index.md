@@ -22,8 +22,8 @@ C 프로그래밍 기초 동영상 모음집
 
 ## 목차
 
-1. [C 언어 소스코드 실행하기: Hello World](./notebooks/01-HelloWorld.html)
-1. [변수, 상수, 표준입출력](./notebooks/02-Variables-Constants-printf-scanf.html)
+1. [C 언어 소스코드 실행: Hello World](./notebooks/01-HelloWorld.html)
+1. [변수, 상수, 표준입출력](./notebooks/02-Variables-Constants-stdio.html)
 1. [반복문](./notebooks/03-Iterations.html)
 1. [조건문](./notebooks/04-Conditionals.html)
 1. [함수](./notebooks/05-Functions.html)
