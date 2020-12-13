@@ -13244,9 +13244,10 @@ div#notebook {
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
-<li><p>파이썬에서는 포인터 변수를 굳이 사용할 필요 없음.</p>
+<li><p>파이썬에서는 포인터 변수를 굳이 사용할 필요 없음.
+  하지만 간단한 정수, 실수 등을 제외한 다른 자료형에 대해서는 기본적으로 포인터 변수처럼 작동함.</p>
 </li>
-<li><p>또한 변수의 주소 등을 확인할 일도 일밙거으로 없음.</p>
+<li><p>또한 변수의 주소 등을 확인할 일도 일반적으로 없음.</p>
 </li>
 </ul>
 
@@ -13600,7 +13601,7 @@ div#notebook {
 <ul>
 <li>배열에 해당하는 파이썬 자료형은 리스트임.</li>
 <li>하지만 또한 일반 변수로 선언해서 사용함.</li>
-<li>리스트의 항목은 인덱스 활용하며, 주소값을 사용할 일이 일반적으로 없음.</li>
+<li>리스트의 항목은 인덱스를 활용하여 접근</li>
 </ul>
 
 </div>
@@ -13733,6 +13734,23 @@ div#notebook {
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>주소값을 사용할 일은 없지만 내부적으로 포인터처럼 작동함.</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<div align="center"><img src="./images/nado07-c-pointer-3a.png" width="700"/></div>
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -14481,7 +14499,7 @@ b: 20
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
-<li>이중 포인터 작동은 일반 포인터가 작동과 동일</li>
+<li>이중 포인터 작동은 일반 포인터의 작동과 동일.</li>
 </ul>
 
 </div>
@@ -14516,9 +14534,9 @@ b: 20
     <span class="n">ptr1</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">var</span><span class="p">;</span>
     <span class="n">ptr2</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">ptr1</span><span class="p">;</span>
 
-    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;var : %d *ptr1 : %d **ptr1 : %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">var</span><span class="p">,</span> <span class="o">*</span><span class="n">ptr1</span><span class="p">,</span> <span class="o">**</span><span class="n">ptr2</span><span class="p">);</span>
-    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;var 주소 : %d *ptr1 값 : %d **ptr1 값 : %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">var</span><span class="p">,</span> <span class="n">ptr1</span><span class="p">,</span> <span class="o">*</span><span class="n">ptr2</span><span class="p">);</span>
-    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;ptr1 주소 : %d ptr2 값 : %d&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">ptr1</span><span class="p">,</span> <span class="n">ptr2</span><span class="p">);</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;var : %d, *ptr1 : %d, **ptr1 : %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">var</span><span class="p">,</span> <span class="o">*</span><span class="n">ptr1</span><span class="p">,</span> <span class="o">**</span><span class="n">ptr2</span><span class="p">);</span>         <span class="c1">// 모두 10</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;var 주소 : %p, ptr1 값 : %p, *ptr2 값 : %p</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">var</span><span class="p">,</span> <span class="n">ptr1</span><span class="p">,</span> <span class="o">*</span><span class="n">ptr2</span><span class="p">);</span> <span class="c1">// 모두 &amp;var와 동일</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;ptr1 주소 : %p, ptr2 값 : %p&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">ptr1</span><span class="p">,</span> <span class="n">ptr2</span><span class="p">);</span>                        <span class="c1">// 모두 &amp;ptr1과 동일</span>
 
     <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
@@ -14674,11 +14692,13 @@ b: 20
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
 <li><p>서로 다른 자료형의 배열을 항목으로 갖는 포인터 배열은 구조체를 활용해야 함.</p>
+<ul>
+<li><p>이후 구조체를 학습한 후에 예제 살펴볼 것임.</p>
 <div class="highlight"><pre><span></span><span class="kt">int</span> <span class="n">arr1</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="mi">10</span><span class="p">,</span> <span class="mi">11</span><span class="p">};</span>
-  <span class="kt">float</span> <span class="n">arr2</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">1.1</span><span class="p">,</span> <span class="mf">1.2</span><span class="p">};</span>
+<span class="kt">float</span> <span class="n">arr2</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">1.1</span><span class="p">,</span> <span class="mf">1.2</span><span class="p">};</span>
 </pre></div>
 </li>
-<li><p>이후 구조체를 학습한 후에 예제 살펴볼 것임.</p>
+</ul>
 </li>
 </ul>
 
