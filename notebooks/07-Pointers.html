@@ -13244,10 +13244,9 @@ div#notebook {
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
-<li><p>파이썬에서는 포인터 변수를 굳이 사용할 필요 없음.
-  하지만 간단한 정수, 실수 등을 제외한 다른 자료형에 대해서는 기본적으로 포인터 변수처럼 작동함.</p>
+<li><p>파이썬에서는 포인터 변수를 굳이 사용할 필요 없음.</p>
 </li>
-<li><p>또한 변수의 주소 등을 확인할 일도 일반적으로 없음.</p>
+<li><p>또한 변수의 주소 등을 확인할 일도 일밙거으로 없음.</p>
 </li>
 </ul>
 
@@ -13601,7 +13600,7 @@ div#notebook {
 <ul>
 <li>배열에 해당하는 파이썬 자료형은 리스트임.</li>
 <li>하지만 또한 일반 변수로 선언해서 사용함.</li>
-<li>리스트의 항목은 인덱스를 활용하여 접근</li>
+<li>리스트의 항목은 인덱스 활용하며, 주소값을 사용할 일이 일반적으로 없음.</li>
 </ul>
 
 </div>
@@ -13734,23 +13733,6 @@ div#notebook {
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li>주소값을 사용할 일은 없지만 내부적으로 포인터처럼 작동함.</li>
-</ul>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<div align="center"><img src="./images/nado07-c-pointer-3a.png" width="700"/></div>
-</div>
-</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -14441,15 +14423,384 @@ b: 20
 </div>
 </div>
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>위 C 코드는 <code>main()</code> 함수의 본체가 좀 길게 작성됨.</li>
+<li>여기서는 <code>while</code> 반복문에 사용된 일부 코드를 함수화시켜서 코드를 보다 단순하게 작성하였음.</li>
+<li>또한 레벨 5 목표를 달성하거나 물고기가 모두 사망하면 게임을 억지로 종료시키기 위해 <code>exit()</code> 함수를 사용하는 것 보다
+  실행을 자연스럽게 멈추게 하도록 할 수 있음.<ul>
+<li><code>checkFishAlive()</code> 함수와 <code>levelUp()</code> 함수 참조</li>
+</ul>
+</li>
+<li><code>levelUp()</code> 함수에서 <code>level</code> 변수가 <code>global</code> 지정자를 이용하여 전역변수로 선언됨.<ul>
+<li>함수 내에서 할당된 값이 수정되는 변수는 <code>global</code> 키워드로 지정되어야 함.</li>
+<li>단, <code>arrayFish</code> 처럼 리스트를 가리키는 경우는 그럴 필요 없음.</li>
+<li>주의: C 언어의 경우 함수 밖에서 선언되면 자동으로 전역변수로 취급됨.<ul>
+<li>참조: <a href="https://dojang.io/mod/page/view.php?id=684">C 언어 코딩도장: 전역변수 선언하기</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span> 
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">time</span>
+
+<span class="c1"># 게임초기화</span>
+<span class="k">def</span> <span class="nf">initData</span><span class="p">():</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">6</span><span class="p">):</span>
+        <span class="n">arrayFish</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="mi">100</span>
+
+<span class="c1"># 현재 어항 상태 보여주기</span>
+<span class="k">def</span> <span class="nf">printFishes</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">===</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%3d</span><span class="s2">  </span><span class="si">%3d</span><span class="s2">  </span><span class="si">%3d</span><span class="s2">  </span><span class="si">%3d</span><span class="s2">  </span><span class="si">%3d</span><span class="s2">  </span><span class="si">%3d</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">))</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">6</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%3d</span><span class="s2">  &quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">arrayFish</span><span class="p">[</span><span class="n">i</span><span class="p">]),</span><span class="n">end</span> <span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1"># 매 초당 (level * 3)씩 물의 양 줄이기</span>
+<span class="k">def</span> <span class="nf">decreaseWater</span><span class="p">(</span><span class="n">elapsedTime</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">6</span><span class="p">):</span>
+        <span class="n">arrayFish</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">-=</span> <span class="p">(</span><span class="n">level</span> <span class="o">*</span> <span class="mi">3</span> <span class="o">*</span> <span class="n">elapsedTime</span><span class="p">)</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">arrayFish</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">):</span>
+            <span class="n">arrayFish</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="c1"># 물고기가 한 마리라도 살아있는지 확인</span>
+<span class="k">def</span> <span class="nf">checkFishAlive</span><span class="p">():</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">6</span><span class="p">):</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">arrayFish</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">):</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;물고기 아직 살아 있음!&quot;</span><span class="p">)</span>
+            <span class="k">return</span> <span class="kc">True</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;물고기 모두 사망! ㅠㅠ</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="kc">False</span>                                           <span class="c1"># 모든 물고기 죽었음</span>
+
+<span class="c1"># 물 추가 어항 선택</span>
+<span class="k">def</span> <span class="nf">selectNum</span><span class="p">():</span>
+    <span class="n">printFishes</span><span class="p">()</span>
+    <span class="n">num</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;몇 번 어항에 물을 주시겠어요? &quot;</span><span class="p">))</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">num</span> <span class="o">&lt;</span> <span class="mi">1</span> <span class="ow">or</span> <span class="n">num</span> <span class="o">&gt;</span> <span class="mi">6</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;입력값이 잘못되었어요.&quot;</span><span class="p">)</span>
+        <span class="n">selectNum</span><span class="p">()</span>                                        <span class="c1"># 재귀호출</span>
+    <span class="k">return</span> <span class="n">num</span>
+
+<span class="c1"># 지정된 어항에 물 추가</span>
+<span class="k">def</span> <span class="nf">watering</span><span class="p">(</span><span class="n">num</span><span class="p">):</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">arrayFish</span><span class="p">[</span><span class="n">num</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">num</span><span class="si">}</span><span class="s2">번 어항 물고기 사망. 물 주지 않음!&quot;</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="p">(</span><span class="n">arrayFish</span><span class="p">[</span><span class="n">num</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span> <span class="o">&lt;=</span> <span class="mi">100</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">num</span><span class="si">}</span><span class="s2">번 어항에 물주기&quot;</span><span class="p">)</span>
+        <span class="n">arrayFish</span><span class="p">[</span><span class="n">num</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
+
+<span class="c1"># 5초마다 레벌 업 시켜주기</span>
+<span class="k">def</span> <span class="nf">levelUp</span><span class="p">(</span><span class="n">totalElapsedTime</span><span class="p">):</span>
+    <span class="k">global</span> <span class="n">level</span>                                           <span class="c1"># 전역변수 선언 필요!</span>
+    <span class="k">if</span> <span class="n">totalElapsedTime</span><span class="o">/</span><span class="mi">5</span> <span class="o">&gt;</span> <span class="n">level</span><span class="p">:</span>
+        <span class="n">level</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">축! </span><span class="si">{</span><span class="n">level</span><span class="si">}</span><span class="s2"> 레벨로 업그레이드!!!</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">level</span> <span class="o">==</span> <span class="mi">5</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">최고레벨 당성! 게임 종료!</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="kc">False</span>                                       <span class="c1"># 레벨 = 5 달성</span>
+    <span class="k">return</span> <span class="kc">True</span>
+
+
+<span class="c1">##############</span>
+<span class="c1">### 게임실행 ###</span>
+<span class="c1">##############</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    
+    <span class="c1"># 게임세팅</span>
+    <span class="n">arrayFish</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
+    <span class="n">initData</span><span class="p">()</span>
+
+    <span class="c1"># 게임시작</span>
+    <span class="n">startTime</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>                                <span class="c1"># 시작 시간 기억</span>
+    <span class="n">lastPouringTime</span> <span class="o">=</span> <span class="mi">0</span>                                    <span class="c1"># 마지막으로 물 추가한 시간 기억</span>
+    <span class="n">level</span> <span class="o">=</span> <span class="mi">1</span>                                              <span class="c1"># 레벨 1로 시작</span>
+
+    <span class="c1"># 어항선택 반복</span>
+    <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+        <span class="n">num</span> <span class="o">=</span> <span class="n">selectNum</span><span class="p">()</span>
+        
+        <span class="n">totalElapsedTime</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span> <span class="o">-</span> <span class="n">startTime</span><span class="p">)</span>    <span class="c1"># 게임 총 경과시간</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;게임 총 경과시간: </span><span class="si">{</span><span class="n">totalElapsedTime</span><span class="si">}</span><span class="s2"> 초&quot;</span><span class="p">)</span>
+        <span class="n">elapsedTime</span> <span class="o">=</span> <span class="n">totalElapsedTime</span> <span class="o">-</span> <span class="n">lastPouringTime</span>   <span class="c1"># 마지막으로 물 추가한 후 흐른 시간</span>
+        <span class="n">decreaseWater</span><span class="p">(</span><span class="n">elapsedTime</span><span class="p">)</span>
+
+        <span class="c1"># 게임종료 조건 확인</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="p">(</span><span class="n">checkFishAlive</span><span class="p">()</span> <span class="ow">and</span> <span class="n">levelUp</span><span class="p">(</span><span class="n">totalElapsedTime</span><span class="p">)):</span>
+            <span class="k">break</span>
+
+        <span class="n">watering</span><span class="p">(</span><span class="n">num</span><span class="p">)</span>
+        <span class="n">lastPouringTime</span> <span class="o">=</span> <span class="n">totalElapsedTime</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>
+===
+
+  1    2    3    4    5    6
+100  100  100  100  100  100  
+
+몇 번 어항에 물을 주시겠어요? 1
+게임 총 경과시간: 1 초
+물고기 아직 살아 있음!
+1번 어항에 물주기
+
+===
+
+  1    2    3    4    5    6
+ 98   97   97   97   97   97  
+
+몇 번 어항에 물을 주시겠어요? 4
+게임 총 경과시간: 5 초
+물고기 아직 살아 있음!
+4번 어항에 물주기
+
+===
+
+  1    2    3    4    5    6
+ 86   85   85   86   85   85  
+
+몇 번 어항에 물을 주시겠어요? 2
+게임 총 경과시간: 18 초
+물고기 아직 살아 있음!
+
+축! 2 레벨로 업그레이드!!!
+
+2번 어항에 물주기
+
+===
+
+  1    2    3    4    5    6
+ 47   47   46   47   46   46  
+
+몇 번 어항에 물을 주시겠어요? 2
+게임 총 경과시간: 26 초
+물고기 모두 사망! ㅠㅠ
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="&#50672;&#49845;&#47928;&#51228;">&#50672;&#49845;&#47928;&#51228;<a class="anchor-link" href="#&#50672;&#49845;&#47928;&#51228;">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>위 파이썬 코드와 동일한 구조를 갖는 C 언어 코드를 작성하라.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="&#54028;&#51060;&#50028;-&#53364;&#47000;&#49828;-&#49324;&#50857;">&#54028;&#51060;&#50028; &#53364;&#47000;&#49828; &#49324;&#50857;<a class="anchor-link" href="#&#54028;&#51060;&#50028;-&#53364;&#47000;&#49828;-&#49324;&#50857;">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>위 파이썬 코드에서 <code>levelUp()</code> 함수에서 <code>level</code> 변수가 전역변수로 사용됨.<ul>
+<li>그렇지 않으면 <code>level</code> 변수를 사용할 수 없음.</li>
+</ul>
+</li>
+<li>이 점을 보완하기 위해 <code>levelUp()</code> 함수와 <code>level</code> 변수가 하나의 공간에서 활동하여 서로 알 수 있도록 해야 함.</li>
+<li>이것을 구현하기 위해 하나의 클래스에서 속성과 메서드로 선언하면 됨.<ul>
+<li>이후에 인스턴스 객체를 선언하면 <code>self</code>에 의해 서로의 존재를 인식하게 됨(아래 코드 참조)</li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">time</span>
+
+<span class="k">class</span> <span class="nc">FishWatering</span><span class="p">():</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">arrayFish</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="mi">6</span><span class="p">,</span> <span class="n">level</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">arrayFish</span> <span class="o">=</span> <span class="n">arrayFish</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">level</span> <span class="o">=</span> <span class="n">level</span>        
+
+    <span class="c1"># 게임초기화</span>
+    <span class="k">def</span> <span class="nf">initData</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">6</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">arrayFish</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="mi">100</span>
+
+    <span class="c1"># 현재 어항 상태 보여주기</span>
+    <span class="k">def</span> <span class="nf">printFishes</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">===</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%3d</span><span class="s2">  </span><span class="si">%3d</span><span class="s2">  </span><span class="si">%3d</span><span class="s2">  </span><span class="si">%3d</span><span class="s2">  </span><span class="si">%3d</span><span class="s2">  </span><span class="si">%3d</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">))</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">6</span><span class="p">):</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%3d</span><span class="s2">  &quot;</span> <span class="o">%</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">arrayFish</span><span class="p">[</span><span class="n">i</span><span class="p">]),</span><span class="n">end</span> <span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+
+    <span class="c1"># 매 초당 (level * 3)씩 물의 양 줄이기</span>
+    <span class="k">def</span> <span class="nf">decreaseWater</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">elapsedTime</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">6</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">arrayFish</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">-=</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">level</span> <span class="o">*</span> <span class="mi">3</span> <span class="o">*</span> <span class="n">elapsedTime</span><span class="p">)</span>
+            <span class="k">if</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">arrayFish</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">):</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">arrayFish</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+
+    <span class="c1"># 물고기가 한 마리라도 살아있는지 확인</span>
+    <span class="k">def</span> <span class="nf">checkFishAlive</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">6</span><span class="p">):</span>
+            <span class="k">if</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">arrayFish</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">):</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;물고기 아직 살아 있음!&quot;</span><span class="p">)</span>
+                <span class="k">return</span> <span class="kc">True</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;물고기 모두 사망! ㅠㅠ</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="kc">False</span>                                           <span class="c1"># 모든 물고기 죽었음</span>
+
+    <span class="c1"># 물 추가 어항 선택</span>
+    <span class="k">def</span> <span class="nf">selectNum</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">printFishes</span><span class="p">()</span>
+        <span class="n">num</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;몇 번 어항에 물을 주시겠어요? &quot;</span><span class="p">))</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">num</span> <span class="o">&lt;</span> <span class="mi">1</span> <span class="ow">or</span> <span class="n">num</span> <span class="o">&gt;</span> <span class="mi">6</span><span class="p">):</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;입력값이 잘못되었어요.&quot;</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">selectNum</span><span class="p">()</span>                                        <span class="c1"># 재귀호출</span>
+        <span class="k">return</span> <span class="n">num</span>
+
+    <span class="c1"># 지정된 어항에 물 추가</span>
+    <span class="k">def</span> <span class="nf">watering</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">num</span><span class="p">):</span>
+        <span class="k">if</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">arrayFish</span><span class="p">[</span><span class="n">num</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">):</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">num</span><span class="si">}</span><span class="s2">번 어항 물고기 사망. 물 주지 않음!&quot;</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">arrayFish</span><span class="p">[</span><span class="n">num</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span> <span class="o">&lt;=</span> <span class="mi">100</span><span class="p">):</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">num</span><span class="si">}</span><span class="s2">번 어항에 물주기&quot;</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">arrayFish</span><span class="p">[</span><span class="n">num</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
+
+    <span class="c1"># 5초마다 레벌 업 시켜주기</span>
+    <span class="k">def</span> <span class="nf">levelUp</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">totalElapsedTime</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">totalElapsedTime</span><span class="o">/</span><span class="mi">5</span> <span class="o">&gt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">level</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">level</span> <span class="o">+=</span> <span class="mi">1</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">축! </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">level</span><span class="si">}</span><span class="s2"> 레벨로 업그레이드!!!</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">level</span> <span class="o">==</span> <span class="mi">5</span><span class="p">):</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">최고레벨 당성! 게임 종료!</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+            <span class="k">return</span> <span class="kc">False</span>                                       <span class="c1"># 레벨 = 5 달성</span>
+        <span class="k">return</span> <span class="kc">True</span>
+
+
+<span class="c1">##############</span>
+<span class="c1">### 게임실행 ###</span>
+<span class="c1">##############</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    
+    <span class="c1"># 게임세팅</span>
+    <span class="n">Fishes</span> <span class="o">=</span> <span class="n">FishWatering</span><span class="p">()</span>
+    <span class="n">Fishes</span><span class="o">.</span><span class="n">initData</span><span class="p">()</span>
+
+    <span class="c1"># 게임시작</span>
+    <span class="n">startTime</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>                                <span class="c1"># 시작 시간 기억</span>
+    <span class="n">lastPouringTime</span> <span class="o">=</span> <span class="mi">0</span>                                    <span class="c1"># 마지막으로 물 추가한 시간 기억</span>
+
+    <span class="c1"># 어항선택 반복</span>
+    <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+        <span class="n">num</span> <span class="o">=</span> <span class="n">Fishes</span><span class="o">.</span><span class="n">selectNum</span><span class="p">()</span>
+        
+        <span class="n">totalElapsedTime</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span> <span class="o">-</span> <span class="n">startTime</span><span class="p">)</span>    <span class="c1"># 게임 총 경과시간</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;게임 총 경과시간: </span><span class="si">{</span><span class="n">totalElapsedTime</span><span class="si">}</span><span class="s2"> 초&quot;</span><span class="p">)</span>
+        <span class="n">elapsedTime</span> <span class="o">=</span> <span class="n">totalElapsedTime</span> <span class="o">-</span> <span class="n">lastPouringTime</span>   <span class="c1"># 마지막으로 물 추가한 후 흐른 시간</span>
+        <span class="n">Fishes</span><span class="o">.</span><span class="n">decreaseWater</span><span class="p">(</span><span class="n">elapsedTime</span><span class="p">)</span>
+
+        <span class="c1"># 게임종료 조건 확인</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="p">(</span><span class="n">Fishes</span><span class="o">.</span><span class="n">checkFishAlive</span><span class="p">()</span> <span class="ow">and</span> <span class="n">Fishes</span><span class="o">.</span><span class="n">levelUp</span><span class="p">(</span><span class="n">totalElapsedTime</span><span class="p">)):</span>
+            <span class="k">break</span>
+
+        <span class="n">Fishes</span><span class="o">.</span><span class="n">watering</span><span class="p">(</span><span class="n">num</span><span class="p">)</span>
+        <span class="n">lastPouringTime</span> <span class="o">=</span> <span class="n">totalElapsedTime</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>
+===
+
+  1    2    3    4    5    6
+100  100  100  100  100  100  
+
+몇 번 어항에 물을 주시겠어요? 2
+게임 총 경과시간: 1 초
+물고기 아직 살아 있음!
+2번 어항에 물주기
+
+===
+
+  1    2    3    4    5    6
+ 94   95   94   94   94   94  
+
+몇 번 어항에 물을 주시겠어요? 4
+게임 총 경과시간: 8 초
+물고기 아직 살아 있음!
+
+축! 2 레벨로 업그레이드!!!
+
+4번 어항에 물주기
+
+===
+
+  1    2    3    4    5    6
+ 52   53   52   53   52   52  
+
+몇 번 어항에 물을 주시겠어요? 2
+게임 총 경과시간: 17 초
+물고기 모두 사망! ㅠㅠ
+
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -14465,7 +14816,7 @@ b: 20
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="(C-&#50616;&#50612;)-&#51060;&#51473;-&#54252;&#51064;&#53552;">(C &#50616;&#50612;) &#51060;&#51473; &#54252;&#51064;&#53552;<a class="anchor-link" href="#(C-&#50616;&#50612;)-&#51060;&#51473;-&#54252;&#51064;&#53552;">&#182;</a></h2>
+<h2 id="&#48512;&#47197;:-(C-&#50616;&#50612;)-&#51060;&#51473;-&#54252;&#51064;&#53552;">&#48512;&#47197;: (C &#50616;&#50612;) &#51060;&#51473; &#54252;&#51064;&#53552;<a class="anchor-link" href="#&#48512;&#47197;:-(C-&#50616;&#50612;)-&#51060;&#51473;-&#54252;&#51064;&#53552;">&#182;</a></h2>
 </div>
 </div>
 </div>
@@ -14499,7 +14850,7 @@ b: 20
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
-<li>이중 포인터 작동은 일반 포인터의 작동과 동일.</li>
+<li>이중 포인터 작동은 일반 포인터가 작동과 동일</li>
 </ul>
 
 </div>
@@ -14534,9 +14885,9 @@ b: 20
     <span class="n">ptr1</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">var</span><span class="p">;</span>
     <span class="n">ptr2</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">ptr1</span><span class="p">;</span>
 
-    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;var : %d, *ptr1 : %d, **ptr1 : %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">var</span><span class="p">,</span> <span class="o">*</span><span class="n">ptr1</span><span class="p">,</span> <span class="o">**</span><span class="n">ptr2</span><span class="p">);</span>         <span class="c1">// 모두 10</span>
-    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;var 주소 : %p, ptr1 값 : %p, *ptr2 값 : %p</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">var</span><span class="p">,</span> <span class="n">ptr1</span><span class="p">,</span> <span class="o">*</span><span class="n">ptr2</span><span class="p">);</span> <span class="c1">// 모두 &amp;var와 동일</span>
-    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;ptr1 주소 : %p, ptr2 값 : %p&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">ptr1</span><span class="p">,</span> <span class="n">ptr2</span><span class="p">);</span>                        <span class="c1">// 모두 &amp;ptr1과 동일</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;var : %d *ptr1 : %d **ptr1 : %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">var</span><span class="p">,</span> <span class="o">*</span><span class="n">ptr1</span><span class="p">,</span> <span class="o">**</span><span class="n">ptr2</span><span class="p">);</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;var 주소 : %d *ptr1 값 : %d **ptr1 값 : %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">var</span><span class="p">,</span> <span class="n">ptr1</span><span class="p">,</span> <span class="o">*</span><span class="n">ptr2</span><span class="p">);</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;ptr1 주소 : %d ptr2 값 : %d&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">ptr1</span><span class="p">,</span> <span class="n">ptr2</span><span class="p">);</span>
 
     <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
@@ -14692,13 +15043,11 @@ b: 20
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
 <li><p>서로 다른 자료형의 배열을 항목으로 갖는 포인터 배열은 구조체를 활용해야 함.</p>
-<ul>
-<li><p>이후 구조체를 학습한 후에 예제 살펴볼 것임.</p>
 <div class="highlight"><pre><span></span><span class="kt">int</span> <span class="n">arr1</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="mi">10</span><span class="p">,</span> <span class="mi">11</span><span class="p">};</span>
-<span class="kt">float</span> <span class="n">arr2</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">1.1</span><span class="p">,</span> <span class="mf">1.2</span><span class="p">};</span>
+  <span class="kt">float</span> <span class="n">arr2</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">1.1</span><span class="p">,</span> <span class="mf">1.2</span><span class="p">};</span>
 </pre></div>
 </li>
-</ul>
+<li><p>이후 구조체를 학습한 후에 예제 살펴볼 것임.</p>
 </li>
 </ul>
 
@@ -14727,7 +15076,7 @@ b: 20
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">arr1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">11</span><span class="p">]</span>
@@ -14774,7 +15123,7 @@ parr[1]: 20
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#48512;&#47197;">&#48512;&#47197;<a class="anchor-link" href="#&#48512;&#47197;">&#182;</a></h2>
+<h2 id="&#48512;&#47197;:-call-by-value-vs.-call-by-reference">&#48512;&#47197;: call-by-value vs. call-by-reference<a class="anchor-link" href="#&#48512;&#47197;:-call-by-value-vs.-call-by-reference">&#182;</a></h2>
 </div>
 </div>
 </div>
@@ -14785,22 +15134,6 @@ parr[1]: 20
 <li>함수에 대한 인자로 일반적인 값을 받는 경우와 포인터 값을 받는 경우로 구분할 수 있음.</li>
 <li>call-by-value(콜 바이 밸류) 함수: 일반적인 값을 인자로 받는 함수</li>
 <li>call-by-reference(콜 바이 레퍼런스) 함수: 포인터 값을 인자로 받는 함수</li>
-</ul>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="call-by-value-vs.-call-by-reference">call-by-value vs. call-by-reference<a class="anchor-link" href="#call-by-value-vs.-call-by-reference">&#182;</a></h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ul>
 <li>함수에 인자를 전달할 때 값을 전달하는 방식과 포인터를 전달하는 방식에 차이가 있음.<ul>
 <li>예제: <code>swap()</code>과 <code>swap_addr()</code></li>
 </ul>
@@ -14877,6 +15210,220 @@ parr[1]: 20
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <hr>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#50672;&#49845;&#47928;&#51228;">&#50672;&#49845;&#47928;&#51228;<a class="anchor-link" href="#&#50672;&#49845;&#47928;&#51228;">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ol>
+<li><p>물고기 키우기 프로젝트의 C 언어 소스코드에 사용된 main() 함수의 본문 내용을 보다 간결하게 작성하라. 
+ 즉, 기능별로 보다 많은 함수를 작성하라.</p>
+<p>힌트: 파이썬 소스코드 참조</p>
+</li>
+</ol>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>모범답안: 아래 코드는 과제로 제출한 모범답안임. 코드에 약간의 중복이 있지만 매우 모범적인 코드임.<ul>
+<li>예를 들어, <code>checkFishAlive()</code> 함수와 <code>isItAlive()</code> 함수를 병합할 수 있음.</li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<hr>
+<div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;stdlib.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;time.h&gt;</span><span class="cp"></span>
+
+<span class="kt">int</span> <span class="n">level</span><span class="p">;</span>
+<span class="kt">int</span> <span class="n">arrayFish</span><span class="p">[</span><span class="mi">6</span><span class="p">];</span>
+<span class="kt">int</span><span class="o">*</span> <span class="n">cursor</span><span class="p">;</span>
+
+<span class="kt">void</span> <span class="nf">initData</span><span class="p">();</span>
+<span class="kt">void</span> <span class="nf">printFishes</span><span class="p">();</span>
+<span class="kt">void</span> <span class="nf">decreaseWater</span><span class="p">(</span><span class="kt">long</span> <span class="n">elapsedTime</span><span class="p">);</span>
+<span class="kt">int</span> <span class="nf">checkFishAlive</span><span class="p">();</span>
+<span class="kt">int</span> <span class="nf">initNum</span><span class="p">();</span>
+<span class="kt">long</span> <span class="nf">initTotalElapsedTime</span><span class="p">(</span><span class="kt">long</span> <span class="n">startTime</span><span class="p">);</span>
+<span class="kt">long</span> <span class="nf">initPrevElapsedTime</span><span class="p">(</span><span class="kt">long</span> <span class="n">totalElapsedTime</span><span class="p">,</span> <span class="kt">long</span> <span class="n">prevElapsedTime</span><span class="p">);</span>
+<span class="kt">void</span> <span class="nf">watering</span><span class="p">(</span><span class="kt">int</span> <span class="n">num</span><span class="p">);</span>
+<span class="kt">void</span> <span class="nf">levelUp</span><span class="p">(</span><span class="kt">long</span> <span class="n">totalElapsedTime</span><span class="p">);</span>
+<span class="kt">void</span> <span class="nf">isItAlive</span><span class="p">();</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="kt">long</span> <span class="n">startTime</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>        <span class="c1">// 게임 시작시간</span>
+    <span class="kt">long</span> <span class="n">totalElapsedTime</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="c1">// 총 경과시간</span>
+    <span class="kt">long</span> <span class="n">prevElapsedTime</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>  <span class="c1">// 직전 경과시간 (최근에 물을 준 시간 간격)</span>
+
+    <span class="kt">int</span> <span class="n">num</span><span class="p">;</span>                   <span class="c1">// 물을 채울 어항 번호 (사용자 입력)</span>
+
+    <span class="n">initData</span><span class="p">();</span>
+
+    <span class="n">cursor</span> <span class="o">=</span> <span class="n">arrayFish</span><span class="p">;</span>
+
+    <span class="n">startTime</span> <span class="o">=</span> <span class="n">clock</span><span class="p">();</span>       <span class="c1">// 현재시각을 millisecond(ms, 1000분의 1초) 단위로 변환</span>
+
+    <span class="k">while</span> <span class="p">(</span><span class="mi">1</span><span class="p">)</span>                  <span class="c1">// 문한반복</span>
+    <span class="p">{</span>
+        <span class="n">printFishes</span><span class="p">();</span>
+
+        <span class="n">num</span> <span class="o">=</span> <span class="n">initNum</span><span class="p">();</span>
+
+        <span class="n">totalElapsedTime</span> <span class="o">=</span> <span class="n">initTotalElapsedTime</span><span class="p">(</span><span class="n">startTime</span><span class="p">);</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;게임 총 경과시간: %ld 초</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">totalElapsedTime</span><span class="p">);</span>
+
+        <span class="n">prevElapsedTime</span> <span class="o">=</span> <span class="n">initPrevElapsedTime</span><span class="p">(</span><span class="n">totalElapsedTime</span><span class="p">,</span> <span class="n">prevElapsedTime</span><span class="p">);</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;마지막으로 물을 준 이후로 흐른 시간: %ld 초</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">prevElapsedTime</span><span class="p">);</span>
+
+        <span class="n">decreaseWater</span><span class="p">(</span><span class="n">prevElapsedTime</span><span class="p">);</span>
+
+        <span class="n">watering</span><span class="p">(</span><span class="n">num</span><span class="p">);</span>
+
+        <span class="n">levelUp</span><span class="p">(</span><span class="n">totalElapsedTime</span><span class="p">);</span>
+
+        <span class="n">isItAlive</span><span class="p">();</span>
+
+        <span class="n">prevElapsedTime</span> <span class="o">=</span> <span class="n">totalElapsedTime</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">initData</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="n">level</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>                 <span class="c1">// 게임 시작 레벨 (1-5)</span>
+
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">6</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">arrayFish</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="mi">100</span><span class="p">;</span>     <span class="c1">// 최초 어항 물높이 </span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">printFishes</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%3d번 %3d번 %3d번 %3d번 %3d번 %3d번</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">);</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">6</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">&quot; %4d &quot;</span><span class="p">,</span> <span class="n">arrayFish</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+    <span class="p">}</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;</span><span class="se">\n\n</span><span class="s">&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">decreaseWater</span><span class="p">(</span><span class="kt">long</span> <span class="n">elapsedTime</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">6</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">arrayFish</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">-=</span> <span class="p">(</span><span class="n">level</span> <span class="o">*</span> <span class="mi">3</span> <span class="o">*</span> <span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">elapsedTime</span><span class="p">);</span> <span class="c1">// 3은 난이도 조절용</span>
+
+        <span class="c1">// 물의 최소량은 0임.</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">arrayFish</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">arrayFish</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">checkFishAlive</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">6</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">arrayFish</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span>
+            <span class="k">return</span> <span class="mi">1</span><span class="p">;</span> <span class="c1">// 참 True</span>
+    <span class="p">}</span>
+
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">initNum</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kt">int</span> <span class="n">num</span><span class="p">;</span>
+
+    <span class="k">while</span> <span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;몇 번 어항에 물을 주시겠어요? &quot;</span><span class="p">);</span>
+        <span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%d&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">num</span><span class="p">);</span>
+
+        <span class="c1">// 입력값 체크</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">num</span> <span class="o">&lt;</span> <span class="mi">1</span> <span class="o">||</span> <span class="n">num</span> <span class="o">&gt;</span> <span class="mi">6</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">printf</span><span class="p">(</span><span class="s">&quot;</span><span class="se">\n</span><span class="s">입력값이 잘못되었어요.</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+            <span class="k">continue</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="k">else</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="n">num</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kt">long</span> <span class="nf">initTotalElapsedTime</span><span class="p">(</span><span class="kt">long</span> <span class="n">startTime</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kt">long</span> <span class="n">totalElapsedTime</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+    <span class="n">totalElapsedTime</span> <span class="o">=</span> <span class="p">(</span><span class="n">clock</span><span class="p">()</span> <span class="o">-</span> <span class="n">startTime</span><span class="p">)</span> <span class="o">/</span> <span class="mi">10</span><span class="p">;</span>
+
+    <span class="k">return</span> <span class="n">totalElapsedTime</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">long</span> <span class="nf">initPrevElapsedTime</span><span class="p">(</span><span class="kt">long</span> <span class="n">totalElapsedTime</span><span class="p">,</span> <span class="kt">long</span> <span class="n">prevElapsedTime</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="n">totalElapsedTime</span> <span class="o">-</span> <span class="n">prevElapsedTime</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">watering</span><span class="p">(</span><span class="kt">int</span> <span class="n">num</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">cursor</span><span class="p">[</span><span class="n">num</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d 번 물고기는 이미 사망. 물 주지 않음.</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">num</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">cursor</span><span class="p">[</span><span class="n">num</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span> <span class="o">&lt;=</span> <span class="mi">100</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d 번 어항에 물주기</span><span class="se">\n\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">num</span><span class="p">);</span>
+        <span class="n">cursor</span><span class="p">[</span><span class="n">num</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">levelUp</span><span class="p">(</span><span class="kt">long</span> <span class="n">totalElapsedTime</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">totalElapsedTime</span> <span class="o">/</span> <span class="mi">20</span> <span class="o">&gt;</span> <span class="n">level</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">level</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">;</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">&quot; *** 축 레벨업! 기존 %d 레벨에서 %d 레벨로 업그레이드 ***</span><span class="se">\n\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">level</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="n">level</span><span class="p">);</span>
+
+        <span class="k">if</span> <span class="p">(</span><span class="n">level</span> <span class="o">==</span> <span class="mi">5</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">printf</span><span class="p">(</span><span class="s">&quot;</span><span class="se">\n\n</span><span class="s">축하합니다. 최고레벨을 달성하였음! 게임 종료!</span><span class="se">\n\n</span><span class="s">&quot;</span><span class="p">);</span>
+            <span class="n">exit</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">isItAlive</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">checkFishAlive</span><span class="p">()</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;모든 물고기 사망 ㅠㅠ</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+        <span class="n">exit</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="k">else</span>
+    <span class="p">{</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;물고기 아직 살아 있음!</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
 
 </div>
 </div>
